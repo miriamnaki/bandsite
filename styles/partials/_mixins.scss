@@ -11,4 +11,9 @@
     @content;
   }
 }
+@mixin desktop {
+  @media screen and (min-width: variables.$minimum-desktop-breakpoint) {
+    @content;
+  }
+}
 
