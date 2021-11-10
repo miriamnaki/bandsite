@@ -8,7 +8,7 @@
   font-family: "Avenir";
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff"), url("../../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Bold.ttf") format("truetype");
   font-weight: 600;
-  font-style: italic;
+  font-style: normal;
 }
 @font-face {
   font-family: "Avenir";
@@ -29,27 +29,46 @@ body {
   background-color: #323232;
   color: #FFFFFF;
 }
-.header__title {
-  text-align: center;
-  font-size: 24px;
-  font-family: "Avenir";
-  font-weight: 700;
-  font-style: bold;
-  line-height: 32px;
-  margin-top: 0;
-  padding-top: 16px;
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header__wrapper {
+    display: flex;
+    padding-top: 18px;
+    padding-left: 36px;
+  }
 }
-.header .nav-list {
+.header__title {
+  font-family: "Avenir";
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+  text-align: center;
+  padding-top: 16px;
+  line-height: 32px;
+  font-size: 24px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .header__title {
+    font-size: 50px;
+  }
+}
+
+.nav-list {
   padding-left: 0;
   padding-bottom: 16px;
   display: flex;
   justify-content: space-evenly;
 }
-.header .nav-list__item {
+.nav-list__item {
   list-style: none;
   color: #E1E1E1;
   font-family: "Avenir";
   font-weight: 400;
   font-style: normal;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .nav-list__item {
+    padding-left: 36px;
+    font-size: 24px;
+  }
 }
 /*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */

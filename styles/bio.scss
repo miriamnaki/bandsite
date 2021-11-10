@@ -1,5 +1,6 @@
 @use './partials/colors';
 @use './partials/_typography';
+@use './partials/mixins';
 
 * {
   box-sizing: border-box;
@@ -13,27 +14,44 @@ body {
   width: 100%;
   background-color: colors.$bandsite-black;
   color: colors.$white;
-  &__title {
-    text-align: center;
-    font-size: 24px;
-    font-family: "Avenir";
-    font-weight: 700;
-    font-style: bold;
-    line-height: 32px;
-    margin-top: 0;
-    padding-top: 16px;  
+
+  &__wrapper {
+    @include mixins.tablet {
+      display: flex;
+      padding-top:18px;
+      padding-left: 36px;     
+    }
   }
-  .nav-list {
-    padding-left: 0;
-    padding-bottom: 16px;
-    display: flex;
-    justify-content: space-evenly;
-    &__item {
-      list-style: none;
-      color: colors.$mercury;
-      font-family: "Avenir";
-      font-weight: 400;
-      font-style: normal;
+
+  &__title {
+    font-family: "Avenir";
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 0;
+    text-align: center;
+    padding-top: 16px; 
+    line-height: 32px;
+    font-size: 24px;
+    
+    @include mixins.tablet {
+      font-size: 50px;
+    }
+  } 
+}
+.nav-list {
+  padding-left: 0;
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: space-evenly;
+  &__item {
+    list-style: none;
+    color: colors.$mercury;
+    font-family: "Avenir";
+    font-weight: 400;
+    font-style: normal;
+    @include mixins.tablet {
+      padding-left: 36px;
+      font-size: 24px;
     }
   }
 }
