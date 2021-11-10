@@ -15,41 +15,4 @@
   src: url("../../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff"), url("../../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Demi.ttf") format("truetype");
   font-weight: 700;
   font-style: bold;
-}
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-.header {
-  width: 100%;
-  background-color: #323232;
-  color: #FFFFFF;
-}
-.header__title {
-  text-align: center;
-  font-size: 24px;
-  font-family: "Avenir";
-  font-weight: 700;
-  font-style: bold;
-  line-height: 32px;
-  margin-top: 0;
-  padding-top: 16px;
-}
-.header .nav-list {
-  padding-left: 0;
-  padding-bottom: 16px;
-  display: flex;
-  justify-content: space-evenly;
-}
-.header .nav-list__item {
-  list-style: none;
-  color: #E1E1E1;
-  font-family: "Avenir";
-  font-weight: 400;
-  font-style: normal;
-}
-/*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */
+}/*# sourceMappingURL=typography.css.map */
