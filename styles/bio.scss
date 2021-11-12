@@ -118,13 +118,13 @@ body {
     font-size: 24px;
 
     @include mixins.tablet {
-      font-size: 40px;
+      font-size: 60px;
       margin-left: 36px;
       margin-right: 36px;
     }
 
     @include mixins.desktop {
-      font-size: 50px;
+      font-size: 60px;
       margin-left: 40px;
       margin-right: 40px;
     }
@@ -155,6 +155,14 @@ body {
 
   &__wrapper {
     margin: 24px 16px 16px 16px;
+
+    @include mixins.tablet {
+      margin: 48px 36px 36px 36px;
+    }
+
+    @include mixins.desktop {
+      margin: 48px 36px 36px 36px;
+    }
   }
   &__image {
     background-size: cover;
@@ -168,6 +176,22 @@ body {
     font-family: "Avenir";
     font-weight: 700;
     font-style: normal;
+
+    @include mixins.tablet {
+    margin-bottom: 36px;
+    font-size: 36px;
+    font-family: "Avenir";
+    font-weight: 700;
+    font-style: normal;
+    }
+
+    @include mixins.desktop {
+    margin-bottom: 36px;
+    font-size: 36px;
+    font-family: "Avenir";
+    font-weight: 700;
+    font-style: normal;
+    }
   
   }
 }

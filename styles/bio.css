@@ -140,14 +140,14 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero__title {
-    font-size: 40px;
+    font-size: 60px;
     margin-left: 36px;
     margin-right: 36px;
   }
 }
 @media screen and (min-width: 1278px) {
   .hero__title {
-    font-size: 50px;
+    font-size: 60px;
     margin-left: 40px;
     margin-right: 40px;
   }
@@ -179,6 +179,16 @@ body {
 .musicians__wrapper {
   margin: 24px 16px 16px 16px;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .musicians__wrapper {
+    margin: 48px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1278px) {
+  .musicians__wrapper {
+    margin: 48px 36px 36px 36px;
+  }
+}
 .musicians__image {
   background-size: cover;
   width: 100%;
@@ -192,5 +202,23 @@ body {
   font-family: "Avenir";
   font-weight: 700;
   font-style: normal;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .musicians__title {
+    margin-bottom: 36px;
+    font-size: 36px;
+    font-family: "Avenir";
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+@media screen and (min-width: 1278px) {
+  .musicians__title {
+    margin-bottom: 36px;
+    font-size: 36px;
+    font-family: "Avenir";
+    font-weight: 700;
+    font-style: normal;
+  }
 }
 /*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */
