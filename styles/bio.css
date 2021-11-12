@@ -78,7 +78,13 @@ body {
   padding-left: 0;
   padding-bottom: 16px;
   display: flex;
+  margin: 0px;
   justify-content: space-evenly;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .nav-list {
+    align-items: center;
+  }
 }
 .nav-list__item {
   list-style: none;
@@ -90,13 +96,49 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .nav-list__item {
     padding-left: 50px;
+    padding-top: 20px;
     font-size: 24px;
   }
 }
 @media screen and (min-width: 1278px) {
   .nav-list__item {
     padding-left: 80px;
+    padding-top: 20px;
     font-size: 24px;
   }
+}
+
+.hero {
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-size: cover;
+  background-position: cover;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.hero__title {
+  margin: 0px;
+  margin-left: 16px;
+  color: #FFFFFF;
+  position: absolute;
+  z-index: 1;
+  font-family: "Avenir";
+  font-style: bold;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.hero:before {
+  content: " ";
+  height: 25vh;
+  background-color: #323232;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
 }
 /*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */

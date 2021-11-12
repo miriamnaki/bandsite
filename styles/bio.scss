@@ -64,7 +64,12 @@ body {
   padding-left: 0;
   padding-bottom: 16px;
   display: flex;
+  margin: 0px;
   justify-content: space-evenly;
+  @include mixins.tablet {
+    align-items: center;
+
+  }
   &__item {
     list-style: none;
     color: colors.$mercury;
@@ -73,11 +78,57 @@ body {
     font-style: normal;
     @include mixins.tablet {
       padding-left: 50px;
+      padding-top: 20px;
       font-size: 24px;
     }
     @include mixins.desktop {
       padding-left: 80px;
+      padding-top: 20px;
       font-size: 24px;
     }
   }
 }
+
+.hero {
+  background-image: url('../assets/images/hero-bio.jpg');
+  background-size: cover;
+  background-position: cover;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  
+  &__title {
+    margin: 0px;
+    margin-left: 16px;
+    color: colors.$white;
+    position: absolute;
+    z-index: 1;
+    font-family: "Avenir";
+    font-style: bold;
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
+.hero:before {
+  content: " ";
+  height: 25vh;
+  background-color: colors.$bandsite-black;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+}
+// div:before, div:after {
+//   content:'';
+//   width: 50%;
+//   position: absolute;
+//   top:0;
+//   bottom:0;
+//   display:block;
+//   z-index:1;
+//   }
+
