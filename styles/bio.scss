@@ -209,6 +209,11 @@ body {
     line-height: 32px;
     font-size: 21px;
     }
+
+    @include mixins.desktop{
+    line-height: 32px;
+    font-size: 21px;
+    }
     
   }
 }
@@ -216,6 +221,10 @@ body {
   margin: 24px 16px 16px 16px;
 
   @include mixins.tablet {
+    margin: 48px 36px 36px 36px;
+  }
+
+  @include mixins.desktop {
     margin: 48px 36px 36px 36px;
   }
   &__title {
@@ -227,6 +236,9 @@ body {
     @include mixins.tablet {
       font-size: 20px;
     }
+    @include mixins.desktop {
+      font-size: 20px;
+    }
   }
   &__description {
     font-family: "Avenir";
@@ -236,6 +248,11 @@ body {
     font-size: 13px;
 
     @include mixins.tablet {
+    line-height: 22px;
+    font-size: 14px;
+    }
+
+    @include mixins.desktop {
     line-height: 22px;
     font-size: 14px;
     }
