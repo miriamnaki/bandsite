@@ -207,34 +207,49 @@ body {
   .musicians__title {
     margin-bottom: 36px;
     font-size: 36px;
-    font-family: "Avenir";
-    font-weight: 700;
-    font-style: normal;
   }
 }
 @media screen and (min-width: 1278px) {
   .musicians__title {
     margin-bottom: 36px;
     font-size: 36px;
-    font-family: "Avenir";
-    font-weight: 700;
-    font-style: normal;
   }
 }
 
 .band-quote {
   margin: 24px 16px 16px 16px;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .band-quote {
+    margin: 48px 36px 36px 36px;
+  }
+}
+@media screen and (min-width: 1278px) {
+  .band-quote {
+    margin: 48px 36px 36px 36px;
+  }
+}
 .band-quote__statement {
   font-family: "Avenir";
   font-weight: 600;
   font-style: normal;
-  line-height: 32px;
+  line-height: 22px;
   font-size: 18px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .band-quote__statement {
+    line-height: 32px;
+    font-size: 21px;
+  }
 }
 
 .band-info {
   margin: 24px 16px 16px 16px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .band-info {
+    margin: 48px 36px 36px 36px;
+  }
 }
 .band-info__title {
   font-family: "Avenir";
@@ -242,11 +257,22 @@ body {
   font-style: normal;
   font-size: 18px;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .band-info__title {
+    font-size: 20px;
+  }
+}
 .band-info__description {
   font-family: "Avenir";
   font-weight: 400;
   font-style: normal;
-  line-height: 22px;
-  font-size: 14px;
+  line-height: 18px;
+  font-size: 13px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .band-info__description {
+    line-height: 22px;
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */

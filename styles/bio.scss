@@ -180,17 +180,11 @@ body {
     @include mixins.tablet {
     margin-bottom: 36px;
     font-size: 36px;
-    font-family: "Avenir";
-    font-weight: 700;
-    font-style: normal;
     }
 
     @include mixins.desktop {
     margin-bottom: 36px;
     font-size: 36px;
-    font-family: "Avenir";
-    font-weight: 700;
-    font-style: normal;
     }
   }
 }
@@ -198,28 +192,53 @@ body {
 .band-quote {
   margin: 24px 16px 16px 16px;
 
+  @include mixins.tablet {
+    margin: 48px 36px 36px 36px;
+  }
+  @include mixins.desktop {
+    margin: 48px 36px 36px 36px;
+  }
   &__statement {
     font-family: "Avenir";
     font-weight: 600;
     font-style: normal;
-    line-height: 32px;
+    line-height: 22px;
     font-size: 18px;
+
+    @include mixins.tablet {
+    line-height: 32px;
+    font-size: 21px;
+    }
+    
   }
 }
 .band-info {
   margin: 24px 16px 16px 16px;
+
+  @include mixins.tablet {
+    margin: 48px 36px 36px 36px;
+  }
   &__title {
     font-family: "Avenir";
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
+
+    @include mixins.tablet {
+      font-size: 20px;
+    }
   }
   &__description {
     font-family: "Avenir";
     font-weight: 400;
     font-style: normal;
+    line-height: 18px;
+    font-size: 13px;
+
+    @include mixins.tablet {
     line-height: 22px;
     font-size: 14px;
+    }
     
   }
 }
