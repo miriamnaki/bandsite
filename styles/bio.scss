@@ -101,6 +101,10 @@ body {
   @include mixins.tablet {
     height: 50vh;
   }
+
+  @include mixins.desktop {
+    height: 60vh;
+  }
   
   &__title {
     margin: 0px;
@@ -118,6 +122,12 @@ body {
       margin-left: 36px;
       margin-right: 36px;
     }
+
+    @include mixins.desktop {
+      font-size: 50px;
+      margin-left: 40px;
+      margin-right: 40px;
+    }
   }
 }
 .hero:before {
@@ -134,6 +144,10 @@ body {
 
   @include mixins.tablet {
     height: 50vh;
+  }
+
+  @include mixins.desktop {
+    height: 60vh;
   }
 }
 

@@ -122,6 +122,11 @@ body {
     height: 50vh;
   }
 }
+@media screen and (min-width: 1278px) {
+  .hero {
+    height: 60vh;
+  }
+}
 .hero__title {
   margin: 0px;
   margin-left: 16px;
@@ -140,6 +145,13 @@ body {
     margin-right: 36px;
   }
 }
+@media screen and (min-width: 1278px) {
+  .hero__title {
+    font-size: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
 
 .hero:before {
   content: " ";
@@ -156,6 +168,11 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero:before {
     height: 50vh;
+  }
+}
+@media screen and (min-width: 1278px) {
+  .hero:before {
+    height: 60vh;
   }
 }
 /*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */
