@@ -191,7 +191,7 @@ body {
 
 .band-quote {
   margin: 24px 16px 16px 16px;
-
+  
   @include mixins.tablet {
     margin: 48px 36px 36px 36px;
   }
@@ -202,19 +202,41 @@ body {
     font-family: "Avenir";
     font-weight: 600;
     font-style: normal;
-    line-height: 22px;
+    line-height: 26px;
     font-size: 18px;
+    margin-bottom: 5px;
 
     @include mixins.tablet {
-    line-height: 32px;
-    font-size: 21px;
+    line-height: 40px;
+    font-size: 25px;
+    margin-bottom: 10px;
     }
 
     @include mixins.desktop{
-    line-height: 32px;
-    font-size: 21px;
+    margin-bottom: 10px;
+    line-height: 40px;
+    font-size: 25px;
     }
+
     
+  }
+  &__writter {
+  font-family: "Avenir";
+  font-weight: 600;
+  font-style: normal;
+  line-height: 26px;
+  font-size: 18px;
+  margin-top: 0px;
+
+  @include mixins.tablet {
+    line-height: 40px;
+    font-size: 20px;
+    }
+
+    @include mixins.desktop{
+    line-height: 40px;
+    font-size: 20px;
+    }
   }
 }
 .band-info {
@@ -240,21 +262,32 @@ body {
       font-size: 20px;
     }
   }
+
   &__description {
     font-family: "Avenir";
     font-weight: 400;
     font-style: normal;
     line-height: 18px;
     font-size: 13px;
+    &--right {
+      padding-right: 15px;
+    }
+    &--left {
+      padding-left: 15px;
+    }
 
     @include mixins.tablet {
     line-height: 22px;
-    font-size: 14px;
+    font-size: 14px;  
+    display: flex; 
+    justify-content: space-between; 
     }
 
     @include mixins.desktop {
     line-height: 22px;
     font-size: 14px;
+    width: 50%;
+    display: flex;
     }
     
   }
