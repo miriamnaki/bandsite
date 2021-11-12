@@ -117,6 +117,11 @@ body {
   align-items: center;
   position: relative;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero {
+    height: 50vh;
+  }
+}
 .hero__title {
   margin: 0px;
   margin-left: 16px;
@@ -127,6 +132,13 @@ body {
   font-style: bold;
   font-weight: 700;
   font-size: 24px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero__title {
+    font-size: 40px;
+    margin-left: 36px;
+    margin-right: 36px;
+  }
 }
 
 .hero:before {
@@ -140,5 +152,10 @@ body {
   left: 0;
   right: 0;
   opacity: 0.5;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero:before {
+    height: 50vh;
+  }
 }
 /*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */

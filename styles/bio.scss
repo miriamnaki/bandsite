@@ -97,6 +97,10 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+
+  @include mixins.tablet {
+    height: 50vh;
+  }
   
   &__title {
     margin: 0px;
@@ -108,6 +112,12 @@ body {
     font-style: bold;
     font-weight: 700;
     font-size: 24px;
+
+    @include mixins.tablet {
+      font-size: 40px;
+      margin-left: 36px;
+      margin-right: 36px;
+    }
   }
 }
 .hero:before {
@@ -121,14 +131,10 @@ body {
   left: 0;
   right: 0;
   opacity: 0.5;
+
+  @include mixins.tablet {
+    height: 50vh;
+  }
 }
-// div:before, div:after {
-//   content:'';
-//   width: 50%;
-//   position: absolute;
-//   top:0;
-//   bottom:0;
-//   display:block;
-//   z-index:1;
-//   }
+
 
