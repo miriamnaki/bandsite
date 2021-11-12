@@ -270,10 +270,20 @@ body {
     line-height: 18px;
     font-size: 13px;
     &--right {
-      padding-right: 15px;
+      @include mixins.tablet {
+        padding-right: 15px;
+      }
+      @include mixins.desktop {
+        padding-right: 15px;
+      }
     }
     &--left {
-      padding-left: 15px;
+      @include mixins.tablet {
+        padding-left: 15px;
+      }
+      @include mixins.desktop {
+        padding-left: 15px;
+      }
     }
 
     @include mixins.tablet {
@@ -286,7 +296,6 @@ body {
     @include mixins.desktop {
     line-height: 22px;
     font-size: 14px;
-    width: 50%;
     display: flex;
     }
     
