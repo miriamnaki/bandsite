@@ -301,22 +301,72 @@ body {
     
   }
 }
+
+// gallery
+
 .gallery {
-  // background-color: colors.$mercury;
   backdrop-filter: brightness(97%);
   display: flex;
   flex-direction: column;
+
+  &__wrapper {
+    @include mixins.tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 36px 18px 0px 18px;
+    }
+    @include mixins.desktop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 36px 18px 0px 18px;
+    }
+  }
   &__image {
     background-size: cover;
     width: 100%;
     height: 100%; 
     object-fit: contain;
     padding: 16px 16px 0px 16px;
+
+    @include mixins.tablet {
+      width: 33%;
+      height: 33%;
+      padding: 0px;
+      padding: 0px 18px 36px 18px;      
+    }
+
+    @include mixins.desktop {
+      width: 33%;
+      height: 33%;
+      padding: 0px;
+      padding: 0px 18px 36px 18px;      
+    }
+    
   }
   
   &__title {
+    font-family: "Avenir";
+    font-weight: 700;
     margin: 24px 16px 0px 16px; 
 
+
+    @include mixins.tablet {
+      margin-left: 36px;
+      margin-top: 48px;
+      font-size: 36px;
+      font-family: "Avenir";
+      font-weight: 700;
+    }
+
+    @include mixins.desktop {
+      margin-left: 36px;
+      margin-top: 48px;
+      font-size: 36px;
+      font-family: "Avenir";
+      font-weight: 700;
+    }
   }
 }
 

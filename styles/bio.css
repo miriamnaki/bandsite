@@ -350,6 +350,22 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .gallery__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 36px 18px 0px 18px;
+  }
+}
+@media screen and (min-width: 1278px) {
+  .gallery__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 36px 18px 0px 18px;
+  }
+}
 .gallery__image {
   background-size: cover;
   width: 100%;
@@ -358,7 +374,43 @@ body {
      object-fit: contain;
   padding: 16px 16px 0px 16px;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .gallery__image {
+    width: 33%;
+    height: 33%;
+    padding: 0px;
+    padding: 0px 18px 36px 18px;
+  }
+}
+@media screen and (min-width: 1278px) {
+  .gallery__image {
+    width: 33%;
+    height: 33%;
+    padding: 0px;
+    padding: 0px 18px 36px 18px;
+  }
+}
 .gallery__title {
+  font-family: "Avenir";
+  font-weight: 700;
   margin: 24px 16px 0px 16px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .gallery__title {
+    margin-left: 36px;
+    margin-top: 48px;
+    font-size: 36px;
+    font-family: "Avenir";
+    font-weight: 700;
+  }
+}
+@media screen and (min-width: 1278px) {
+  .gallery__title {
+    margin-left: 36px;
+    margin-top: 48px;
+    font-size: 36px;
+    font-family: "Avenir";
+    font-weight: 700;
+  }
 }
 /*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */
