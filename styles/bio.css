@@ -80,8 +80,8 @@ body {
 .nav-list {
   padding-left: 0;
   padding-bottom: 1rem;
-  display: flex;
   margin: 0rem;
+  display: flex;
   justify-content: space-evenly;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
@@ -290,7 +290,6 @@ body {
 .band-quote__statement {
   font-family: "Avenir";
   font-weight: 700;
-  font-style: normal;
   line-height: 2rem;
   font-size: 0.875rem;
   margin-bottom: 0.3125rem;
@@ -314,7 +313,6 @@ body {
 .band-quote__writter {
   font-family: "Avenir";
   font-weight: 700;
-  font-style: normal;
   line-height: 1.625rem;
   font-size: 0.875rem;
   margin-top: 0rem;
@@ -351,7 +349,6 @@ body {
 .band-info__title {
   font-family: "Avenir";
   font-weight: 700;
-  font-style: normal;
   font-size: 1.125rem;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
@@ -433,16 +430,16 @@ body {
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .gallery__wrapper {
-    display: flex;
     flex-wrap: wrap;
+    display: flex;
     justify-content: space-between;
     margin: 0rem 1.125rem 0rem 1.125rem;
   }
 }
 @media screen and (min-width: 79.875rem) {
   .gallery__wrapper {
-    display: flex;
     flex-wrap: wrap;
+    display: flex;
     justify-content: space-between;
     margin: 0rem 1.125rem 0rem 1.125rem;
   }
@@ -496,7 +493,7 @@ body {
 
 .footer {
   background-color: #323232;
-  color: white;
+  color: #FFFFFF;
   padding-top: 0.5rem;
   padding: 1.5rem 1rem 1rem 1rem;
 }
@@ -514,8 +511,8 @@ body {
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .footer__wrapper {
-    display: flex;
     align-items: baseline;
+    display: flex;
     justify-content: space-between;
     max-width: 50%;
   }
@@ -523,8 +520,8 @@ body {
 @media screen and (min-width: 79.875rem) {
   .footer__wrapper {
     display: flex;
-    align-items: baseline;
     justify-content: space-between;
+    align-items: baseline;
     max-width: 50%;
   }
 }
@@ -545,8 +542,8 @@ body {
   }
 }
 .footer__icons {
-  display: flex;
   flex-direction: row;
+  display: flex;
   justify-content: space-between;
   max-width: 30%;
 }
@@ -572,11 +569,11 @@ body {
 }
 .management__name {
   margin-bottom: 0rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 .management__group {
   margin-top: 0;
-  font-weight: 700;
+  font-weight: 600;
 }
 .management__address {
   margin-top: 0;

@@ -59,8 +59,7 @@ body {
       margin-right: 4rem;
       padding-left: 2rem;
       font-size: 2.25rem;
-    }
-    
+    }   
   } 
 }
 
@@ -68,9 +67,8 @@ body {
 .nav-list {
   padding-left: 0;
   padding-bottom: 1rem;
-  display: flex;
   margin: 0rem;
-  justify-content: space-evenly;
+  @include mixins.flex(space-evenly);
   
   // desktop and tablet navlist
   @include mixins.tablet {
@@ -119,7 +117,6 @@ body {
     padding-bottom: 1rem;
     border-bottom: 0.2rem solid colors.$white;
     color: colors.$mercury;
-
     @include mixins.tablet {
       padding-bottom: 2.25rem;
     }    
@@ -263,7 +260,6 @@ body {
   &__statement {
     font-family: "Avenir";
     font-weight: 700;
-    font-style: normal;
     line-height: 2rem;
     font-size: 0.875rem;
     margin-bottom: 0.3125rem;
@@ -286,7 +282,6 @@ body {
   &__writter {
   font-family: "Avenir";
   font-weight: 700;
-  font-style: normal;
   line-height: 1.625rem;
   font-size: 0.875rem;
   margin-top: 0rem;
@@ -305,6 +300,8 @@ body {
   }
   }
 }
+
+// band info section
 .band-info {
   margin: 1.5rem 1rem 1rem 1rem;
 
@@ -318,7 +315,6 @@ body {
   &__title {
     font-family: "Avenir";
     font-weight: 700;
-    font-style: normal;
     font-size: 1.125rem;
 
     @include mixins.tablet {
@@ -366,21 +362,19 @@ body {
       
     }
 
+    // tablet and desktop description
     @include mixins.tablet {
     line-height: 2rem;
-    font-size: 1.125rem;  
-    display: flex; 
-    justify-content: space-between; 
+    font-size: 1.125rem;
+    @include mixins.flex(space-between); 
     margin: 0;
     }
     @include mixins.desktop {
     line-height: 32px;
     font-size: 1.125rem;  
-    display: flex; 
-    justify-content: space-between; 
+    @include mixins.flex(space-between); 
     margin: 0;
-    }
-   
+    }  
   }
 }
 
@@ -393,18 +387,17 @@ body {
   &__wrapper {
     padding-bottom: 0.5rem;
     @include mixins.tablet {
-      display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      @include mixins.flex(space-between); 
       margin: 0rem 1.125rem 0rem 1.125rem;
     }
     @include mixins.desktop {
-      display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      @include mixins.flex(space-between); 
       margin: 0rem 1.125rem 0rem 1.125rem;
     }
   }
+
   &__image {
     display: block;
     background-size: cover;
@@ -413,6 +406,7 @@ body {
     object-fit: contain;
     padding: 0.5rem 1rem 0.5rem 1rem;
 
+    // tablet and desktop images
     @include mixins.tablet {
       width: 33%;
       height: 33%;
@@ -433,6 +427,7 @@ body {
     margin: 1.5rem 1rem 0.5rem 1rem; 
 
 
+    // tablet and desktop gallery title
     @include mixins.tablet {
       margin: 0rem 2.25rem ;
       padding-top: 3rem;
@@ -452,7 +447,7 @@ body {
 // footer
 .footer {
   background-color: colors.$bandsite-black;
-  color: white;
+  color: colors.$white;
   padding-top: 0.5rem;
   padding: 1.5rem 1rem 1rem 1rem;
 
@@ -467,19 +462,18 @@ body {
 
   &__wrapper {
     @include mixins.tablet {
-      display: flex;
       align-items: baseline;
-      justify-content: space-between;
+      @include mixins.flex(space-between); 
       max-width: 50%;
     }
     @include mixins.desktop {
-      display: flex;
+      @include mixins.flex(space-between); 
       align-items: baseline;
-      justify-content: space-between;
       max-width: 50%;
     }
   }
   
+  // footer title
   &__title {
     margin-top: 0rem;
     font-family: 'Avenir';
@@ -494,10 +488,10 @@ body {
     }
   }
 
+  // footer icons
   &__icons {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    @include mixins.flex(space-between); 
     max-width: 30%;
   }
   
@@ -513,6 +507,8 @@ body {
   }
 
 }
+
+// management section
 .management {
   font-family: 'Avenir';
   font-size: 0.875rem;
@@ -521,11 +517,11 @@ body {
   }
   &__name{
     margin-bottom: 0rem;
-    font-weight: 700;
+    font-weight: 600;
   }
   &__group {
     margin-top: 0; 
-    font-weight: 700; 
+    font-weight: 600; 
   }
   &__address {
     margin-top: 0; 
@@ -582,14 +578,13 @@ body {
     }
   }
 
+  // footer flex sections
   &__sections {
     @include mixins.tablet {
-      display: flex;
-      justify-content: space-between;
+      @include mixins.flex(space-between); 
     }
     @include mixins.desktop {
-      display: flex;
-      justify-content: space-between;
+      @include mixins.flex(space-between); 
     }
   }
 }

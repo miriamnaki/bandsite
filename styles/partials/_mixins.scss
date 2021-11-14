@@ -1,5 +1,6 @@
 @use './variables';
 
+// media queries
 @mixin mobile {
   @media screen and (max-width: variables.$mobile-breakpoint) {
     @content;
@@ -15,5 +16,11 @@
   @media screen and (min-width: variables.$minimum-desktop-breakpoint) {
     @content;
   }
+}
+
+// flex box
+@mixin flex($justify-content: flex-start) {
+  display: flex;
+  justify-content: $justify-content;
 }
 
