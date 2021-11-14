@@ -421,6 +421,21 @@ body {
   margin-top: 8px;
   padding: 24px 16px 16px 16px;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer {
+    padding: 48px 36px 36px 36px;
+    margin-top: 24px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    max-width: 50%;
+  }
+}
 .footer__title {
   margin-top: 0px;
   font-family: "Avenir";
@@ -429,8 +444,12 @@ body {
 }
 .footer__icons {
   display: flex;
-  justify-content: space-between;
-  max-width: 30%;
+  flex-direction: row;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__icon {
+    padding-left: 1.5rem;
+  }
 }
 
 .management__wrapper {
@@ -485,5 +504,22 @@ body {
   font-weight: 400;
   font-size: 24px;
   padding-top: 50px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .management__logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 55px;
+    padding-right: 36px;
+    margin-bottom: 0;
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .management__sections {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 /*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */
