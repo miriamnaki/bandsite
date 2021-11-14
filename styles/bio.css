@@ -597,6 +597,9 @@ body {
 }
 .management__email {
   font-weight: 400;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
 }
 .management__copyright {
   font-weight: 400;

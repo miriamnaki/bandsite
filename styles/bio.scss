@@ -545,6 +545,9 @@ body {
   }
   &__email {
     font-weight: 400;
+    color: colors.$white;
+    text-decoration: none;
+    cursor: pointer;
   }
   &__copyright {
     font-weight: 400;
