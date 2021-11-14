@@ -10,28 +10,27 @@ body {
   margin: 0;
 }
 
+// header
 .header {
   width: 100%;
   background-color: colors.$bandsite-black;
   color: colors.$white;
-  
-  @include mixins.desktop {
-    // margin: auto;
-  }
 
   &__wrapper {
     margin-left: 16px;
     margin-right: 16px;
+
+    // tablet and desktop wrapper
     @include mixins.tablet {
       display: flex;
-      padding: 18px 100px 15px 100px; 
+      padding: 18px 36px 15px 36px; 
       margin: 0 auto;    
     }
 
     @include mixins.desktop {
       display: flex;
-      padding: 18px 120px 15px 120px; 
-      margin: 0 auto;  
+      padding: 18px 36px 15px 36px; 
+      margin: 0 auto;    
     }
   }
 
@@ -43,67 +42,75 @@ body {
     text-align: center;
     padding-top: 16px; 
     line-height: 32px;
-    font-size: 24px;
     
+    // desktop and tablet title
     @include mixins.tablet {
-      font-size: 50px;
       margin-bottom: 0px;
       padding-top: 0;
       line-height: 68px;
     }
-
     @include mixins.desktop {
-      font-size: 50px;
       margin-bottom: 0px;
       padding-top: 0;
       line-height: 68px;
     }
   } 
 }
+
+// navlist
 .nav-list {
   padding-left: 0;
   padding-bottom: 16px;
   display: flex;
   margin: 0px;
   justify-content: space-evenly;
+  
+  // desktop and tablet navlist
   @include mixins.tablet {
     align-items: center;
-
   }
+  @include mixins.desktop {
+    align-items: center;
+  }
+
   &__item {
     list-style: none;
     color: colors.$mercury;
     font-family: "Avenir";
     font-weight: 400;
     font-style: normal;
+    
+    // desktop and tablet nav item
     @include mixins.tablet {
       padding-left: 50px;
       padding-top: 20px;
       font-size: 24px;
     }
     @include mixins.desktop {
-      padding-left: 80px;
+      padding-left: 50px;
       padding-top: 20px;
       font-size: 24px;
     }
   }
+
 }
 
+// hero section
 .hero {
   background-image: url('../assets/images/hero-bio.jpg');
   background-size: cover;
   background-position: cover;
-  height: 25vh;
+  height: 29vh;
   display: flex;
   align-items: center;
   position: relative;
-
+  
+  // desktop and tablet hero
   @include mixins.tablet {
     height: 50vh;
   }
-
   @include mixins.desktop {
-    height: 60vh;
+    height: 50vh;
   }
   
   &__title {
@@ -113,26 +120,26 @@ body {
     position: absolute;
     z-index: 1;
     font-family: "Avenir";
-    font-style: bold;
     font-weight: 700;
-    font-size: 24px;
 
+    // tablet and desktop hero title
     @include mixins.tablet {
       font-size: 60px;
       margin-left: 36px;
       margin-right: 36px;
     }
-
     @include mixins.desktop {
       font-size: 60px;
-      margin-left: 40px;
-      margin-right: 40px;
+      margin-left: 36px;
+      margin-right: 36px;
     }
   }
 }
+
+// hero overlay
 .hero:before {
   content: " ";
-  height: 25vh;
+  height: 29vh;
   background-color: colors.$bandsite-black;
   position: absolute;
   z-index: 1;
@@ -142,34 +149,47 @@ body {
   right: 0;
   opacity: 0.5;
 
+  // tablet and desktop overlay
   @include mixins.tablet {
     height: 50vh;
   }
-
   @include mixins.desktop {
-    height: 60vh;
+    height: 50vh;
   }
 }
 
+// musician section
 .musicians {
-
   &__wrapper {
     margin: 24px 16px 16px 16px;
-
+ 
+    // tablet and desktop musician wrapper
     @include mixins.tablet {
       margin: 48px 36px 36px 36px;
     }
-
     @include mixins.desktop {
       margin: 48px 36px 36px 36px;
     }
   }
+
   &__image {
     background-size: cover;
-    width: 100%;
-    height: 100%; 
+    width:100%;
+    height: auto; 
     object-fit: contain;
+    
+    // tablet and desktop musician image
+    @include mixins.tablet {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+    @include mixins.desktop {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+    
   }
+
   &__title {
     margin-bottom: 16px;
     font-size: 24px;
@@ -189,54 +209,60 @@ body {
   }
 }
 
+// band quotation
 .band-quote {
   margin: 24px 16px 16px 16px;
   
+  // tablet and desktop quotation
   @include mixins.tablet {
-    margin: 48px 36px 36px 36px;
+    margin: 0px 72px 0px 72px;
   }
   @include mixins.desktop {
     margin: 48px 36px 36px 36px;
   }
   &__statement {
     font-family: "Avenir";
-    font-weight: 600;
+    font-weight: 700;
     font-style: normal;
-    line-height: 26px;
-    font-size: 18px;
+    line-height: 32px;
+    font-size: 14px;
     margin-bottom: 5px;
+    margin-top: 0px;
 
     @include mixins.tablet {
-    line-height: 40px;
-    font-size: 25px;
+    line-height: 44px;
+    font-size: 30px;
     margin-bottom: 10px;
     }
 
-    @include mixins.desktop{
+    @include mixins.desktop {
+    line-height: 44px;
+    font-size: 30px;
     margin-bottom: 10px;
-    line-height: 40px;
-    font-size: 25px;
-    }
-
-    
+    padding-left: 36px;
+    }  
   }
+
   &__writter {
   font-family: "Avenir";
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
   line-height: 26px;
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 0px;
 
   @include mixins.tablet {
-    line-height: 40px;
-    font-size: 20px;
+    line-height: 36px;
+    font-size: 24px;
+    margin-bottom: 0px;
     }
 
-    @include mixins.desktop{
-    line-height: 40px;
-    font-size: 20px;
-    }
+  @include mixins.desktop{
+    line-height: 36px;
+    font-size: 24px;
+    margin-bottom: 0px;
+    padding-left: 36px;
+  }
   }
 }
 .band-info {
@@ -251,15 +277,23 @@ body {
   }
   &__title {
     font-family: "Avenir";
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
     font-size: 18px;
 
     @include mixins.tablet {
-      font-size: 20px;
+      font-size: 24px;
+      padding-left: 36px;
+      margin: 0;
+      padding-bottom: 36px;
+      padding-top: 48px;
     }
     @include mixins.desktop {
-      font-size: 20px;
+      font-size: 24px;
+      padding-left: 36px;
+      margin: 0;
+      padding-bottom: 36px;
+      padding-top: 48px;
     }
   }
 
@@ -267,43 +301,50 @@ body {
     font-family: "Avenir";
     font-weight: 400;
     font-style: normal;
-    line-height: 18px;
-    font-size: 13px;
+    line-height: 22px;
+    font-size: 14px;
+
     &--right {
       @include mixins.tablet {
         padding-right: 15px;
+        padding-left: 36px;
       }
       @include mixins.desktop {
         padding-right: 15px;
+        padding-left: 36px;
       }
     }
     &--left {
       @include mixins.tablet {
         padding-left: 15px;
+        padding-right: 36px;
       }
       @include mixins.desktop {
         padding-left: 15px;
+        padding-right: 36px;
       }
+      
     }
 
     @include mixins.tablet {
-    line-height: 22px;
-    font-size: 14px;  
+    line-height: 32px;
+    font-size: 18px;  
     display: flex; 
     justify-content: space-between; 
+    margin: 0;
     }
-
     @include mixins.desktop {
-    line-height: 22px;
-    font-size: 14px;
-    display: flex;
+    line-height: 32px;
+    font-size: 18px;  
+    display: flex; 
+    justify-content: space-between; 
+    margin: 0;
     }
-    
+   
   }
 }
 
 // gallery
-
 .gallery {
   backdrop-filter: brightness(97%);
   display: flex;
@@ -314,13 +355,13 @@ body {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin: 36px 18px 0px 18px;
+      margin: 0px 18px 0px 18px;
     }
     @include mixins.desktop {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin: 36px 18px 0px 18px;
+      margin: 0px 18px 0px 18px;
     }
   }
   &__image {
@@ -337,14 +378,12 @@ body {
       padding: 0px;
       padding: 0px 18px 36px 18px;      
     }
-
     @include mixins.desktop {
       width: 33%;
       height: 33%;
       padding: 0px;
       padding: 0px 18px 36px 18px;      
-    }
-    
+    }  
   }
   
   &__title {
@@ -354,19 +393,17 @@ body {
 
 
     @include mixins.tablet {
-      margin-left: 36px;
-      margin-top: 48px;
+      margin: 0px 36px ;
+      padding-top: 48px;
+      padding-bottom: 36px;
       font-size: 36px;
-      font-family: "Avenir";
-      font-weight: 700;
+     
     }
-
     @include mixins.desktop {
-      margin-left: 36px;
-      margin-top: 48px;
-      font-size: 36px;
-      font-family: "Avenir";
-      font-weight: 700;
+      margin: 0px 36px ;
+      padding-top: 48px;
+      padding-bottom: 36px;
+      font-size: 36px;   
     }
   }
 }
@@ -375,18 +412,26 @@ body {
 .footer {
   background-color: colors.$bandsite-black;
   color: white;
-  margin-top: 8px;
+  padding-top: 8px;
   padding: 24px 16px 16px 16px;
 
   @include mixins.tablet {
     padding: 48px 36px 36px 36px;
-    margin-top: 24px;
-    position: relative;
-    
+    position: relative; 
+  }
+  @include mixins.desktop {
+    padding: 48px 36px 36px 36px;
+    position: relative; 
   }
 
   &__wrapper {
     @include mixins.tablet {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      max-width: 50%;
+    }
+    @include mixins.desktop {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
@@ -401,85 +446,75 @@ body {
     font-style: normal;
 
     @include mixins.tablet {
-     
+     font-size: 36px;
+    }
+    @include mixins.desktop {
+     font-size: 36px;
     }
   }
-
-  
-  
 
   &__icons {
     display: flex;
     flex-direction: row;
-    // justify-content: space-between;
-    // max-width: 30%;
-
-    @include mixins.tablet {
-      // position: absolute;
-      // top: 60px;
-      
-    }
+    justify-content: space-between;
+    max-width: 30%;
   }
   
   &__icon {
     @include mixins.tablet {
-      padding-left: 1.5rem;
+      padding-left: 1.2rem;
+      height: 1.8rem;
+    }
+    @include mixins.desktop {
+      padding-left: 1.2rem;
+      height: 1.8rem;
     }
   }
 
 }
 .management {
+  font-family: 'Avenir';
+  font-size: 14px;
   &__wrapper {
-   line-height: 18px;
+   line-height: 22px;
   }
   &__name{
     margin-bottom: 0px;
-    font-family: 'Avenir';
-    font-weight: 600;
+    font-weight: 700;
   }
   &__group {
-    margin-top: 0;
-    font-family: 'Avenir';
-    font-weight: 600; 
+    margin-top: 0; 
+    font-weight: 700; 
   }
   &__address {
-    margin-top: 0;
-    font-family: 'Avenir';
+    margin-top: 0; 
     font-weight: 400;
   }
   &__location {
-    margin-top: 0;
-    font-family: 'Avenir';
+    margin-top: 0; 
     font-weight: 400;
   }
   &__type {
     margin-bottom: 0;
-    font-family: 'Avenir';
     font-weight: 400;
   }
   &__street {
     margin-bottom: 0;
-    font-family: 'Avenir';
     font-weight: 400;
   }
   &__city {
     margin-top: 0;
-    font-family: 'Avenir';
     font-weight: 400;
   }
   &__email {
-    font-family: 'Avenir';
     font-weight: 400;
   }
   &__copyright {
-    font-family: 'Avenir';
     font-weight: 400;
     font-size: 14px;
-
   }
 
   &__logo {
-    font-family: 'Avenir';
     font-weight: 400;
     font-size: 24px;
     padding-top: 50px;
@@ -492,18 +527,29 @@ body {
       padding-right: 36px;
       margin-bottom:0;
       margin-top: 0px;
+      font-size: 36px;
+    }
+    @include mixins.desktop {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-top: 55px;
+      padding-right: 36px;
+      margin-bottom:0;
+      margin-top: 0px;
+      font-size: 36px;
     }
   }
-
 
   &__sections {
     @include mixins.tablet {
       display: flex;
       justify-content: space-between;
     }
+    @include mixins.desktop {
+      display: flex;
+      justify-content: space-between;
+    }
   }
-  
-
-
 }
 

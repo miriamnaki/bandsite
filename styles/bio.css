@@ -36,14 +36,14 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .header__wrapper {
     display: flex;
-    padding: 18px 100px 15px 100px;
+    padding: 18px 36px 15px 36px;
     margin: 0 auto;
   }
 }
 @media screen and (min-width: 1278px) {
   .header__wrapper {
     display: flex;
-    padding: 18px 120px 15px 120px;
+    padding: 18px 36px 15px 36px;
     margin: 0 auto;
   }
 }
@@ -55,11 +55,9 @@ body {
   text-align: center;
   padding-top: 16px;
   line-height: 32px;
-  font-size: 24px;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .header__title {
-    font-size: 50px;
     margin-bottom: 0px;
     padding-top: 0;
     line-height: 68px;
@@ -67,7 +65,6 @@ body {
 }
 @media screen and (min-width: 1278px) {
   .header__title {
-    font-size: 50px;
     margin-bottom: 0px;
     padding-top: 0;
     line-height: 68px;
@@ -82,6 +79,11 @@ body {
   justify-content: space-evenly;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .nav-list {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1278px) {
   .nav-list {
     align-items: center;
   }
@@ -102,7 +104,7 @@ body {
 }
 @media screen and (min-width: 1278px) {
   .nav-list__item {
-    padding-left: 80px;
+    padding-left: 50px;
     padding-top: 20px;
     font-size: 24px;
   }
@@ -112,7 +114,7 @@ body {
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: cover;
-  height: 25vh;
+  height: 29vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -124,7 +126,7 @@ body {
 }
 @media screen and (min-width: 1278px) {
   .hero {
-    height: 60vh;
+    height: 50vh;
   }
 }
 .hero__title {
@@ -134,9 +136,7 @@ body {
   position: absolute;
   z-index: 1;
   font-family: "Avenir";
-  font-style: bold;
   font-weight: 700;
-  font-size: 24px;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .hero__title {
@@ -148,14 +148,14 @@ body {
 @media screen and (min-width: 1278px) {
   .hero__title {
     font-size: 60px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 36px;
+    margin-right: 36px;
   }
 }
 
 .hero:before {
   content: " ";
-  height: 25vh;
+  height: 29vh;
   background-color: #323232;
   position: absolute;
   z-index: 1;
@@ -172,7 +172,7 @@ body {
 }
 @media screen and (min-width: 1278px) {
   .hero:before {
-    height: 60vh;
+    height: 50vh;
   }
 }
 
@@ -192,9 +192,21 @@ body {
 .musicians__image {
   background-size: cover;
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .musicians__image {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+@media screen and (min-width: 1278px) {
+  .musicians__image {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
 }
 .musicians__title {
   margin-bottom: 16px;
@@ -221,7 +233,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .band-quote {
-    margin: 48px 36px 36px 36px;
+    margin: 0px 72px 0px 72px;
   }
 }
 @media screen and (min-width: 1278px) {
@@ -231,44 +243,49 @@ body {
 }
 .band-quote__statement {
   font-family: "Avenir";
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
-  line-height: 26px;
-  font-size: 18px;
+  line-height: 32px;
+  font-size: 14px;
   margin-bottom: 5px;
+  margin-top: 0px;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .band-quote__statement {
-    line-height: 40px;
-    font-size: 25px;
+    line-height: 44px;
+    font-size: 30px;
     margin-bottom: 10px;
   }
 }
 @media screen and (min-width: 1278px) {
   .band-quote__statement {
+    line-height: 44px;
+    font-size: 30px;
     margin-bottom: 10px;
-    line-height: 40px;
-    font-size: 25px;
+    padding-left: 36px;
   }
 }
 .band-quote__writter {
   font-family: "Avenir";
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
   line-height: 26px;
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 0px;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .band-quote__writter {
-    line-height: 40px;
-    font-size: 20px;
+    line-height: 36px;
+    font-size: 24px;
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 1278px) {
   .band-quote__writter {
-    line-height: 40px;
-    font-size: 20px;
+    line-height: 36px;
+    font-size: 24px;
+    margin-bottom: 0px;
+    padding-left: 36px;
   }
 }
 
@@ -287,60 +304,75 @@ body {
 }
 .band-info__title {
   font-family: "Avenir";
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-size: 18px;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .band-info__title {
-    font-size: 20px;
+    font-size: 24px;
+    padding-left: 36px;
+    margin: 0;
+    padding-bottom: 36px;
+    padding-top: 48px;
   }
 }
 @media screen and (min-width: 1278px) {
   .band-info__title {
-    font-size: 20px;
+    font-size: 24px;
+    padding-left: 36px;
+    margin: 0;
+    padding-bottom: 36px;
+    padding-top: 48px;
   }
 }
 .band-info__description {
   font-family: "Avenir";
   font-weight: 400;
   font-style: normal;
-  line-height: 18px;
-  font-size: 13px;
+  line-height: 22px;
+  font-size: 14px;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .band-info__description--right {
     padding-right: 15px;
+    padding-left: 36px;
   }
 }
 @media screen and (min-width: 1278px) {
   .band-info__description--right {
     padding-right: 15px;
+    padding-left: 36px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .band-info__description--left {
     padding-left: 15px;
+    padding-right: 36px;
   }
 }
 @media screen and (min-width: 1278px) {
   .band-info__description--left {
     padding-left: 15px;
+    padding-right: 36px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .band-info__description {
-    line-height: 22px;
-    font-size: 14px;
+    line-height: 32px;
+    font-size: 18px;
     display: flex;
     justify-content: space-between;
+    margin: 0;
   }
 }
 @media screen and (min-width: 1278px) {
   .band-info__description {
-    line-height: 22px;
-    font-size: 14px;
+    line-height: 32px;
+    font-size: 18px;
     display: flex;
+    justify-content: space-between;
+    margin: 0;
   }
 }
 
@@ -355,7 +387,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 36px 18px 0px 18px;
+    margin: 0px 18px 0px 18px;
   }
 }
 @media screen and (min-width: 1278px) {
@@ -363,7 +395,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 36px 18px 0px 18px;
+    margin: 0px 18px 0px 18px;
   }
 }
 .gallery__image {
@@ -398,37 +430,48 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .gallery__title {
-    margin-left: 36px;
-    margin-top: 48px;
+    margin: 0px 36px;
+    padding-top: 48px;
+    padding-bottom: 36px;
     font-size: 36px;
-    font-family: "Avenir";
-    font-weight: 700;
   }
 }
 @media screen and (min-width: 1278px) {
   .gallery__title {
-    margin-left: 36px;
-    margin-top: 48px;
+    margin: 0px 36px;
+    padding-top: 48px;
+    padding-bottom: 36px;
     font-size: 36px;
-    font-family: "Avenir";
-    font-weight: 700;
   }
 }
 
 .footer {
   background-color: #323232;
   color: white;
-  margin-top: 8px;
+  padding-top: 8px;
   padding: 24px 16px 16px 16px;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .footer {
     padding: 48px 36px 36px 36px;
-    margin-top: 24px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 1278px) {
+  .footer {
+    padding: 48px 36px 36px 36px;
     position: relative;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 1278px) {
   .footer__wrapper {
     display: flex;
     align-items: baseline;
@@ -442,65 +485,78 @@ body {
   font-weight: 700;
   font-style: normal;
 }
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .footer__title {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 1278px) {
+  .footer__title {
+    font-size: 36px;
+  }
+}
 .footer__icons {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  max-width: 30%;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .footer__icon {
-    padding-left: 1.5rem;
+    padding-left: 1.2rem;
+    height: 1.8rem;
+  }
+}
+@media screen and (min-width: 1278px) {
+  .footer__icon {
+    padding-left: 1.2rem;
+    height: 1.8rem;
   }
 }
 
+.management {
+  font-family: "Avenir";
+  font-size: 14px;
+}
 .management__wrapper {
-  line-height: 18px;
+  line-height: 22px;
 }
 .management__name {
   margin-bottom: 0px;
-  font-family: "Avenir";
-  font-weight: 600;
+  font-weight: 700;
 }
 .management__group {
   margin-top: 0;
-  font-family: "Avenir";
-  font-weight: 600;
+  font-weight: 700;
 }
 .management__address {
   margin-top: 0;
-  font-family: "Avenir";
   font-weight: 400;
 }
 .management__location {
   margin-top: 0;
-  font-family: "Avenir";
   font-weight: 400;
 }
 .management__type {
   margin-bottom: 0;
-  font-family: "Avenir";
   font-weight: 400;
 }
 .management__street {
   margin-bottom: 0;
-  font-family: "Avenir";
   font-weight: 400;
 }
 .management__city {
   margin-top: 0;
-  font-family: "Avenir";
   font-weight: 400;
 }
 .management__email {
-  font-family: "Avenir";
   font-weight: 400;
 }
 .management__copyright {
-  font-family: "Avenir";
   font-weight: 400;
   font-size: 14px;
 }
 .management__logo {
-  font-family: "Avenir";
   font-weight: 400;
   font-size: 24px;
   padding-top: 50px;
@@ -514,9 +570,28 @@ body {
     padding-right: 36px;
     margin-bottom: 0;
     margin-top: 0px;
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 1278px) {
+  .management__logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 55px;
+    padding-right: 36px;
+    margin-bottom: 0;
+    margin-top: 0px;
+    font-size: 36px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .management__sections {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1278px) {
   .management__sections {
     display: flex;
     justify-content: space-between;
