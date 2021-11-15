@@ -100,6 +100,7 @@ body {
   font-family: "Avenir";
   font-weight: 400;
   font-style: normal;
+  position: relative;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .nav-list__item {
@@ -110,8 +111,43 @@ body {
 @media screen and (min-width: 79.875rem) {
   .nav-list__item {
     margin-right: 2.25rem;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
+}
+.nav-list__item:before {
+  content: "";
+  position: absolute;
+  height: 33.33%;
+  width: 0;
+  right: 0;
+  top: 33.33%;
+  z-index: 0;
+  transition: all 0.5s;
+}
+.nav-list__item:after {
+  content: "";
+  position: absolute;
+  height: 33.33%;
+  width: 0;
+  opacity: 30%;
+  left: 0;
+  z-index: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+.nav-list__item > a:before {
+  content: "";
+  position: absolute;
+  height: 33.33%;
+  width: 0;
+  bottom: 66.66%;
+  left: 0;
+  transition: all 0.5s;
+}
+.nav-list__item:hover:before, .nav-list__item:hover:after, .nav-list__item:hover a:before {
+  width: 100%;
+  background-color: #DA70D6;
+  opacity: 20%;
 }
 .nav-list__item:active {
   bottom: 0;
@@ -136,6 +172,8 @@ body {
   padding-bottom: 1rem;
   border-bottom: 0.2rem solid #FFFFFF;
   color: #E1E1E1;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .nav-list__item:hover {

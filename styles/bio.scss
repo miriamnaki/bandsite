@@ -84,6 +84,7 @@ body {
     font-family: "Avenir";
     font-weight: 400;
     font-style: normal;
+    position: relative;
     
     // desktop and tablet nav item
     @include mixins.tablet {
@@ -92,9 +93,49 @@ body {
     }
     @include mixins.desktop {
       margin-right: 2.25rem;
-      font-size: 24px;
-    }
-    
+      font-size: 1.5rem;
+    } 
+  }
+
+  // nav list hover  and active effects
+  &__item:before {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    right: 0;
+    top: 33.33%;
+    z-index: 0;
+    transition: all 0.5s;
+  }
+  &__item:after {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    opacity: 30%;
+    left: 0;
+    z-index: 0;
+    bottom: 0;
+    transition: all 0.5s;
+  }
+
+  &__item > a:before {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    bottom: 66.66%;
+    left: 0;
+    transition: all 0.5s; 
+  }
+
+  &__item:hover:before,
+  &__item:hover:after,
+  &__item:hover a:before {
+    width: 100%;
+    background-color: #DA70D6;
+    opacity: 20%;
   }
 
   &__item:active {  
@@ -117,6 +158,8 @@ body {
     padding-bottom: 1rem;
     border-bottom: 0.2rem solid colors.$white;
     color: colors.$mercury;
+   position: relative;
+  z-index: 1;
     @include mixins.tablet {
       padding-bottom: 2.25rem;
     }    
@@ -131,7 +174,6 @@ body {
 .nav-list:active {
   padding-bottom: 0rem;
 }
-
 
 // hero section
 .hero {
