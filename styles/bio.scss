@@ -16,6 +16,10 @@ body {
   background-color: colors.$bandsite-black;
   color: colors.$white;
 
+  &__wrapper > a {
+    text-decoration: none;
+  }
+
   &__wrapper {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -44,6 +48,7 @@ body {
     text-align: center;
     padding-top: 1rem; 
     line-height: 2rem;
+    color: colors.$white;
     
     // desktop and tablet title
     @include mixins.tablet {
