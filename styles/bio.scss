@@ -354,6 +354,7 @@ body {
   @include mixins.desktop {
     margin: 3rem 4rem 2.25rem 4rem;
   }
+
   &__title {
     font-family: "Avenir";
     font-weight: 700;
@@ -464,6 +465,7 @@ body {
     }  
   }
 
+  // Image hover effects
   &__image:hover {
     filter: none;
     cursor: pointer;
