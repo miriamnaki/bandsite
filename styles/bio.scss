@@ -163,8 +163,8 @@ body {
     padding-bottom: 1rem;
     border-bottom: 0.2rem solid colors.$white;
     color: colors.$mercury;
-   position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
     @include mixins.tablet {
       padding-bottom: 2.25rem;
     }    
