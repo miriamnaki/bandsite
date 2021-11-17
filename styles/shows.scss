@@ -1,0 +1,29 @@
+@use './partials/colors';
+@use './partials/_typography';
+@use './partials/mixins';
+@use './partials/globals';
+
+// hero section
+.hero {
+  background-image: url('../assets/images/hero-shows.jpg');
+  height: 400px;
+  background-position:center;
+  background-size: cover;
+  color: colors.$white;
+  padding: 32px 16px 32px 16px;
+  font-family: 'Avenir';
+
+  &__title {
+    margin-top: 0;
+    font-weight: 400;
+    font-style: normal;
+  }
+  &__sample-title {
+    font-size: 36px;
+    font-weight: 700px;
+  }
+  &__sample-song {
+    border-radius: 5px;
+    border: 0.5px solid rgb(32, 22, 9);
+  }
+}
