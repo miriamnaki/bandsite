@@ -394,8 +394,6 @@ body {
   margin: 0rem;
   margin-left: 1rem;
   color: #FFFFFF;
-  position: absolute;
-  z-index: 1;
   font-family: "Avenir";
   font-weight: 700;
 }

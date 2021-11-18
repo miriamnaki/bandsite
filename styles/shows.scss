@@ -6,24 +6,103 @@
 // hero section
 .hero {
   background-image: url('../assets/images/hero-shows.jpg');
-  height: 400px;
   background-position:center;
   background-size: cover;
   color: colors.$white;
   padding: 32px 16px 32px 16px;
   font-family: 'Avenir';
+  position: relative;
+  display: flex;
+  flex-direction: column;
 
   &__title {
     margin-top: 0;
     font-weight: 400;
     font-style: normal;
+    z-index: 1;
+    
   }
   &__sample-title {
     font-size: 36px;
-    font-weight: 700px;
+    font-weight: 600px;
+    z-index: 1;
+    margin-top: 0;
+    
   }
   &__sample-song {
     border-radius: 5px;
     border: 0.5px solid rgb(32, 22, 9);
+    z-index: 1;
+    
   }
 }
+
+.hero::before {
+  content: " ";
+  background-color: colors.$bandsite-black;
+  position: absolute;
+  // z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+
+  // tablet and desktop overlay
+  @include mixins.tablet {
+    height: 50vh;
+  }
+  @include mixins.desktop {
+    height: 60vh;
+  }
+}
+
+//shows section
+.shows {
+  padding: 32px 16px 32px 16px;
+  font-family: 'Avenir';
+
+  &__title {
+    font-size: 30px;
+  }
+  &__label {
+    text-transform: uppercase;
+    color: colors.$silver;
+    font-weight: 600;
+  }
+
+  &__date {
+    font-weight: 600;
+  }
+  &__venue,
+  &__location {
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  &__button-wrapper {
+    width: 100%;
+    text-align: center;
+    background-color: colors.$bandsite-black;
+    border-radius: 5px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__booking {
+    text-decoration: none;
+    color: colors.$white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  &__date-wrapper,
+  &__venue-wrapper,
+  &__location-wrapper {
+    line-height: 18px;
+    padding-bottom: 2px;
+  }  
+}
+
