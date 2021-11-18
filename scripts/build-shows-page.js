@@ -2,79 +2,79 @@
 
 // Creating elements
 
-const concerts = [
-  {
-    date: 'Monday Sept 06 2021',
-    venue: 'Ronald Lane',
-    location: 'San Francisco, CA',    
-  },
-  {
-    date: 'Monday Sept 06 2021',
-    venue: 'Ronald Lane',
-    location: 'San Francisco, CA',
+// const concerts = [
+//   {
+//     date: 'Monday Sept 06 2021',
+//     venue: 'Ronald Lane',
+//     location: 'San Francisco, CA',    
+//   },
+//   {
+//     date: 'Monday Sept 06 2021',
+//     venue: 'Ronald Lane',
+//     location: 'San Francisco, CA',
     
-  },
-  {
-    date: 'Monday Sept 06 2021',
-    venue: 'Ronald Lane',
-    location: 'San Francisco, CA',
+//   },
+//   {
+//     date: 'Monday Sept 06 2021',
+//     venue: 'Ronald Lane',
+//     location: 'San Francisco, CA',
     
-  }
-];
-const mainEl = document.querySelector('main');
+//   }
+// ];
+// const mainEl = document.querySelector('main');
 
-let sectionEl = document.createElement('section');
-mainEl.appendChild(sectionEl);
-sectionEl.classList.add('shows');
+// let sectionEl = document.createElement('section');
+// mainEl.appendChild(sectionEl);
+// sectionEl.classList.add('shows');
 
-let h1El = document.createElement('h1');
-sectionEl.appendChild(h1El);
-h1El.classList.add('shows__title');
-h1El.innerText = "Shows";
+// let h1El = document.createElement('h1');
+// sectionEl.appendChild(h1El);
+// h1El.classList.add('shows__title');
+// h1El.innerText = "Shows";
 
-let shows = document.querySelector('.shows')
+// let shows = document.querySelector('.shows')
 
 
 
-const show = document.querySelector('.shows');
-show.innerHTML += concerts.map(concert => 
-  `<div>
-  <p>date</p>
-  <p>${concert.date}</p>
-  <p>venue</p>
-  <p>${concert.venue}</p>
-  <p>location</p>
-  <p>${concert.location}</p>
-  </div>`
-).join(' ');
+// const show = document.querySelector('.shows');
+// show.innerHTML += concerts.map(concert => 
+//   `<div>
+//   <p>date</p>
+//   <p>${concert.date}</p>
+//   <p>venue</p>
+//   <p>${concert.venue}</p>
+//   <p>location</p>
+//   <p>${concert.location}</p>
+//   </div>`
+// ).join(' ');
 
- const shows = document.querySelector('.shows');
- const allDivs = shows.querySelectorAll('div');
- const btn = document.createElement('a');
- shows.appendChild(btn)
- allDivs.forEach((div)=> {
-  div.classList.add('shows__wrapper');
- });
+//  const shows = document.querySelector('.shows');
+//  const allDivs = shows.querySelectorAll('div');
+//  const btn = document.createElement('a');
+//  shows.appendChild(btn)
+//  allDivs.forEach((div)=> {
+//   div.classList.add('shows__wrapper');
+//  });
  
-const divs = document.querySelectorAll('.shows__wrapper');
+// const divs = document.querySelectorAll('.shows__wrapper');
 
 
-// console.log(divs)
-function addClass(n, newClass){
-for(let i = 0; i < divs.length; i++) {
-  let collection = divs[i].children
-  for(j =0; j< collection.length; j++){
-    let itemClass = collection[n]
-    itemClass.classList.add(newClass);
-  }
-}  
-}
-addClass(0, 'shows__label');
-addClass(1, 'shows__date');
-addClass(2, 'shows__label');
-addClass(3, 'shows__venue');
-addClass(4, 'shows__label');
-addClass(5, 'shows__location');
+// // console.log(divs)
+// function addClass(n, newClass){
+// for(let i = 0; i < divs.length; i++) {
+//   let collection = divs[i].children
+//   for(j =0; j< collection.length; j++){
+//     let itemClass = collection[n]
+//     itemClass.classList.add(newClass);
+//   }
+// }  
+// }
+// addClass(0, 'shows__label');
+// addClass(1, 'shows__date');
+// addClass(2, 'shows__label');
+// addClass(3, 'shows__venue');
+// addClass(4, 'shows__label');
+// addClass(5, 'shows__location');
 
 
 

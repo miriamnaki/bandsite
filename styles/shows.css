@@ -382,11 +382,22 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .hero {
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+    height: 100%;
+  }
+}
 .hero__title {
   margin-top: 0;
   font-weight: 400;
   font-style: normal;
   z-index: 1;
+}
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .hero__title {
+    font-size: 24px;
+  }
 }
 .hero__sample-title {
   font-size: 36px;
@@ -394,10 +405,21 @@ body {
   z-index: 1;
   margin-top: 0;
 }
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .hero__sample-title {
+    font-size: 40px;
+    max-width: 50%;
+  }
+}
 .hero__sample-song {
   border-radius: 5px;
   border: 0.5px solid #201609;
   z-index: 1;
+}
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .hero__sample-song {
+    max-width: 40%;
+  }
 }
 
 .hero::before {
@@ -410,20 +432,33 @@ body {
   right: 0;
   opacity: 0.5;
 }
-@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
-  .hero::before {
-    height: 50vh;
-  }
-}
-@media screen and (min-width: 79.875rem) {
-  .hero::before {
-    height: 60vh;
-  }
-}
-
 .shows {
   padding: 32px 16px 32px 16px;
   font-family: "Avenir";
+}
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .shows {
+    padding: 3rem 2.25rem 2.25rem;
+  }
+}
+.shows__label-wrapper {
+  display: none;
+}
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .shows__label-wrapper {
+    display: flex;
+  }
+}
+.shows__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .shows__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .shows__title {
   font-size: 30px;
@@ -432,6 +467,11 @@ body {
   text-transform: uppercase;
   color: #AFAFAF;
   font-weight: 600;
+}
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .shows__label--tablet-desktop {
+    display: none;
+  }
 }
 .shows__date {
   font-weight: 600;
@@ -448,10 +488,20 @@ body {
   padding-top: 16px;
   padding-bottom: 16px;
 }
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .shows__button-wrapper {
+    width: 25%;
+    height: 65px;
+  }
+}
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .shows__button-wrapper--top {
+    margin-top: 40px;
+  }
+}
 .shows__booking {
   text-decoration: none;
   color: #FFFFFF;
-  text-align: center;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 24px;
@@ -459,5 +509,10 @@ body {
 .shows__date-wrapper, .shows__venue-wrapper, .shows__location-wrapper {
   line-height: 18px;
   padding-bottom: 2px;
+}
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .shows__date-wrapper, .shows__venue-wrapper, .shows__location-wrapper {
+    line-height: 44px;
+  }
 }
 /*# sourceMappingURL=shows.css.map *//*# sourceMappingURL=shows.css.map */
