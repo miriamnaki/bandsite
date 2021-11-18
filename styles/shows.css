@@ -372,20 +372,52 @@ body {
 }
 
 .hero {
-  background-image: url("../assets/images/hero-shows.jpg");
-  background-position: center;
-  background-size: cover;
-  color: #FFFFFF;
-  padding: 32px 16px 32px 16px;
-  font-family: "Avenir";
   position: relative;
+  color: #FFFFFF;
+  font-family: "Avenir";
   display: flex;
   flex-direction: column;
 }
+.hero__image {
+  background-image: url("../assets/images/hero-shows.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+}
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
-  .hero {
+  .hero__image {
+    height: 32vh;
+  }
+}
+@media screen and (min-width: 79.875rem) {
+  .hero__image {
+    height: 45vh;
+  }
+}
+.hero__wrapper {
+  z-index: 1;
+  position: absolute;
+  padding: 32px 16px 32px 16px;
+  width: 100%;
+}
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .hero__wrapper {
     padding: 3rem 2.25rem 2.25rem 2.25rem;
-    height: 100%;
+  }
+}
+@media screen and (min-width: 79.875rem) {
+  .hero__wrapper {
+    top: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media screen and (min-width: 79.875rem) {
+  .hero__info-wrapper {
+    margin-right: 20px;
   }
 }
 .hero__title {
@@ -399,26 +431,55 @@ body {
     font-size: 24px;
   }
 }
+@media screen and (min-width: 79.875rem) {
+  .hero__title {
+    font-size: 24px;
+  }
+}
 .hero__sample-title {
   font-size: 36px;
   font-weight: 600px;
   z-index: 1;
   margin-top: 0;
+  max-width: 50%;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .hero__sample-title {
     font-size: 40px;
-    max-width: 50%;
+    max-width: 60%;
+  }
+}
+@media screen and (min-width: 79.875rem) {
+  .hero__sample-title {
+    font-size: 3.75rem;
+    max-width: 80%;
+    margin: 0px;
+  }
+}
+.hero__video-wrapper {
+  width: 100%;
+}
+@media screen and (min-width: 79.875rem) {
+  .hero__video-wrapper {
+    width: 60%;
+    margin-top: 40px;
   }
 }
 .hero__sample-song {
   border-radius: 5px;
   border: 0.5px solid #201609;
   z-index: 1;
+  width: 100%;
+  top: 0;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .hero__sample-song {
-    max-width: 40%;
+    max-width: 43%;
+  }
+}
+@media screen and (min-width: 79.875rem) {
+  .hero__sample-song {
+    max-width: 100%;
   }
 }
 
