@@ -16,16 +16,16 @@
     background-image: url('../assets/images/hero-shows.jpg');
     background-size: cover;
     background-position: center;
-    height: 30vh;
+    height: 50vh;
     
 
     @include mixins.tablet {
-      height: 32vh;
+      height: 60vh;
        
     }
   
     @include mixins.desktop {
-      height: 45vh;
+      height: 70vh;
       // padding: 3rem 2.25rem 2.25rem 2.25rem;
       
       // padding-left: 80px;
@@ -59,10 +59,7 @@
 
   &__info-wrapper {
     @include mixins.desktop {
-      // padding-top: 40px;
-      // padding-bottom: 40px;
       margin-right: 20px;
-      // max-width: 50%;
     }
   }
 
@@ -76,10 +73,8 @@
       font-size: 24px;
     }
     @include mixins.desktop {
-      font-size: 24px;
-      
-    }
-    
+      font-size: 24px;    
+    }   
   }
   &__sample-title {
     font-size: 36px;
@@ -95,8 +90,7 @@
       font-size: 3.75rem;
       max-width: 80%;
       margin: 0px;
-    }
-    
+    }   
   }
 
   &__video-wrapper {
@@ -151,7 +145,15 @@
   padding: 32px 16px 32px 16px;
   font-family: 'Avenir';
   @include mixins.tablet {
-    padding: 3rem 2.25rem 2.25rem ;
+    padding: 3rem 2.25rem 2.25rem;
+  }
+  @include mixins.desktop {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center; 
+    flex-wrap: wrap;  
+    align-items: baseline;
+    padding: 3rem 5rem 5rem ;
   }
 
   &__label-wrapper {
@@ -161,6 +163,9 @@
       display: flex;
      
     }
+    @include mixins.desktop {
+      display: none;    
+    }
   }
 
   &__wrapper {
@@ -169,13 +174,28 @@
     @include mixins.tablet {
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
-      
+      align-items: center;   
+    }
+    @include mixins.desktop {
+      // width: 80%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: baseline;       
     }
   }
-
   &__title {
     font-size: 30px;
+
+    @include mixins.tablet {
+      // padding: 3rem 2.25rem 2.25rem ;
+    }
+
+    @include mixins.desktop {
+      padding-right: 10%;
+      font-size: 2.25rem;
+      font-weight: 600;
+    }
   }
   &__label {
     text-transform: uppercase;
@@ -186,16 +206,28 @@
       @include mixins.tablet {
         display: none;
       }
+      @include mixins.desktop {
+        display: none;
+      }
     }
   }
 
   &__date {
     font-weight: 600;
+    @include mixins.desktop{
+      width: 200px;
+      line-height: 22px;
+    }
+    
   }
   &__venue,
   &__location {
     font-weight: 400;
     font-style: normal;
+    @include mixins.desktop {
+      width: 200px;
+      line-height: 32px;
+    }
   }
 
   &__button-wrapper {
@@ -205,27 +237,42 @@
     border-radius: 5px;
     padding-top: 16px;
     padding-bottom: 16px;
+    
 
     @include mixins.tablet {
       width: 25%;
       height: 65px;
       
     }
+    @include mixins.desktop {
+      padding-top: 10px;
+      width: 15%;
+      height: 45px;
+      
+    }
     &--top {
       @include mixins.tablet {
         margin-top: 40px;
+      }
+      @include mixins.desktop {
+        // margin-top: 200px;
       }
     }
 
   }
 
   &__booking {
+    text-align: center;    
     text-decoration: none;
     color: colors.$white;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 24px;
-    @include mixins.tablet {
+    
+    @include mixins.desktop {
+      width: 15%;
+      text-align: center;
+      font-size: 15px;
       
     }
   }
@@ -241,5 +288,17 @@
       
     }
   }  
+
+  &__container{
+    @include mixins.desktop {
+      width: 80%;
+      padding-left: 40px;
+
+    }
+    
+  }
 }
+
+
+
 
