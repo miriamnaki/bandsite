@@ -100,24 +100,28 @@
     </div>
     </article>
 
-    <section class="comments-section">
-    <h2>Join the Conversation</h2>
-    <form  class="comments">
+    <section class="comments-form">
+    <h2 class="comments-form__title">Join the Conversation</h2>
+    <form class="comments-form__main">
 
-      <div class="comments__container">
-        <img  class="comments__avatar" src="./assets/images/Mohan-muruge.jpg" alt="avatar">
-      </div>
-      <div class="comments__container">
-        <h3>Name</h3>
-        <input type="text"
-          name="commenterName"
-          placeholder="Enter your name"
-        />
+      <div class="comments-form__wrapper">
+        <div class="comments-form__container">
+          <img  class="comments-form__avatar" src="./assets/images/Mohan-muruge.jpg" alt="avatar">
+        </div>
+        <div class="comments-form__container">
+          <h3 class="comments-form__name">Name</h3>
+          <input class="comments-form__input" type="text"
+            name="commenterName"
+            placeholder="Enter your name"
+          />
+        </div>
+
       </div>
 
-      <div class="comments__container">
-        <h3>Comment</h3>
+      <div class="comments-form__container">
+        <h3 class="comments-form__comment">Comment</h3>
         <textarea 
+        class="comments-form__description"
         type="text"
         name="description" 
         id="description" 
@@ -128,23 +132,25 @@
         </textarea>
       </div>
 
-      <div class="comments__container">
-        <input type="submit"
+      <div class="comments-form__container">
+        <input class="comments-form__button" type="submit"
         value="Comment"
         >
       </div>
     </form>
+    <hr>
     </section>
-
-    <section>
-      <div>      
-        <div>
-          <div>avatar</div>
-          <p>Name</p>
-          <p>Connor Walton</p>
+    <section class="comments">
+      <div class="comments__container">      
+        <div class="comments__flex-1">
+          <div  class="comments__one">
+            <div class="comments__avatar"></div>
+            <p class="comments__name">Emily Sash</p>
+          </div>
+          <p class="comments__date">12/12/2021</p>
         </div>
-        <div>
-          <p>his is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."</p>
+        <div class="comments__flex-2">
+          <p class="comments__description">This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."</p>
         </div>
       </div>
       <hr>

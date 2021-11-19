@@ -321,13 +321,124 @@
   }
 }
 
-.comments {
+.comments-form {
+  padding: 1.5rem 1rem 1rem 1rem;
+  font-family: "Avenir";
+
   &__avatar {
   vertical-align:auto;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  
+  margin-right: 16px; 
+  }
+
+  &__title {
+  font-weight: 700;  
+  }
+  &__main{
+    // display: flex;
+  }
+
+  &__wrapper {
+    display: flex; 
+    flex-wrap: wrap;
+    align-items: flex-end; 
+    width: 100%;
+  }
+  &__name {
+    padding-bottom: 10px;
+    margin: 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: colors.$silver; 
+      
+  }
+  &__input {
+    padding:20px;
+    width: 300px;
+    overflow: hidden;
+    flex: 2;
+    border: 2px solid colors.$silver;
+    border-radius: 5px;
+    color: black;
+    margin-bottom: 3px;
+    // backdrop-filter: brightness(97%);   
+  }
+
+  &__comment {
+    
+    padding-bottom: 10px;
+    margin-top: 16;
+    margin-bottom: 0px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: colors.$silver; 
+    margin-left: 76px;
+  }
+  &__description {
+    width: 300px;
+    flex: 2;
+    border: 2px solid colors.$silver;
+    border-radius: 5px;
+    color: black;
+    margin-bottom: 3px;
+    margin-left: 76px;
+  }
+
+  &__button {
+    color: colors.$white;
+    background-color: colors.$bandsite-black;
+    margin-left: 76px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 300px;
+    padding: 16px 0px 16px 0px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid colors.$bandsite-black;
+  }
+}
+.comments {
+  font-family: "Avenir";
+  padding: 1.5rem 1rem 1rem 1rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__flex-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__one {
+    display: flex;
+    align-items: center;
+  }
+  &__avatar {
+    margin-right: 16px;
+    width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 16px;
+  background-color: colors.$mercury; 
+  }
+  &__name {
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 0;
+    
+  }
+
+  &__description {
+    margin-left: 76px;
+    margin-top: 0px;
+    line-height: 22px;
+  }
+  &__date {
+    color: colors.$silver;
+    margin-top: 0;
   }
 }
 

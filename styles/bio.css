@@ -709,10 +709,112 @@ body {
   }
 }
 
-.comments__avatar {
+.comments-form {
+  padding: 1.5rem 1rem 1rem 1rem;
+  font-family: "Avenir";
+}
+.comments-form__avatar {
   vertical-align: auto;
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  margin-right: 16px;
+}
+.comments-form__title {
+  font-weight: 700;
+}
+.comments-form__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: 100%;
+}
+.comments-form__name {
+  padding-bottom: 10px;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #AFAFAF;
+}
+.comments-form__input {
+  padding: 20px;
+  width: 300px;
+  overflow: hidden;
+  flex: 2;
+  border: 2px solid #AFAFAF;
+  border-radius: 5px;
+  color: black;
+  margin-bottom: 3px;
+}
+.comments-form__comment {
+  padding-bottom: 10px;
+  margin-top: 16;
+  margin-bottom: 0px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #AFAFAF;
+  margin-left: 76px;
+}
+.comments-form__description {
+  width: 300px;
+  flex: 2;
+  border: 2px solid #AFAFAF;
+  border-radius: 5px;
+  color: black;
+  margin-bottom: 3px;
+  margin-left: 76px;
+}
+.comments-form__button {
+  color: #FFFFFF;
+  background-color: #323232;
+  margin-left: 76px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 300px;
+  padding: 16px 0px 16px 0px;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #323232;
+}
+
+.comments {
+  font-family: "Avenir";
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+.comments__container {
+  display: flex;
+  flex-direction: column;
+}
+.comments__flex-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.comments__one {
+  display: flex;
+  align-items: center;
+}
+.comments__avatar {
+  margin-right: 16px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 16px;
+  background-color: #E1E1E1;
+}
+.comments__name {
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 0;
+}
+.comments__description {
+  margin-left: 76px;
+  margin-top: 0px;
+  line-height: 22px;
+}
+.comments__date {
+  color: #AFAFAF;
+  margin-top: 0;
 }
 /*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */
