@@ -19,4 +19,29 @@ const comments = [
     comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
 
   }
-]
+];
+
+// const sectionEl = document.querySelector('.comments-section');
+// const defaultComments = document.createElement('div');
+// defaultComments.classList.add('comments__default');
+// sectionEl.appendChild(defaultComments);
+
+// for(let i = 0; i < comments.length; i++) {
+//   let p = document.createElement('p');
+//   let aComment = comments[i].name;
+//   p.innerText = aComment
+//   console.log(aComment)
+//   defaultComments.append(p);
+// }
+// comments.forEach(el => defaultComments.append(el)) 
+// console.log(el)
+
+
+
+const form = document.querySelector(".comments");
+
+form.addEventListener('submit', handleSubmitForm);
+
+function handleSubmitForm(e) {
+  e.preventDefault();
+}
