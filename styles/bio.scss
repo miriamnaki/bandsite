@@ -324,6 +324,24 @@
 .comments-form {
   padding: 1.5rem 1rem 1rem 1rem;
   font-family: "Avenir";
+  @include mixins.tablet {
+    margin: 0rem 2.25rem;
+    padding: 0;
+  }
+
+  // &__description::placeholder { 
+  //   opacity:1;
+  // }
+
+  &__main {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    // justify-content: center;
+    @include mixins.tablet {
+      justify-content: center;
+    }
+  }
 
   &__avatar {
   vertical-align:auto;
@@ -331,20 +349,22 @@
   height: 60px;
   border-radius: 50%;
   margin-right: 16px; 
+  margin-top: 30px;
   }
 
   &__title {
-  font-weight: 700;  
+  font-weight: 700; 
+  
+  @include mixins.tablet {
+    font-size: 2.25rem;
   }
-  &__main{
-    // display: flex;
   }
 
-  &__wrapper {
-    display: flex; 
-    flex-wrap: wrap;
-    align-items: flex-end; 
+  &__wrapper { 
     width: 100%;
+    @include mixins.tablet {
+      width: 70%;
+    }
   }
   &__name {
     padding-bottom: 10px;
@@ -356,62 +376,93 @@
   }
   &__input {
     padding:20px;
-    width: 300px;
+    width: 100%;
     overflow: hidden;
     flex: 2;
     border: 2px solid colors.$silver;
     border-radius: 5px;
-    color: black;
-    margin-bottom: 3px;
-    // backdrop-filter: brightness(97%);   
+    color: black;  
   }
 
-  &__comment {
-    
+  &__comment { 
     padding-bottom: 10px;
     margin-top: 16;
     margin-bottom: 0px;
     font-weight: 400;
     text-transform: uppercase;
     color: colors.$silver; 
-    margin-left: 76px;
   }
   &__description {
-    width: 300px;
+    width: 100%;
     flex: 2;
     border: 2px solid colors.$silver;
     border-radius: 5px;
     color: black;
     margin-bottom: 3px;
-    margin-left: 76px;
+    &::placeholder { 
+      opacity:1;
+    }
   }
 
   &__button {
     color: colors.$white;
     background-color: colors.$bandsite-black;
-    margin-left: 76px;
     margin-top: 16px;
     margin-bottom: 16px;
-    width: 300px;
+    width: 100%;
     padding: 16px 0px 16px 0px;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 13px;
     border-radius: 5px;
     border: 1px solid colors.$bandsite-black;
+    font-size: 20px;
+    @include mixins.tablet {
+      width: 30%;
+      float: right;
+      padding: 10px 0px 10px 0px;
+    }
   }
 }
 .comments {
   font-family: "Avenir";
-  padding: 1.5rem 1rem 1rem 1rem;
+  padding: 0rem 1rem 1rem 1rem;
+
+  @include mixins.tablet {
+  //   display: flex;
+  //  align-items: center;
+  }
+
+  @include mixins.tablet {
+    // padding: 1.5rem 1rem 1rem 1rem;
+    margin: 0rem 2.25rem;
+  }
   &__container {
     display: flex;
     flex-direction: column;
+
+    @include mixins.tablet {
+      // align-items: center;
+      // max-width: 70% 
+    }
   }
   &__flex-1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mixins.tablet {
+    //  justify-content: center;
+    padding-left: 8.5%;
+    padding-right: 8.5%;
+    }
   }
+
+  // &__flex-2 {
+  //   @include mixins.tablet {
+  //     display: flex;
+  //     justify-content: center;
+  //   }
+  // }
   &__one {
     display: flex;
     align-items: center;
@@ -419,15 +470,15 @@
   &__avatar {
     margin-right: 16px;
     width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-right: 16px;
-  background-color: colors.$mercury; 
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 16px;
+    background-color: colors.$mercury;
   }
   &__name {
     font-weight: 600;
     font-size: 20px;
-    margin-top: 0;
+    margin: 0;
     
   }
 
@@ -435,10 +486,15 @@
     margin-left: 76px;
     margin-top: 0px;
     line-height: 22px;
+
+    @include mixins.tablet {
+      padding-left: 8%;
+      padding-right: 8%;
+    }
   }
   &__date {
     color: colors.$silver;
-    margin-top: 0;
+    margin: 0;
   }
 }
 
