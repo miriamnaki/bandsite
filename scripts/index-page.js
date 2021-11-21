@@ -34,80 +34,133 @@ const mainEl = document.querySelector('main');
 const sectionEl = document.createElement('section');
 sectionEl.classList.add('comments');
 mainEl.appendChild(sectionEl);
-console.log(sectionEl);
+// console.log(sectionEl);
 
-comments.forEach((comment) => {
+function displayComment(){
+   comments.forEach((comment) => {
+    const container = document.createElement('div');
+    container.classList.add('comments__container');
+    sectionEl.appendChild(container);
+    // console.log(mainEl);
+    
+    const flexOne = document.createElement('div');
+    flexOne.classList.add('comments__flex-1');
+    container.appendChild(flexOne)
+    // console.log(container);
+    
+    const commentOne = document.createElement('div');
+    commentOne.classList.add('comments__one');
+    flexOne.appendChild(commentOne);
+    
+    const avatar = document.createElement('img');
+    avatar.classList.add('comments__avatar');
+    avatar.src = '/assets/images/' + comment.avatar.url;
+    avatar.alt =  comment.avatar.alt;
+    // console.log(avatar.alt)
+    commentOne.appendChild(avatar);
+    
+    const commentName = document.createElement('p');
+    commentName.classList.add('comments__name');
+    commentName.innerHTML = comment.name
+    commentOne.appendChild(commentName);
+    // console.log(container);
+    
+    const date = document.createElement('p');
+    date.classList.add('comments__date');
+    date.innerHTML = comment.date
+    flexOne.appendChild(date);
+    
+    const flexTwo = document.createElement('div');
+    flexTwo.classList.add('comments__flex-2');
+    container.appendChild(flexTwo);
+    
+    const description = document.createElement('p');
+    description.classList.add('comments__description');
+    description.innerHTML = comment.comment;
+    flexTwo.appendChild(description);
+    
+    const divider = document.createElement('hr');
+    divider.classList.add('comments__divider');
+    sectionEl.appendChild(divider);
+    });
+}
 
-const container = document.createElement('div');
-container.classList.add('comments__container');
-sectionEl.appendChild(container);
-console.log(mainEl);
+displayComment()
 
-const flexOne = document.createElement('div');
-flexOne.classList.add('comments__flex-1');
-container.appendChild(flexOne)
-console.log(container);
+function addComment(name, comment){ 
+  let obj = {}
+  
+    const container = document.createElement('div');
+    container.classList.add('comments__container');
+    sectionEl.appendChild(container);
+    // console.log(mainEl);
+    
+    const flexOne = document.createElement('div');
+    flexOne.classList.add('comments__flex-1');
+    container.appendChild(flexOne)
+    // console.log(container);
+    
+    const commentOne = document.createElement('div');
+    commentOne.classList.add('comments__one');
+    flexOne.appendChild(commentOne);
+    
+    const avatar = document.createElement('img');
+    avatar.classList.add('comments__avatar');
+    let url = '/assets/images/Mohan-muruge.jpg';
+    let alt = 'Mohan'
+    obj.avatar = {}
+    avatar.src = obj.avatar.url = url;
+    avatar.alt = obj.avatar.alt = alt;
+    
+    commentOne.appendChild(avatar);
+    
+    const commentName = document.createElement('p');
+    commentName.classList.add('comments__name');
+    commentName.innerHTML = name
+    commentOne.appendChild(commentName);
+    // console.log(container);
+    obj.name = name
+    
+    const date = document.createElement('p');
+    date.classList.add('comments__date');
+    let today  = new Date();
+    let currentDate = today.toLocaleDateString();
+    date.innerHTML = currentDate;
+    flexOne.appendChild(date);
+    obj.date = currentDate;
+    
+    const flexTwo = document.createElement('div');
+    flexTwo.classList.add('comments__flex-2');
+    container.appendChild(flexTwo);
+    
+    const description = document.createElement('p');
+    description.classList.add('comments__description');
+    description.innerHTML = comment;
+    flexTwo.appendChild(description);
+    obj.comment = comment
+    
+    const divider = document.createElement('hr');
+    divider.classList.add('comments__divider');
+    sectionEl.appendChild(divider);
+    // console.log(obj)
+  return obj
+}
 
-const commentOne = document.createElement('div');
-commentOne.classList.add('comments__one');
-flexOne.appendChild(commentOne);
+const form = document.querySelector('.comments-form__main');
+form.addEventListener('submit', handleSubmitForm);
 
-const avatar = document.createElement('img');
-avatar.classList.add('comments__avatar');
-avatar.src = '/assets/images/' + comment.avatar.url;
-avatar.alt =  comment.avatar.alt;
-console.log(avatar.alt)
-commentOne.appendChild(avatar);
-
-const commentName = document.createElement('p');
-commentName.classList.add('comments__name');
-commentName.innerHTML = comment.name
-commentOne.appendChild(commentName);
-console.log(container);
-
-const date = document.createElement('p');
-date.classList.add('comments__date');
-date.innerHTML = comment.date
-flexOne.appendChild(date);
-
-const flexTwo = document.createElement('div');
-flexTwo.classList.add('comments__flex-2');
-container.appendChild(flexTwo);
-
-const description = document.createElement('p');
-description.classList.add('comments__description');
-description.innerHTML = comment.comment;
-flexTwo.appendChild(description);
-
-const divider = document.createElement('hr');
-divider.classList.add('comments__divider');
-sectionEl.appendChild(divider);
-})
+function handleSubmitForm(e) {
+  e.preventDefault();
+  const commentName = e.target.commenterName.value;
+  const description = e.target.description.value;
+  let newComment = addComment(commentName, description);
+  comments.push(newComment)
+   
+  // console.log(comments)
+ }
+  
 
 
 
 
 
-// const defaultComments = document.createElement('div');
-// defaultComments.classList.add('comments__default');
-// sectionEl.appendChild(defaultComments);
-
-// for(let i = 0; i < comments.length; i++) {
-//   let p = document.createElement('p');
-//   let aComment = comments[i].name;
-//   p.innerText = aComment
-//   console.log(aComment)
-//   defaultComments.append(p);
-// }
-// comments.forEach(el => defaultComments.append(el)) 
-// console.log(el)
-
-
-
-// const form = document.querySelector(".comments");
-
-// form.addEventListener('submit', handleSubmitForm);
-
-// function handleSubmitForm(e) {
-//   e.preventDefault();
-// }
