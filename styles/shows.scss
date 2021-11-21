@@ -5,45 +5,21 @@
 
 // hero section
 .hero {
-  position: relative;
   color: colors.$white;
   font-family: 'Avenir';
   display: flex;
   flex-direction: column;
-  @include mixins.desktop {
-  }
-  &__image {
+
+  &__wrapper {
+    // z-index: 1;
+    position: relative;
     background-image: url('../assets/images/hero-shows.jpg');
     background-size: cover;
     background-position: center;
-    height: 50vh;
-    
-
-    @include mixins.tablet {
-      height: 60vh;
-       
-    }
-  
-    @include mixins.desktop {
-      height: 70vh;
-      // padding: 3rem 2.25rem 2.25rem 2.25rem;
-      
-      // padding-left: 80px;
-      // padding-right: 80px;
-      
-    }
-  }
-
-  &__wrapper {
-    z-index: 1;
-    position: absolute;
     padding: 32px 16px 32px 16px;
-    width: 100%;
     
     @include mixins.tablet{
-      // display: flex;
-      padding: 3rem 2.25rem 2.25rem 2.25rem;
-      
+      padding: 3rem 2.25rem 2.25rem 2.25rem;    
     }
     @include mixins.desktop{
       top: 150px;
@@ -52,8 +28,25 @@
       align-items: center;
       padding-left: 5rem;
       padding-right: 5rem;
-      // justify-content: space-between;
-
+    }
+  }
+  &__wrapper::before {
+    content: " ";
+    background-color: colors.$bandsite-black;
+    // position: absolute;
+    // z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+  
+    // tablet and desktop overlay
+    @include mixins.tablet {
+      // height: 50vh;
+    }
+    @include mixins.desktop {
+      // height: 60vh;
     }
   }
 
@@ -64,10 +57,10 @@
   }
 
   &__title {
+    z-index: 3;
     margin-top: 0;
     font-weight: 400;
     font-style: normal;
-    z-index: 1;
   
     @include mixins.tablet {
       font-size: 24px;
@@ -77,9 +70,9 @@
     }   
   }
   &__sample-title {
+    z-index: 3;
     font-size: 36px;
     font-weight: 600px;
-    z-index: 1;
     margin-top: 0;
     max-width: 50%;
     @include mixins.tablet {
@@ -94,51 +87,19 @@
   }
 
   &__video-wrapper {
-    width: 100%;
+    width: 60%;
+    height: 150px;
+    z-index: 3;
 
     @include mixins.desktop {
       width: 60%;
       margin-top: 40px;
     }
   }
-  &__sample-song {
-    border-radius: 5px;
-    border: 0.5px solid rgb(32, 22, 9);
-    z-index: 1;
-    width: 100%;
-    top: 0;
-
-    @include mixins.tablet {
-      max-width: 43%;
-    }
-    @include mixins.desktop {
-      max-width: 100%;
-      
-      
-    }
-    
-  }
-}
-
-.hero::before {
-  content: " ";
-  background-color: colors.$bandsite-black;
-  position: absolute;
   
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.5;
-
-  // tablet and desktop overlay
-  @include mixins.tablet {
-    // height: 50vh;
-  }
-  @include mixins.desktop {
-    // height: 60vh;
-  }
 }
+
+
 
 //shows section
 .shows {
@@ -235,8 +196,10 @@
     text-align: center;
     background-color: colors.$bandsite-black;
     border-radius: 5px;
-    padding-top: 16px;
+    padding-top: 24px;
     padding-bottom: 16px;
+    margin-top: 24px;
+    margin-bottom: 16px;
     
     @include mixins.tablet {
       width: 25%;
@@ -296,6 +259,13 @@
     }
     
   }
+}
+hr {
+padding: 0;
+margin: 0;
+width: 100%;
+height: 1px;
+color: colors.$mercury;
 }
 
 

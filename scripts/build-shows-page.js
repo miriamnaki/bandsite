@@ -143,8 +143,12 @@ concerts.forEach((concert, index)=> {
   container.appendChild(hr)
 
 
-})
+});
 
+// const playbutton = document.querySelector('.mobilePrestitial__wrapper')
+// console.log(playbutton)
+// playbutton.classList.remove('sc-button-large')
+// console.log(playbutton)
 // let sectionEl = document.createElement('section');
 // mainEl.appendChild(sectionEl);
 // sectionEl.classList.add('shows');
