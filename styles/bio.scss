@@ -329,15 +329,10 @@
     padding: 0;
   }
 
-  // &__description::placeholder { 
-  //   opacity:1;
-  // }
-
   &__main {
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
-    // justify-content: center;
     @include mixins.tablet {
       justify-content: center;
     }
@@ -372,6 +367,7 @@
     font-weight: 400;
     text-transform: uppercase;
     color: colors.$silver; 
+    
       
   }
   &__input {
@@ -379,9 +375,22 @@
     width: 100%;
     overflow: hidden;
     flex: 2;
-    border: 2px solid colors.$silver;
     border-radius: 5px;
-    color: black;  
+    border: 2px solid colors.$silver;
+    background-color: colors.$mercury;
+    opacity: 0.3;
+
+    &::placeholder {
+      font-size: 20px;
+      opacity: 1;
+      z-index: 1;
+      
+     }
+    
+  }
+
+  &__input:focus {
+    outline: 2px solid colors.$bandsite-black;
   }
 
   &__comment { 
@@ -397,11 +406,18 @@
     flex: 2;
     border: 2px solid colors.$silver;
     border-radius: 5px;
+    opacity: 0.3;
+    background-color: colors.$mercury;
     color: black;
     margin-bottom: 3px;
     &::placeholder { 
       opacity:1;
+      font-size: 20px;
+      padding: 10px
     }
+  }
+  &__description:focus {
+    outline: 2px solid colors.$bandsite-black;
   }
 
   &__button {
@@ -428,22 +444,11 @@
   padding: 0rem 1rem 1rem 1rem;
 
   @include mixins.tablet {
-  //   display: flex;
-  //  align-items: center;
-  }
-
-  @include mixins.tablet {
-    // padding: 1.5rem 1rem 1rem 1rem;
     margin: 0rem 2.25rem;
   }
   &__container {
     display: flex;
     flex-direction: column;
-
-    @include mixins.tablet {
-      // align-items: center;
-      // max-width: 70% 
-    }
   }
   &__flex-1 {
     display: flex;
@@ -451,22 +456,16 @@
     justify-content: space-between;
 
     @include mixins.tablet {
-    //  justify-content: center;
     padding-left: 8.5%;
     padding-right: 8.5%;
     }
   }
 
-  // &__flex-2 {
-  //   @include mixins.tablet {
-  //     display: flex;
-  //     justify-content: center;
-  //   }
-  // }
   &__one {
     display: flex;
     align-items: center;
   }
+
   &__avatar {
     vertical-align:auto;
   width: 60px;
@@ -479,8 +478,7 @@
   &__name {
     font-weight: 600;
     font-size: 20px;
-    margin: 0;
-    
+    margin: 0;   
   }
 
   &__description {

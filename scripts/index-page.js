@@ -1,3 +1,4 @@
+// comments array
 const comments = [
   {
     avatar: {
@@ -14,7 +15,7 @@ const comments = [
       url: "Mohan-muruge.jpg",
       alt: "mohan"
     },
-    name: "Connor Walton",
+    name: "Emilie Beach",
     date: "01/09/2021",
     comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
   },
@@ -30,12 +31,15 @@ const comments = [
   }
 ];
 
+// main section
 const mainEl = document.querySelector('main');
 const sectionEl = document.createElement('section');
 sectionEl.classList.add('comments');
 mainEl.appendChild(sectionEl);
 // console.log(sectionEl);
 
+
+// function to display comments
 function displayComment(){
    comments.forEach((comment) => {
     const container = document.createElement('div');
@@ -43,42 +47,50 @@ function displayComment(){
     sectionEl.appendChild(container);
     // console.log(mainEl);
     
+    // Flex one container
     const flexOne = document.createElement('div');
     flexOne.classList.add('comments__flex-1');
     container.appendChild(flexOne)
     // console.log(container);
     
+    // comments Wrapper
     const commentOne = document.createElement('div');
     commentOne.classList.add('comments__one');
     flexOne.appendChild(commentOne);
     
+    // avatar
     const avatar = document.createElement('img');
     avatar.classList.add('comments__avatar');
     avatar.src = '/assets/images/' + comment.avatar.url;
     avatar.alt =  comment.avatar.alt;
-    // console.log(avatar.alt)
     commentOne.appendChild(avatar);
     
+    // commenter name
     const commentName = document.createElement('p');
     commentName.classList.add('comments__name');
     commentName.innerHTML = comment.name
     commentOne.appendChild(commentName);
     // console.log(container);
     
+    
+    // date
     const date = document.createElement('p');
     date.classList.add('comments__date');
     date.innerHTML = comment.date
     flexOne.appendChild(date);
     
+    // Flex two wrapper
     const flexTwo = document.createElement('div');
     flexTwo.classList.add('comments__flex-2');
     container.appendChild(flexTwo);
     
+    // description
     const description = document.createElement('p');
     description.classList.add('comments__description');
     description.innerHTML = comment.comment;
     flexTwo.appendChild(description);
     
+    // divider
     const divider = document.createElement('hr');
     divider.classList.add('comments__divider');
     sectionEl.appendChild(divider);
@@ -87,9 +99,9 @@ function displayComment(){
 
 displayComment()
 
+// function to add a comment
 function addComment(name, comment){ 
-  let obj = {}
-  
+  let obj = {} 
     const container = document.createElement('div');
     container.classList.add('comments__container');
     sectionEl.appendChild(container);
@@ -146,17 +158,18 @@ function addComment(name, comment){
   return obj
 }
 
+// adding event ot the form
 const form = document.querySelector('.comments-form__main');
 form.addEventListener('submit', handleSubmitForm);
 
+// handling submit
 function handleSubmitForm(e) {
   e.preventDefault();
   const commentName = e.target.commenterName.value;
   const description = e.target.description.value;
+  e.target.reset()
   let newComment = addComment(commentName, description);
-  comments.push(newComment)
-   
-  // console.log(comments)
+  comments.unshift(newComment) 
  }
   
 

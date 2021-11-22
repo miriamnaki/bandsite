@@ -765,9 +765,28 @@ body {
   width: 100%;
   overflow: hidden;
   flex: 2;
-  border: 2px solid #AFAFAF;
   border-radius: 5px;
-  color: black;
+  border: 2px solid #AFAFAF;
+  background-color: #E1E1E1;
+  opacity: 0.3;
+}
+.comments-form__input::-moz-placeholder {
+  font-size: 20px;
+  opacity: 1;
+  z-index: 1;
+}
+.comments-form__input:-ms-input-placeholder {
+  font-size: 20px;
+  opacity: 1;
+  z-index: 1;
+}
+.comments-form__input::placeholder {
+  font-size: 20px;
+  opacity: 1;
+  z-index: 1;
+}
+.comments-form__input:focus {
+  outline: 2px solid #323232;
 }
 .comments-form__comment {
   padding-bottom: 10px;
@@ -782,17 +801,28 @@ body {
   flex: 2;
   border: 2px solid #AFAFAF;
   border-radius: 5px;
+  opacity: 0.3;
+  background-color: #E1E1E1;
   color: black;
   margin-bottom: 3px;
 }
 .comments-form__description::-moz-placeholder {
   opacity: 1;
+  font-size: 20px;
+  padding: 10px;
 }
 .comments-form__description:-ms-input-placeholder {
   opacity: 1;
+  font-size: 20px;
+  padding: 10px;
 }
 .comments-form__description::placeholder {
   opacity: 1;
+  font-size: 20px;
+  padding: 10px;
+}
+.comments-form__description:focus {
+  outline: 2px solid #323232;
 }
 .comments-form__button {
   color: #FFFFFF;
