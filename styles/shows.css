@@ -518,6 +518,12 @@ hr {
     align-items: baseline;
   }
 }
+.shows__wrapper:hover {
+  background-color: #FAFAFA;
+}
+.shows__wrapper:active {
+  background-color: #E1E1E1;
+}
 .shows__title {
   font-size: 1.875rem;
 }

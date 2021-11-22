@@ -129,6 +129,13 @@
       align-items: baseline;       
     }
   }
+
+  &__wrapper:hover{
+    background-color: colors.$alabaster;
+  }
+  &__wrapper:active{
+    background-color: colors.$mercury;
+  }
   &__title {
     font-size: 1.875rem;
 
