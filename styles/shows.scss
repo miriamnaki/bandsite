@@ -16,6 +16,7 @@
     background-position: center;
     padding: 2rem 1rem 2rem 1rem;
     
+    //tablet and desktop
     @include mixins.tablet{
       padding: 3rem 2.25rem 2.25rem 2.25rem;    
     }
