@@ -737,6 +737,16 @@ body {
   margin-right: 16px;
   margin-top: 30px;
 }
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .comments-form__avatar {
+    vertical-align: auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+}
 .comments-form__title {
   font-weight: 700;
 }
@@ -881,6 +891,16 @@ body {
   margin-right: 16px;
   margin-top: 30px;
 }
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .comments__avatar {
+    vertical-align: auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+}
 .comments__name {
   font-weight: 600;
   font-size: 20px;
@@ -893,7 +913,7 @@ body {
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments__description {
-    padding-left: 8%;
+    padding-left: 12%;
     padding-right: 8%;
   }
 }

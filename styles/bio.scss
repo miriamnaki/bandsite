@@ -345,6 +345,15 @@
   border-radius: 50%;
   margin-right: 16px; 
   margin-top: 30px;
+
+  @include mixins.tablet {
+    vertical-align:auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px; 
+    margin-top: 30px;
+  }
   }
 
   &__title {
@@ -467,12 +476,21 @@
   }
 
   &__avatar {
-    vertical-align:auto;
+  vertical-align:auto;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   margin-right: 16px; 
   margin-top: 30px;
+
+  @include mixins.tablet {
+  vertical-align:auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px; 
+  margin-top: 30px;
+  }
   
   }
   &__name {
@@ -487,7 +505,7 @@
     line-height: 22px;
 
     @include mixins.tablet {
-      padding-left: 8%;
+      padding-left: 12%;
       padding-right: 8%;
     }
   }
