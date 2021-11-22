@@ -484,6 +484,12 @@
   &__container {
     display: flex;
     flex-direction: column;
+
+    @include mixins.desktop {
+      padding-left: 22%;
+      justify-content: center;
+      width: 80%;
+    }
   }
   &__flex-1 {
     display: flex;
@@ -518,6 +524,15 @@
   margin-top: 30px;
   }
   
+  @include mixins.desktop {
+  vertical-align:auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px; 
+  margin-top: 30px;
+  }
+  
   }
   &__name {
     font-weight: 600;
@@ -533,6 +548,10 @@
     @include mixins.tablet {
       padding-left: 12%;
       padding-right: 8%;
+    }
+    @include mixins.desktop {
+      padding-left: 20px;
+      // padding-right: 24px;
     }
   }
   &__date {

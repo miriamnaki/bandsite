@@ -903,6 +903,13 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 79.875rem) {
+  .comments__container {
+    padding-left: 22%;
+    justify-content: center;
+    width: 80%;
+  }
+}
 .comments__flex-1 {
   display: flex;
   align-items: center;
@@ -936,6 +943,16 @@ body {
     margin-top: 30px;
   }
 }
+@media screen and (min-width: 79.875rem) {
+  .comments__avatar {
+    vertical-align: auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+}
 .comments__name {
   font-weight: 600;
   font-size: 20px;
@@ -950,6 +967,11 @@ body {
   .comments__description {
     padding-left: 12%;
     padding-right: 8%;
+  }
+}
+@media screen and (min-width: 79.875rem) {
+  .comments__description {
+    padding-left: 20px;
   }
 }
 .comments__date {
