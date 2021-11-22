@@ -632,7 +632,7 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .band-info__description {
-    line-height: 32px;
+    line-height: 2rem;
     font-size: 1.125rem;
     display: flex;
     justify-content: space-between;
@@ -745,30 +745,30 @@ hr {
 }
 .comments-form__avatar {
   vertical-align: auto;
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   border-radius: 50%;
-  margin-right: 16px;
-  margin-top: 30px;
+  margin-right: 1rem;
+  margin-top: 1.875rem;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments-form__avatar {
     vertical-align: auto;
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
-    margin-right: 20px;
-    margin-top: 30px;
+    margin-right: 1.25rem;
+    margin-top: 1.875rem;
   }
 }
 @media screen and (min-width: 79.875rem) {
   .comments-form__avatar {
     vertical-align: auto;
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
-    margin-right: 20px;
-    margin-top: 30px;
+    margin-right: 1.25rem;
+    margin-top: 1.875rem;
   }
 }
 .comments-form__title {
@@ -793,44 +793,44 @@ hr {
   }
 }
 .comments-form__name {
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
   margin: 0;
   font-weight: 400;
   text-transform: uppercase;
   color: #AFAFAF;
 }
 .comments-form__input {
-  padding: 20px;
+  padding: 1.25rem;
   width: 100%;
   overflow: hidden;
   flex: 2;
-  border-radius: 5px;
-  border: 2px solid #AFAFAF;
+  border-radius: 0.3125rem;
+  border: 0.125rem solid #AFAFAF;
   background-color: #E1E1E1;
   opacity: 0.3;
 }
 .comments-form__input::-moz-placeholder {
-  font-size: 20px;
+  font-size: 1.25rem;
   opacity: 1;
   z-index: 1;
 }
 .comments-form__input:-ms-input-placeholder {
-  font-size: 20px;
+  font-size: 1.25rem;
   opacity: 1;
   z-index: 1;
 }
 .comments-form__input::placeholder {
-  font-size: 20px;
+  font-size: 1.25rem;
   opacity: 1;
   z-index: 1;
 }
 .comments-form__input:focus {
-  outline: 2px solid #323232;
+  outline: 0.125rem solid #323232;
 }
 .comments-form__comment {
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
   margin-top: 16;
-  margin-bottom: 0px;
+  margin-bottom: 0rem;
   font-weight: 400;
   text-transform: uppercase;
   color: #AFAFAF;
@@ -838,63 +838,63 @@ hr {
 .comments-form__description {
   width: 100%;
   flex: 2;
-  border: 2px solid #AFAFAF;
-  border-radius: 5px;
+  border: 0.125rem solid #AFAFAF;
+  border-radius: 0.3125rem;
   opacity: 0.3;
   background-color: #E1E1E1;
   color: black;
-  margin-bottom: 3px;
+  margin-bottom: 0.1875rem;
 }
 .comments-form__description::-moz-placeholder {
   opacity: 1;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 1.25rem;
+  padding: 0.625rem;
 }
 .comments-form__description:-ms-input-placeholder {
   opacity: 1;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 1.25rem;
+  padding: 0.625rem;
 }
 .comments-form__description::placeholder {
   opacity: 1;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 1.25rem;
+  padding: 0.625rem;
 }
 .comments-form__description:focus {
-  outline: 2px solid #323232;
+  outline: 0.125rem solid #323232;
 }
 .comments-form__button {
   color: #FFFFFF;
   background-color: #323232;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   width: 100%;
-  padding: 16px 0px 16px 0px;
+  padding: 1rem 0rem 1rem 0rem;
   text-transform: uppercase;
-  font-size: 13px;
-  border-radius: 5px;
-  border: 1px solid #323232;
-  font-size: 20px;
+  font-size: 0.8125rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #323232;
+  font-size: 1.25rem;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments-form__button {
     width: 30%;
     float: right;
-    padding: 10px 0px 10px 0px;
+    padding: 0.625rem 0rem 0.625rem 0rem;
   }
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments-form__button {
     width: 30%;
     float: right;
-    padding: 10px 0px 10px 0px;
+    padding: 0.625rem 0rem 0.625rem 0rem;
   }
 }
 @media screen and (min-width: 79.875rem) {
   .comments-form__button {
     width: 30%;
     float: right;
-    padding: 10px 0px 10px 0px;
+    padding: 0.625rem 0rem 0.625rem 0rem;
   }
 }
 
@@ -935,41 +935,41 @@ hr {
 }
 .comments__avatar {
   vertical-align: auto;
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   border-radius: 50%;
-  margin-right: 16px;
-  margin-top: 30px;
+  margin-right: 1rem;
+  margin-top: 1.875rem;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments__avatar {
     vertical-align: auto;
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
-    margin-right: 20px;
-    margin-top: 30px;
+    margin-right: 1.25rem;
+    margin-top: 1.875rem;
   }
 }
 @media screen and (min-width: 79.875rem) {
   .comments__avatar {
     vertical-align: auto;
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
-    margin-right: 20px;
-    margin-top: 30px;
+    margin-right: 1.25rem;
+    margin-top: 1.875rem;
   }
 }
 .comments__name {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 0;
 }
 .comments__description {
-  margin-left: 76px;
-  margin-top: 0px;
-  line-height: 22px;
+  margin-left: 4.75rem;
+  margin-top: 0rem;
+  line-height: 1.375rem;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments__description {
@@ -979,7 +979,7 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .comments__description {
-    padding-left: 20px;
+    padding-left: 1.25rem;
   }
 }
 .comments__date {

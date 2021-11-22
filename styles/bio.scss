@@ -240,7 +240,7 @@
     margin: 0;
     }
     @include mixins.desktop {
-    line-height: 32px;
+    line-height: 2rem;
     font-size: 1.125rem;  
     @include mixins.flex(space-between); 
     margin: 0;
@@ -345,27 +345,27 @@
 
   &__avatar {
   vertical-align:auto;
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   border-radius: 50%;
-  margin-right: 16px; 
-  margin-top: 30px;
+  margin-right: 1rem; 
+  margin-top: 1.875rem;
 
   @include mixins.tablet {
     vertical-align:auto;
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
-    margin-right: 20px; 
-    margin-top: 30px;
+    margin-right: 1.25rem; 
+    margin-top: 1.875rem;
   }
   @include mixins.desktop {
     vertical-align:auto;
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
-    margin-right: 20px; 
-    margin-top: 30px;
+    margin-right: 1.25rem; 
+    margin-top: 1.875rem;
   }
   }
 
@@ -387,41 +387,38 @@
     }
   }
   &__name {
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
     margin: 0;
     font-weight: 400;
     text-transform: uppercase;
     color: colors.$silver; 
-    
-      
+       
   }
   &__input {
-    padding:20px;
+    padding:1.25rem;
     width: 100%;
     overflow: hidden;
     flex: 2;
-    border-radius: 5px;
-    border: 2px solid colors.$silver;
+    border-radius: 0.3125rem;
+    border: 0.125rem solid colors.$silver;
     background-color: colors.$mercury;
     opacity: 0.3;
 
     &::placeholder {
-      font-size: 20px;
+      font-size: 1.25rem;
       opacity: 1;
-      z-index: 1;
-      
-     }
-    
+      z-index: 1;    
+     }   
   }
 
   &__input:focus {
-    outline: 2px solid colors.$bandsite-black;
+    outline: 0.125rem solid colors.$bandsite-black;
   }
 
   &__comment { 
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
     margin-top: 16;
-    margin-bottom: 0px;
+    margin-bottom: 0rem;
     font-weight: 400;
     text-transform: uppercase;
     color: colors.$silver; 
@@ -429,51 +426,53 @@
   &__description {
     width: 100%;
     flex: 2;
-    border: 2px solid colors.$silver;
-    border-radius: 5px;
+    border: 0.125rem solid colors.$silver;
+    border-radius: 0.3125rem;
     opacity: 0.3;
     background-color: colors.$mercury;
     color: black;
-    margin-bottom: 3px;
+    margin-bottom: 0.1875rem;
     &::placeholder { 
       opacity:1;
-      font-size: 20px;
-      padding: 10px
+      font-size: 1.25rem;
+      padding: 0.625rem
     }
   }
   &__description:focus {
-    outline: 2px solid colors.$bandsite-black;
+    outline: 0.125rem solid colors.$bandsite-black;
   }
 
   &__button {
     color: colors.$white;
     background-color: colors.$bandsite-black;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     width: 100%;
-    padding: 16px 0px 16px 0px;
+    padding: 1rem 0rem 1rem 0rem;
     text-transform: uppercase;
-    font-size: 13px;
-    border-radius: 5px;
-    border: 1px solid colors.$bandsite-black;
-    font-size: 20px;
+    font-size: 0.8125rem;
+    border-radius: 0.3125rem;
+    border: 0.0625rem solid colors.$bandsite-black;
+    font-size: 1.25rem;
     @include mixins.tablet {
       width: 30%;
       float: right;
-      padding: 10px 0px 10px 0px;
+      padding: 0.625rem 0rem 0.625rem 0rem;
     }
     @include mixins.tablet {
       width: 30%;
       float: right;
-      padding: 10px 0px 10px 0px;
+      padding: 0.625rem 0rem 0.625rem 0rem;
     }
     @include mixins.desktop {
       width: 30%;
       float: right;
-      padding: 10px 0px 10px 0px;
+      padding: 0.625rem 0rem 0.625rem 0rem;
     }
   }
 }
+
+// Rendered comments section
 .comments {
   font-family: "Avenir";
   padding: 0rem 1rem 1rem 1rem;
@@ -509,48 +508,48 @@
 
   &__avatar {
   vertical-align:auto;
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   border-radius: 50%;
-  margin-right: 16px; 
-  margin-top: 30px;
+  margin-right: 1rem; 
+  margin-top: 1.875rem;
 
   @include mixins.tablet {
   vertical-align:auto;
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
-  margin-right: 20px; 
-  margin-top: 30px;
+  margin-right: 1.25rem; 
+  margin-top: 1.875rem;
   }
   
   @include mixins.desktop {
   vertical-align:auto;
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
-  margin-right: 20px; 
-  margin-top: 30px;
+  margin-right: 1.25rem; 
+  margin-top: 1.875rem;
   }
   
   }
   &__name {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin: 0;   
   }
 
   &__description {
-    margin-left: 76px;
-    margin-top: 0px;
-    line-height: 22px;
+    margin-left: 4.75rem;
+    margin-top: 0rem;
+    line-height: 1.375rem;
 
     @include mixins.tablet {
       padding-left: 12%;
       padding-right: 8%;
     }
     @include mixins.desktop {
-      padding-left: 20px;
+      padding-left: 1.25rem;
     }
   }
   &__date {
