@@ -9,15 +9,12 @@
   font-family: 'Avenir';
   display: flex;
   flex-direction: column;
-  
-
   &__wrapper {
-    // z-index: 1;
     position: relative;
     background-image: url('../assets/images/hero-shows.jpg');
     background-size: cover;
     background-position: center;
-    padding: 32px 16px 32px 16px;
+    padding: 2rem 1rem 2rem 1rem;
     
     @include mixins.tablet{
       padding: 3rem 2.25rem 2.25rem 2.25rem;    
@@ -38,20 +35,12 @@
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: 0.5;
-  
-    // tablet and desktop overlay
-    @include mixins.tablet {
-      // height: 50vh;
-    }
-    @include mixins.desktop {
-      // height: 60vh;
-    }
+    opacity: 0.5; 
   }
 
   &__info-wrapper {
     @include mixins.desktop {
-      margin-right: 20px;
+      margin-right: 1.25rem;
     }
   }
 
@@ -62,47 +51,44 @@
     font-style: normal;
   
     @include mixins.tablet {
-      font-size: 24px;
+      font-size: 1.5rem;
     }
     @include mixins.desktop {
-      font-size: 24px;    
+      font-size: 1.5rem;    
     }   
   }
   &__sample-title {
     z-index: 3;
-    font-size: 36px;
-    font-weight: 600px;
+    font-size: 2.25rem;
+    font-weight: 37.5rem;
     margin-top: 0;
     max-width: 50%;
     @include mixins.tablet {
-      font-size: 40px;
+      font-size: 2.5rem;
       max-width: 60%;
     }
     @include mixins.desktop {
       font-size: 3.75rem;
       max-width: 80%;
-      margin: 0px;
+      margin: 0rem;
     }   
   }
 
   &__video-wrapper {
     width: 60%;
-    height: 150px;
+    height: 9.375rem;
     z-index: 3;
 
     @include mixins.desktop {
       width: 60%;
-      margin-top: 40px;
+      margin-top: 2.5rem;
     }
-  }
-  
+  }  
 }
-
-
 
 //shows section
 .shows {
-  padding: 32px 16px 32px 16px;
+  padding: 2rem 1rem 2rem 1rem;
   font-family: 'Avenir';
   @include mixins.tablet {
     padding: 3rem 2.25rem 2.25rem;
@@ -137,7 +123,6 @@
       align-items: center;   
     }
     @include mixins.desktop {
-      // width: 80%;
       flex-wrap: wrap;
       justify-content: space-between;
       flex-direction: row;
@@ -145,11 +130,7 @@
     }
   }
   &__title {
-    font-size: 30px;
-
-    @include mixins.tablet {
-      // padding: 3rem 2.25rem 2.25rem ;
-    }
+    font-size: 1.875rem;
 
     @include mixins.desktop {
       padding-right: 10%;
@@ -175,8 +156,8 @@
   &__date {
     font-weight: 600;
     @include mixins.desktop{
-      width: 200px;
-      line-height: 22px;
+      width: 12.5rem;
+      line-height: 1.375rem;
     }
     
   }
@@ -185,8 +166,8 @@
     font-weight: 400;
     font-style: normal;
     @include mixins.desktop {
-      width: 200px;
-      line-height: 32px;
+      width: 12.5rem;
+      line-height: 2rem;
     }
   }
 
@@ -194,37 +175,35 @@
     width: 100%;
     text-align: center;
     background-color: colors.$bandsite-black;
-    border-radius: 5px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    margin-top: 24px;
-    margin-bottom: 16px;
+    border-radius: 0.3125rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
      
     @include mixins.tablet {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      margin-top: 16px;
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem;
+      margin-top: 1rem;
       width: 20%;      
     }
     @include mixins.desktop {
-      margin-top: 16px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      margin-top: 1rem;
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem;
       width: 15%;  
     }
 
     &--top {
       @include mixins.tablet {
         margin-bottom: 0;
-        margin-top: 50px;
+        margin-top: 3.125rem;
       }
       @include mixins.desktop {
         margin-bottom: 0;
         align-self: center;
       }
     }
-    
-
   }
 
   &__booking {
@@ -233,18 +212,18 @@
     color: colors.$white;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.5rem;
     
     @include mixins.tablet {
       // width: 15%;
       text-align: center;
-      font-size: 15px;
+      font-size: 0.9375rem;
       
     }
     @include mixins.desktop {
       width: 15%;
       text-align: center;
-      font-size: 15px;
+      font-size: 0.9375rem;
       
     }
   }
@@ -252,11 +231,11 @@
   &__date-wrapper,
   &__venue-wrapper,
   &__location-wrapper {
-    line-height: 18px;
-    padding-bottom: 2px;
+    line-height: 1.125rem;
+    padding-bottom: 0.125rem;
 
     @include mixins.tablet {
-      line-height: 44px;
+      line-height: 2.75rem;
       
     }
   }  
@@ -264,19 +243,13 @@
   &__container{
     @include mixins.desktop {
       width: 80%;
-      padding-left: 40px;
+      padding-left: 2.5rem;
 
     }
     
   }
 }
-hr {
-padding: 0;
-margin: 0;
-width: 100%;
-height: 1px;
-color: colors.$mercury;
-}
+
 
 
 
