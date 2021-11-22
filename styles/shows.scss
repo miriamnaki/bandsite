@@ -9,6 +9,7 @@
   font-family: 'Avenir';
   display: flex;
   flex-direction: column;
+  
 
   &__wrapper {
     // z-index: 1;
@@ -22,12 +23,10 @@
       padding: 3rem 2.25rem 2.25rem 2.25rem;    
     }
     @include mixins.desktop{
-      top: 150px;
       display: flex;
       flex-direction: row;
       align-items: center;
-      padding-left: 5rem;
-      padding-right: 5rem;
+      padding: 10rem 5rem;
     }
   }
   &__wrapper::before {
@@ -205,24 +204,23 @@
       padding-top: 10px;
       padding-bottom: 10px;
       margin-top: 16px;
-      width: 20%;
-      
-      // height: 65px;
-      // padding-top: 10px;
-      // padding-bottom: 10px;   
-      
+      width: 20%;      
     }
     @include mixins.desktop {
+      margin-top: 16px;
       padding-top: 10px;
-      width: 15%;
-      height: 45px;
-      
+      padding-bottom: 10px;
+      width: 15%;  
     }
 
     &--top {
       @include mixins.tablet {
         margin-bottom: 0;
         margin-top: 50px;
+      }
+      @include mixins.desktop {
+        margin-bottom: 0;
+        align-self: center;
       }
     }
     
