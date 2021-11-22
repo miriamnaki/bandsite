@@ -561,15 +561,17 @@ body {
   text-align: center;
   background-color: #323232;
   border-radius: 5px;
-  padding-top: 24px;
+  padding-top: 16px;
   padding-bottom: 16px;
   margin-top: 24px;
   margin-bottom: 16px;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .shows__button-wrapper {
-    width: 25%;
-    height: 65px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 16px;
+    width: 20%;
   }
 }
 @media screen and (min-width: 79.875rem) {
@@ -581,7 +583,8 @@ body {
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .shows__button-wrapper--top {
-    margin-top: 40px;
+    margin-bottom: 0;
+    margin-top: 50px;
   }
 }
 .shows__booking {
@@ -591,6 +594,12 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 24px;
+}
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .shows__booking {
+    text-align: center;
+    font-size: 15px;
+  }
 }
 @media screen and (min-width: 79.875rem) {
   .shows__booking {

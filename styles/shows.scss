@@ -196,14 +196,20 @@
     text-align: center;
     background-color: colors.$bandsite-black;
     border-radius: 5px;
-    padding-top: 24px;
+    padding-top: 16px;
     padding-bottom: 16px;
     margin-top: 24px;
     margin-bottom: 16px;
-    
+     
     @include mixins.tablet {
-      width: 25%;
-      height: 65px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 16px;
+      width: 20%;
+      
+      // height: 65px;
+      // padding-top: 10px;
+      // padding-bottom: 10px;   
       
     }
     @include mixins.desktop {
@@ -212,14 +218,14 @@
       height: 45px;
       
     }
+
     &--top {
       @include mixins.tablet {
-        margin-top: 40px;
-      }
-      @include mixins.desktop {
-        // margin-top: 200px;
+        margin-bottom: 0;
+        margin-top: 50px;
       }
     }
+    
 
   }
 
@@ -231,6 +237,12 @@
     font-weight: 600;
     font-size: 24px;
     
+    @include mixins.tablet {
+      // width: 15%;
+      text-align: center;
+      font-size: 15px;
+      
+    }
     @include mixins.desktop {
       width: 15%;
       text-align: center;

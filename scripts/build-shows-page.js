@@ -4,7 +4,7 @@
 
 const concerts = [
   {
-    date: 'Monday Sept 06 2021',
+    date: 'Mon Sept 06 2021',
     venue: 'Ronald Lane',
     location: 'San Francisco, CA',    
   },
@@ -128,7 +128,9 @@ concerts.forEach((concert, index)=> {
   // button wrapper
   const buttonWrapper = document.createElement('div');
   buttonWrapper.classList.add('shows__button-wrapper');
+  if(index === 0){
   buttonWrapper.classList.add('shows__button-wrapper--top')
+  }
   showsWrapper.appendChild(buttonWrapper);
 
   // button
