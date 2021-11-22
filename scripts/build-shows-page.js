@@ -1,4 +1,3 @@
-//shows section
 
 // Creating elements
 
@@ -63,7 +62,7 @@ concerts.forEach((concert, index)=> {
   // show wrapper
   const showsWrapper = document.createElement('div');
   showsWrapper.classList.add('shows__wrapper');
-  container.appendChild(showsWrapper)
+  container.appendChild(showsWrapper);
 
   // date wrapper
   const dateWrapper = document.createElement('div');
@@ -74,9 +73,9 @@ concerts.forEach((concert, index)=> {
   const dateLabel = document.createElement('p');
   dateLabel.classList.add('shows__label');
   if(index !== 0){
-    dateLabel.classList.add('shows__label--tablet-desktop')
+    dateLabel.classList.add('shows__label--tablet-desktop');
   }
-  dateLabel.innerText = 'date'
+  dateLabel.innerText = 'date';
   dateWrapper.appendChild(dateLabel);
 
   // date
@@ -94,9 +93,9 @@ concerts.forEach((concert, index)=> {
   const venueLabel = document.createElement('p');
   venueLabel.classList.add('shows__label');
   if(index !== 0){
-    venueLabel.classList.add('shows__label--tablet-desktop')
+    venueLabel.classList.add('shows__label--tablet-desktop');
   }
-  venueLabel.innerText = 'venue'
+  venueLabel.innerText = 'venue';
   venueWrapper.appendChild(venueLabel);
 
   //venue
@@ -114,7 +113,7 @@ concerts.forEach((concert, index)=> {
   const locationLabel = document.createElement('p');
   locationLabel.classList.add('shows__label');
   if(index !== 0){
-    locationLabel.classList.add('shows__label--tablet-desktop')
+    locationLabel.classList.add('shows__label--tablet-desktop');
   }
   locationLabel.innerText = 'location';
   locationWrapper.appendChild(locationLabel);
@@ -122,7 +121,7 @@ concerts.forEach((concert, index)=> {
   // location
   const location = document.createElement('p');
   location.classList.add('shows__location');
-  location.innerHTML = concert.location
+  location.innerHTML = concert.location;
   locationWrapper.appendChild(location);
 
   // button wrapper
@@ -142,67 +141,9 @@ concerts.forEach((concert, index)=> {
 
   // hr
   const hr = document.createElement('hr');
-  container.appendChild(hr)
-
-
+  container.appendChild(hr);
 });
 
-// const playbutton = document.querySelector('.mobilePrestitial__wrapper')
-// console.log(playbutton)
-// playbutton.classList.remove('sc-button-large')
-// console.log(playbutton)
-// let sectionEl = document.createElement('section');
-// mainEl.appendChild(sectionEl);
-// sectionEl.classList.add('shows');
-
-// let h1El = document.createElement('h1');
-// sectionEl.appendChild(h1El);
-// h1El.classList.add('shows__title');
-// h1El.innerText = "Shows";
-
-// let shows = document.querySelector('.shows')
-
-
-
-// const show = document.querySelector('.shows');
-// show.innerHTML += concerts.map(concert => 
-//   `<div>
-//   <p>date</p>
-//   <p>${concert.date}</p>
-//   <p>venue</p>
-//   <p>${concert.venue}</p>
-//   <p>location</p>
-//   <p>${concert.location}</p>
-//   </div>`
-// ).join(' ');
-
-//  const shows = document.querySelector('.shows');
-//  const allDivs = shows.querySelectorAll('div');
-//  const btn = document.createElement('a');
-//  shows.appendChild(btn)
-//  allDivs.forEach((div)=> {
-//   div.classList.add('shows__wrapper');
-//  });
- 
-// const divs = document.querySelectorAll('.shows__wrapper');
-
-
-// // console.log(divs)
-// function addClass(n, newClass){
-// for(let i = 0; i < divs.length; i++) {
-//   let collection = divs[i].children
-//   for(j =0; j< collection.length; j++){
-//     let itemClass = collection[n]
-//     itemClass.classList.add(newClass);
-//   }
-// }  
-// }
-// addClass(0, 'shows__label');
-// addClass(1, 'shows__date');
-// addClass(2, 'shows__label');
-// addClass(3, 'shows__venue');
-// addClass(4, 'shows__label');
-// addClass(5, 'shows__location');
 
 
 
