@@ -36,8 +36,6 @@ const mainEl = document.querySelector('main');
 const sectionEl = document.createElement('section');
 sectionEl.classList.add('comments');
 mainEl.appendChild(sectionEl);
-// console.log(sectionEl);
-
 
 // function to display comments
 function displayComment(){
@@ -45,13 +43,11 @@ function displayComment(){
     const container = document.createElement('div');
     container.classList.add('comments__container');
     sectionEl.appendChild(container);
-    // console.log(mainEl);
     
     // Flex one container
     const flexOne = document.createElement('div');
     flexOne.classList.add('comments__flex-1');
-    container.appendChild(flexOne)
-    // console.log(container);
+    container.appendChild(flexOne);
     
     // comments Wrapper
     const commentOne = document.createElement('div');
@@ -68,15 +64,13 @@ function displayComment(){
     // commenter name
     const commentName = document.createElement('p');
     commentName.classList.add('comments__name');
-    commentName.innerHTML = comment.name
+    commentName.innerHTML = comment.name;
     commentOne.appendChild(commentName);
-    // console.log(container);
-    
     
     // date
     const date = document.createElement('p');
     date.classList.add('comments__date');
-    date.innerHTML = comment.date
+    date.innerHTML = comment.date;
     flexOne.appendChild(date);
     
     // Flex two wrapper
@@ -105,12 +99,10 @@ function addComment(name, comment){
     const container = document.createElement('div');
     container.classList.add('comments__container');
     sectionEl.appendChild(container);
-    // console.log(mainEl);
     
     const flexOne = document.createElement('div');
     flexOne.classList.add('comments__flex-1');
     container.appendChild(flexOne)
-    // console.log(container);
     
     const commentOne = document.createElement('div');
     commentOne.classList.add('comments__one');
@@ -128,9 +120,8 @@ function addComment(name, comment){
     
     const commentName = document.createElement('p');
     commentName.classList.add('comments__name');
-    commentName.innerHTML = name
+    commentName.innerHTML = name;
     commentOne.appendChild(commentName);
-    // console.log(container);
     obj.name = name
     
     const date = document.createElement('p');
@@ -149,12 +140,12 @@ function addComment(name, comment){
     description.classList.add('comments__description');
     description.innerHTML = comment;
     flexTwo.appendChild(description);
-    obj.comment = comment
+    obj.comment = comment;
     
     const divider = document.createElement('hr');
     divider.classList.add('comments__divider');
     sectionEl.appendChild(divider);
-    // console.log(obj)
+
   return obj
 }
 
