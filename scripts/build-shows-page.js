@@ -1,41 +1,46 @@
 
 // Creating elements
 
-const concerts = [
-  {
-    date: 'Mon Sept 06 2021',
-    venue: 'Ronald Lane',
-    location: 'San Francisco, CA',    
-  },
-  {
-    date: 'Tue Sept 21 2021',
-    venue: 'Pier 3 East ',
-    location: 'San Francisco, CA',
+// const concerts = [
+//   {
+//     date: 'Mon Sept 06 2021',
+//     venue: 'Ronald Lane',
+//     location: 'San Francisco, CA',    
+//   },
+//   {
+//     date: 'Tue Sept 21 2021',
+//     venue: 'Pier 3 East ',
+//     location: 'San Francisco, CA',
     
-  },
-  {
-    date: 'Fri Oct 15 2021',
-    venue: 'View Lounge ',
-    location: 'San Francisco, CA',
+//   },
+//   {
+//     date: 'Fri Oct 15 2021',
+//     venue: 'View Lounge ',
+//     location: 'San Francisco, CA',
     
-  },
-  {
-    date: 'Sat Nov 06 2021 ',
-    venue: 'Hyatt Agency',
-    location: 'San Francisco, CA',
+//   },
+//   {
+//     date: 'Sat Nov 06 2021 ',
+//     venue: 'Hyatt Agency',
+//     location: 'San Francisco, CA',
     
-  },
-  {
-    date: 'Fri Nov 26 2021',
-    venue: 'Moscow Center  ',
-    location: 'San Francisco, CA',  
-  },
-  {
-    date: 'Wed Dec 15 2021 ',
-    venue: 'Press Club',
-    location: 'San Francisco, CA',   
-  }
-];
+//   },
+//   {
+//     date: 'Fri Nov 26 2021',
+//     venue: 'Moscow Center  ',
+//     location: 'San Francisco, CA',  
+//   },
+//   {
+//     date: 'Wed Dec 15 2021 ',
+//     venue: 'Press Club',
+//     location: 'San Francisco, CA',   
+//   }
+// ];
+
+const SHOWS_API_URL = 'https://project-1-api.herokuapp.com/showdates';
+const SHOWS_API_KEY = '98fb0e40-0eeb-4919-ace4-b7361e82015a';
+
+const showDates = axios.get(`${SHOWS_API_URL}?api_key=${SHOWS_API_KEY}`);
 
 // main
 const mainEl = document.querySelector('main');
@@ -57,92 +62,112 @@ const container = document.createElement('div');
 container.classList.add('shows__container');
 article.appendChild(container);
 
-concerts.forEach((concert, index)=> {
+showDates
+.then((response)=> {
+  console.log(response)
 
-  // show wrapper
-  const showsWrapper = document.createElement('div');
-  showsWrapper.classList.add('shows__wrapper');
-  container.appendChild(showsWrapper);
+  let concerts = response.data
+  concerts.forEach((concert, index)=> {
 
-  // date wrapper
-  const dateWrapper = document.createElement('div');
-  dateWrapper.classList.add('shows__date-wrapper')
-  showsWrapper.appendChild(dateWrapper);
+    // show wrapper
+    const showsWrapper = document.createElement('div');
+    showsWrapper.classList.add('shows__wrapper');
+    container.appendChild(showsWrapper);
+  
+    // date wrapper
+    const dateWrapper = document.createElement('div');
+    dateWrapper.classList.add('shows__date-wrapper')
+    showsWrapper.appendChild(dateWrapper);
+  
+    // date label
+    const dateLabel = document.createElement('p');
+    dateLabel.classList.add('shows__label');
+    if(index !== 0){
+      dateLabel.classList.add('shows__label--tablet-desktop');
+    }
+    dateLabel.innerText = 'date';
+    dateWrapper.appendChild(dateLabel);
+  
+    // date
+    const date = document.createElement('p');
+    date.classList.add('shows__date');
+    let showingDate  =   Number(concert.date);
+    console.log( typeof showingDate)
+    date.innerHTML = new Date(showingDate).toDateString();
+    console.log(concert.date)
+    console.log( typeof concert.date)
+    console.log(showingDate)
+    // console.log(showingDate)
+    // let currentDate = showingDate.toLocaleDateString();
+    // date.innerHTML =  new Date(concert.date);
+    dateWrapper.appendChild(date);
+  
+    //venue wrapper
+    const venueWrapper = document.createElement('div');
+    venueWrapper.classList.add('shows__venue-wrapper');
+    showsWrapper.appendChild(venueWrapper);
+  
+    //venue label
+    const venueLabel = document.createElement('p');
+    venueLabel.classList.add('shows__label');
+    if(index !== 0){
+      venueLabel.classList.add('shows__label--tablet-desktop');
+    }
+    venueLabel.innerText = 'venue';
+    venueWrapper.appendChild(venueLabel);
+  
+    //venue
+    const venue = document.createElement('p');
+    venue.classList.add('shows__venue');
+    venue.innerHTML = concert.place;
+    venueWrapper.appendChild(venue);
+  
+    //location wrapper
+    const locationWrapper = document.createElement('div');
+    locationWrapper.classList.add('shows__location-wrapper');
+    showsWrapper.appendChild(locationWrapper);
+  
+    // location label
+    const locationLabel = document.createElement('p');
+    locationLabel.classList.add('shows__label');
+    if(index !== 0){
+      locationLabel.classList.add('shows__label--tablet-desktop');
+    }
+    locationLabel.innerText = 'location';
+    locationWrapper.appendChild(locationLabel);
+  
+    // location
+    const location = document.createElement('p');
+    location.classList.add('shows__location');
+    location.innerHTML = concert.location;
+    locationWrapper.appendChild(location);
+  
+    // button wrapper
+    const buttonWrapper = document.createElement('div');
+    buttonWrapper.classList.add('shows__button-wrapper');
+    if(index === 0){
+    buttonWrapper.classList.add('shows__button-wrapper--top')
+    }
+    showsWrapper.appendChild(buttonWrapper);
+  
+    // button
+    const button = document.createElement('a');
+    button.classList.add('shows__booking');
+    button.setAttribute('href', "#");
+    button.innerText = "buy tickets"
+    buttonWrapper.appendChild(button);
+  
+    // hr
+    const hr = document.createElement('hr');
+    container.appendChild(hr);
+  });
+  
+  
 
-  // date label
-  const dateLabel = document.createElement('p');
-  dateLabel.classList.add('shows__label');
-  if(index !== 0){
-    dateLabel.classList.add('shows__label--tablet-desktop');
-  }
-  dateLabel.innerText = 'date';
-  dateWrapper.appendChild(dateLabel);
+})
 
-  // date
-  const date = document.createElement('p');
-  date.classList.add('shows__date');
-  date.innerHTML = concert.date;
-  dateWrapper.appendChild(date);
 
-  //venue wrapper
-  const venueWrapper = document.createElement('div');
-  venueWrapper.classList.add('shows__venue-wrapper');
-  showsWrapper.appendChild(venueWrapper);
 
-  //venue label
-  const venueLabel = document.createElement('p');
-  venueLabel.classList.add('shows__label');
-  if(index !== 0){
-    venueLabel.classList.add('shows__label--tablet-desktop');
-  }
-  venueLabel.innerText = 'venue';
-  venueWrapper.appendChild(venueLabel);
-
-  //venue
-  const venue = document.createElement('p');
-  venue.classList.add('shows__venue');
-  venue.innerHTML = concert.venue;
-  venueWrapper.appendChild(venue);
-
-  //location wrapper
-  const locationWrapper = document.createElement('div');
-  locationWrapper.classList.add('shows__location-wrapper');
-  showsWrapper.appendChild(locationWrapper);
-
-  // location label
-  const locationLabel = document.createElement('p');
-  locationLabel.classList.add('shows__label');
-  if(index !== 0){
-    locationLabel.classList.add('shows__label--tablet-desktop');
-  }
-  locationLabel.innerText = 'location';
-  locationWrapper.appendChild(locationLabel);
-
-  // location
-  const location = document.createElement('p');
-  location.classList.add('shows__location');
-  location.innerHTML = concert.location;
-  locationWrapper.appendChild(location);
-
-  // button wrapper
-  const buttonWrapper = document.createElement('div');
-  buttonWrapper.classList.add('shows__button-wrapper');
-  if(index === 0){
-  buttonWrapper.classList.add('shows__button-wrapper--top')
-  }
-  showsWrapper.appendChild(buttonWrapper);
-
-  // button
-  const button = document.createElement('a');
-  button.classList.add('shows__booking');
-  button.setAttribute('href', "#");
-  button.innerText = "buy tickets"
-  buttonWrapper.appendChild(button);
-
-  // hr
-  const hr = document.createElement('hr');
-  container.appendChild(hr);
-});
 
 
 
