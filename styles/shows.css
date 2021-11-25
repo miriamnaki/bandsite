@@ -39,6 +39,7 @@
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -74,10 +75,13 @@ body {
   font-weight: 400;
   font-style: normal;
   margin-top: 0;
+  margin-bottom: 0;
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.4rem;
   line-height: 2rem;
   color: #FFFFFF;
+  font-size: 24px;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .header__title {
@@ -100,10 +104,10 @@ body {
 
 .nav-list {
   padding-left: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 0.7rem;
   margin: 0rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .nav-list {
@@ -122,6 +126,9 @@ body {
   font-weight: 400;
   font-style: normal;
   position: relative;
+  font-size: 14px;
+  padding-right: 60px;
+  padding-left: 50px;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .nav-list__item {
@@ -172,7 +179,6 @@ body {
 }
 .nav-list__item:active {
   bottom: 0;
-  padding-bottom: 1rem;
   border-bottom: 0.2em solid #FFFFFF;
   color: #FFFFFF;
   font-weight: 700;

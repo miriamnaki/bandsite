@@ -7,6 +7,7 @@
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 // header
@@ -14,6 +15,7 @@ body {
   width: 100%;
   background-color: colors.$bandsite-black;
   color: colors.$white;
+  
 
   &__wrapper > a {
     text-decoration: none;
@@ -44,10 +46,14 @@ body {
     font-weight: 400;
     font-style: normal;
     margin-top: 0;
+    margin-bottom: 0;
     text-align: center;
-    padding-top: 1rem; 
+    padding-top: 0.7rem; 
+    padding-bottom: 0.4rem; 
     line-height: 2rem;
     color: colors.$white;
+    font-size: 24px;
+    
     
     // desktop and tablet title
     @include mixins.tablet {
@@ -70,9 +76,9 @@ body {
 // navlist
 .nav-list {
   padding-left: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 0.7rem;
   margin: 0rem;
-  @include mixins.flex(space-evenly);
+  @include mixins.flex(center);
   
   // desktop and tablet navlist
   @include mixins.tablet {
@@ -89,6 +95,9 @@ body {
     font-weight: 400;
     font-style: normal;
     position: relative;
+    font-size: 14px;
+    padding-right: 60px;
+    padding-left: 50px;
     
     // desktop and tablet nav item
     @include mixins.tablet {
@@ -144,7 +153,7 @@ body {
 
   &__item:active {  
     bottom: 0;
-    padding-bottom: 1rem;
+    // padding-bottom: 1rem;
     border-bottom: 0.2em solid colors.$white;
     color: colors.$white;
     font-weight: 700;
