@@ -11,27 +11,27 @@
 }
 
 // headers
-h1 {
-  font-family: "Avenir";
-  font-size: 60px;
-  font-weight: 700;
-  font-style: bold;
-  line-height: 68px;
-}
-h2 {
-  font-family: "Avenir";
-  font-size: 36px;
-  font-weight: 700;
-  font-style: bold;
-  line-height: 44px;
-}
+// h1 {
+//   font-family: "Avenir";
+//   font-size: 3.75rem;
+//   font-weight: 700;
+//   font-style: bold;
+//   line-height: 4.25rem;
+// }
+// h2 {
+//   font-family: "Avenir";
+//   font-size: 2.25rem;
+//   font-weight: 700;
+//   font-style: bold;
+//   line-height: 2.75rem;
+// }
 
-h3 {
-  font-family: "Avenir";
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 32px;
-}
+// h3 {
+//   font-family: "Avenir";
+//   font-size: 1.5rem;
+//   font-weight: 600;
+//   line-height: 2rem;
+// }
 
 // header
 .header {
@@ -49,9 +49,9 @@ h3 {
 
     // tablet and desktop wrapper
     @include mixins.tablet {
-      margin-left: 36px;
-      margin-right: 36px;
-      height: 70px;
+      margin-left: 2.25rem;
+      margin-right: 2.25rem;
+      height: 4.375rem;
       display: flex;
       align-items: center;   
     }
@@ -62,7 +62,7 @@ h3 {
       margin-left: auto;
       margin-right: auto;
       
-      height: 70px;
+      height: 4.375rem;
       display: flex;
       align-items: center;
     }
@@ -79,16 +79,16 @@ h3 {
     padding-bottom: 0.4rem; 
     line-height: 2rem;
     color: colors.$white;
-    font-size: 24px;
+    font-size: 1.5rem;
     
     
     // desktop and tablet title
     @include mixins.tablet {
-      padding-right: 50px;
+      padding-right: 3.125rem;
     }
 
     @include mixins.desktop {
-      padding-right: 50px;
+      padding-right: 3.125rem;
     }   
   } 
 }
@@ -115,19 +115,19 @@ h3 {
     font-weight: 400;
     font-style: normal;
     position: relative;
-    font-size: 14px;
-    padding-right: 60px;
-    padding-left: 50px;
+    font-size: 0.875rem;
+    padding-right: 3.75rem;
+    padding-left: 3.125rem;
     
     // desktop and tablet nav item
     @include mixins.tablet {
-      padding-right: 36px;
-      padding-left: 0px;
+      padding-right: 2.25rem;
+      padding-left: 0rem;
       margin: 0;
     }
     @include mixins.desktop {
-      padding-right: 36px;
-      padding-left: 0px;
+      padding-right: 2.25rem;
+      padding-left: 0rem;
       margin: 0;
       display: block;
     } 
@@ -182,10 +182,10 @@ h3 {
     font-style: bold;
 
     @include mixins.tablet {
-      margin-bottom: -24px;
+      margin-bottom: -1.5rem;
     }    
     @include mixins.desktop {
-      margin-bottom: -24px;
+      margin-bottom: -1.5rem;
       
     }    
   }
@@ -197,10 +197,10 @@ h3 {
     position: relative;
     z-index: 1;
     @include mixins.tablet {
-      margin-bottom: -24px;
+      margin-bottom: -1.5rem;
     }    
     @include mixins.desktop {
-      margin-bottom: -24px;
+      margin-bottom: -1.5rem;
     }    
   }
 }
@@ -333,7 +333,7 @@ h3 {
       padding-top: 3.4375rem;
       padding-right: 2.25rem;
       margin-bottom:0;
-      margin-top: 0px;
+      margin-top: 0rem;
       font-size: 2.25rem;
     }
     @include mixins.desktop {
@@ -359,10 +359,19 @@ h3 {
   }
 }
 
-hr {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 0.0625rem;
-  color: colors.$mercury;
-  }
+.divider {
+  // comments divider
+  
+    stroke-width: 0.0625rem;
+    color: colors.$mercury;
+
+    @include mixins.tablet {
+      width: 36.25rem;
+      margin: auto;
+    }
+    @include mixins.desktop {
+      width: 36.25rem;
+      margin: auto;
+    }
+  
+}

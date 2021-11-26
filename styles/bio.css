@@ -42,29 +42,6 @@
   padding: 0;
 }
 
-h1 {
-  font-family: "Avenir";
-  font-size: 60px;
-  font-weight: 700;
-  font-style: bold;
-  line-height: 68px;
-}
-
-h2 {
-  font-family: "Avenir";
-  font-size: 36px;
-  font-weight: 700;
-  font-style: bold;
-  line-height: 44px;
-}
-
-h3 {
-  font-family: "Avenir";
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 32px;
-}
-
 .header {
   width: 100%;
   background-color: #323232;
@@ -77,22 +54,22 @@ h3 {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .header__wrapper {
-    margin-left: 36px;
-    margin-right: 36px;
-    height: 70px;
+    margin-left: 2.25rem;
+    margin-right: 2.25rem;
+    height: 4.375rem;
     display: flex;
     align-items: center;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .header__wrapper {
     display: block;
     width: 87%;
     margin-left: auto;
     margin-right: auto;
-    height: 70px;
+    height: 4.375rem;
     display: flex;
     align-items: center;
   }
@@ -108,16 +85,16 @@ h3 {
   padding-bottom: 0.4rem;
   line-height: 2rem;
   color: #FFFFFF;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .header__title {
-    padding-right: 50px;
+    padding-right: 3.125rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .header__title {
-    padding-right: 50px;
+    padding-right: 3.125rem;
   }
 }
 
@@ -128,12 +105,12 @@ h3 {
   display: flex;
   justify-content: center;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .nav-list {
     padding: 0;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .nav-list {
     padding-bottom: 0rem;
   }
@@ -145,21 +122,21 @@ h3 {
   font-weight: 400;
   font-style: normal;
   position: relative;
-  font-size: 14px;
-  padding-right: 60px;
-  padding-left: 50px;
+  font-size: 0.875rem;
+  padding-right: 3.75rem;
+  padding-left: 3.125rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .nav-list__item {
-    padding-right: 36px;
-    padding-left: 0px;
+    padding-right: 2.25rem;
+    padding-left: 0rem;
     margin: 0;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .nav-list__item {
-    padding-right: 36px;
-    padding-left: 0px;
+    padding-right: 2.25rem;
+    padding-left: 0rem;
     margin: 0;
     display: block;
   }
@@ -206,14 +183,14 @@ h3 {
   font-weight: 700;
   font-style: bold;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .nav-list__item:active {
-    margin-bottom: -24px;
+    margin-bottom: -1.5rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .nav-list__item:active {
-    margin-bottom: -24px;
+    margin-bottom: -1.5rem;
   }
 }
 .nav-list__item:hover {
@@ -224,14 +201,14 @@ h3 {
   position: relative;
   z-index: 1;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .nav-list__item:hover {
-    margin-bottom: -24px;
+    margin-bottom: -1.5rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .nav-list__item:hover {
-    margin-bottom: -24px;
+    margin-bottom: -1.5rem;
   }
 }
 
@@ -249,19 +226,19 @@ h3 {
   padding-top: 0.5rem;
   padding: 1.5rem 1rem 1rem 1rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .footer {
     padding: 3rem 2.25rem 2.25rem 2.25rem;
     position: relative;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .footer {
     padding: 3rem 2.25rem 2.25rem 2.25rem;
     position: relative;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .footer__wrapper {
     align-items: baseline;
     display: flex;
@@ -269,7 +246,7 @@ h3 {
     max-width: 50%;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .footer__wrapper {
     display: flex;
     justify-content: space-between;
@@ -283,12 +260,12 @@ h3 {
   font-weight: 700;
   font-style: normal;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .footer__title {
     font-size: 2.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .footer__title {
     font-size: 2.25rem;
   }
@@ -299,13 +276,13 @@ h3 {
   justify-content: space-between;
   max-width: 30%;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .footer__icon {
     padding-left: 0.5rem;
     height: 1.8rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .footer__icon {
     padding-left: 0.5rem;
     height: 1.8rem;
@@ -362,19 +339,7 @@ h3 {
   font-size: 1.5rem;
   padding-top: 3.125rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .management__logo {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-top: 3.4375rem;
-    padding-right: 2.25rem;
-    margin-bottom: 0;
-    margin-top: 0px;
-    font-size: 2.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .management__logo {
     position: absolute;
     top: 0;
@@ -386,44 +351,66 @@ h3 {
     font-size: 2.25rem;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 80rem) {
+  .management__logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 3.4375rem;
+    padding-right: 2.25rem;
+    margin-bottom: 0;
+    margin-top: 0rem;
+    font-size: 2.25rem;
+  }
+}
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .management__sections {
     display: flex;
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .management__sections {
     display: flex;
     justify-content: space-between;
   }
 }
 
-hr {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 0.0625rem;
+.divider {
+  stroke-width: 0.0625rem;
   color: #E1E1E1;
+}
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .divider {
+    width: 36.25rem;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .divider {
+    width: 36.25rem;
+    margin: auto;
+  }
 }
 
 .hero {
+  font-family: "Avenir";
+  height: 11.875rem;
+  display: flex;
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: cover;
-  height: 190px;
-  display: flex;
   align-items: center;
   position: relative;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .hero {
-    height: 445px;
+    height: 27.8125rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .hero {
-    height: 475px;
+    height: 29.6875rem;
   }
 }
 .hero__title {
@@ -431,19 +418,18 @@ hr {
   margin-left: 1rem;
   color: #FFFFFF;
   z-index: 1;
-  font-family: "Avenir";
   font-weight: 600;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .hero__title {
     font-size: 3.75rem;
     margin-left: 2.25rem;
     margin-right: 2.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .hero__title {
-    font-size: 43px;
+    font-size: 2.6875rem;
     margin-left: 5rem;
     margin-right: 5rem;
   }
@@ -451,7 +437,6 @@ hr {
 
 .hero:before {
   content: " ";
-  height: 190px;
   background-color: #323232;
   position: absolute;
   z-index: 1;
@@ -460,15 +445,16 @@ hr {
   left: 0;
   right: 0;
   opacity: 0.4;
+  height: 11.875rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .hero:before {
-    height: 445px;
+    height: 27.8125rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .hero:before {
-    height: 475px;
+    height: 29.6875rem;
   }
 }
 
@@ -476,154 +462,151 @@ hr {
   font-family: "Avenir";
 }
 .musicians__title {
-  padding: 18px 1rem 10px 1rem;
-  padding-top: 18px;
+  padding: 1.125rem 1rem 0.625rem 1rem;
   font-weight: 600;
   font-style: normal;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .musicians__title {
-    padding: 40px 36px 25px 36px;
-    font-size: 36px;
+    padding: 2.5rem 2.25rem 1.5625rem 2.25rem;
+    font-size: 2.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .musicians__title {
-    padding: 36px 36px 25px 0px;
-    font-size: 36px;
+    padding: 2.25rem 2.25rem 1.5625rem 0rem;
+    font-size: 2.25rem;
     margin-left: 5rem;
   }
 }
 .musicians__image {
-  margin: 0rem 1rem;
   background-image: url("../assets/images/band.jpg");
+  margin: 0rem 1rem;
+  height: 10rem;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 160px;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .musicians__image {
-    height: 300px;
-    width: 580px;
+    height: 18.75rem;
+    width: 36.25rem;
     margin: auto;
-    margin-bottom: 36px;
+    margin-bottom: 2.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .musicians__image {
-    height: 450px;
-    width: 970px;
+    height: 28.125rem;
+    width: 60.625rem;
     margin: auto;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
   }
 }
 
 .band-quote {
-  padding: 16px 16px 24px 16px;
+  font-family: "Avenir";
+  padding: 1rem 1rem 1.5rem 1rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .band-quote {
     margin: auto;
-    width: 580px;
+    width: 36.25rem;
     padding: 0;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .band-quote {
     margin: auto;
-    width: 970px;
+    width: 60.625rem;
     padding: 0;
   }
 }
 .band-quote__statement {
-  font-family: "Avenir";
   font-weight: 600;
   font-style: normal;
-  line-height: 22px;
+  line-height: 1.375rem;
   font-size: 0.875rem;
   margin-top: 0rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .band-quote__statement {
-    font-size: 22px;
-    line-height: 32px;
-    padding-bottom: 10px;
+    font-size: 1.375rem;
+    line-height: 2rem;
+    padding-bottom: 0.625rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .band-quote__statement {
-    line-height: 24px;
-    font-size: 18px;
+    line-height: 1.5rem;
+    font-size: 1.125rem;
     margin-bottom: 0.625rem;
-    max-width: 540px;
+    max-width: 33.75rem;
   }
 }
 .band-quote__writter {
-  font-family: "Avenir";
   font-weight: 600;
   line-height: 1.625rem;
   font-size: 0.875rem;
   margin-top: 0rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .band-quote__writter {
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 0rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .band-quote__writter {
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 0rem;
   }
 }
 
 .band-info {
-  margin: 0rem 1rem 0px 1rem;
+  font-family: "Avenir";
+  margin: 0rem 1rem 0rem 1rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .band-info {
     margin: auto;
-    width: 580px;
+    width: 36.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .band-info {
     margin: auto;
-    width: 970px;
+    width: 60.625rem;
   }
 }
 .band-info__title {
-  font-family: "Avenir";
   font-weight: 600;
-  font-size: 14px;
-  padding-bottom: 16px;
+  font-size: 0.875rem;
+  padding-bottom: 1rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .band-info__title {
-    padding-top: 48px;
+    padding-top: 3rem;
     font-size: 1.5rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .band-info__title {
-    padding-top: 48px;
+    padding-top: 3rem;
     font-size: 1.5rem;
   }
 }
 .band-info__description {
-  font-family: "Avenir";
   font-weight: 400;
   font-style: normal;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .band-info__description {
     display: flex;
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .band-info__description {
     display: flex;
     justify-content: space-between;
@@ -631,92 +614,93 @@ hr {
   }
 }
 .band-info__description--right {
-  line-height: 18px;
-  font-size: 13.3px;
-  padding-bottom: 16px;
+  line-height: 1.125rem;
+  font-size: 0.8313rem;
+  padding-bottom: 1rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .band-info__description--right {
-    line-height: 22px;
-    font-size: 14px;
-    padding-right: 16px;
-    padding-bottom: 36px;
+    line-height: 1.375rem;
+    font-size: 0.875rem;
+    padding-right: 1rem;
+    padding-bottom: 2.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .band-info__description--right {
-    line-height: 22px;
-    font-size: 14px;
-    padding-right: 16px;
-    padding-bottom: 36px;
+    line-height: 1.375rem;
+    font-size: 0.875rem;
+    padding-right: 1rem;
+    padding-bottom: 2.25rem;
   }
 }
 .band-info__description--left {
-  line-height: 18px;
-  font-size: 13.4px;
-  padding-bottom: 16px;
+  line-height: 1.125rem;
+  font-size: 0.8375rem;
+  padding-bottom: 1rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .band-info__description--left {
-    line-height: 22px;
-    font-size: 14px;
-    padding-bottom: 30px;
+    line-height: 1.375rem;
+    font-size: 0.875rem;
+    padding-bottom: 1.875rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .band-info__description--left {
-    line-height: 22px;
-    font-size: 14px;
-    padding-bottom: 30px;
+    line-height: 1.375rem;
+    font-size: 0.875rem;
+    padding-bottom: 1.875rem;
   }
 }
 
 .gallery {
+  font-family: "Avenir";
   -webkit-backdrop-filter: brightness(97%);
           backdrop-filter: brightness(97%);
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
 }
 .gallery__title {
-  font-family: "Avenir";
   font-weight: 600;
   margin: 1.5rem 1rem 0.5rem 1rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .gallery__title {
     margin: 0rem 2.25rem;
-    padding-top: 40px;
-    padding-bottom: 24px;
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
     font-size: 2.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .gallery__title {
-    margin: 0rem 80px;
-    padding-top: 40px;
-    padding-bottom: 24px;
+    margin: 0rem 5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
     font-size: 2.25rem;
   }
 }
 .gallery__wrapper {
   padding-bottom: 0.5rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .gallery__wrapper {
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .gallery__wrapper {
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
-    padding-left: 68px;
-    padding-right: 68px;
+    padding-left: 4.25rem;
+    padding-right: 4.25rem;
   }
 }
 .gallery__image {
@@ -727,20 +711,20 @@ hr {
   -o-object-fit: contain;
      object-fit: contain;
   filter: grayscale(100%);
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .gallery__image {
     width: 33%;
     height: 33%;
-    padding: 0rem 12px 24px 12px;
+    padding: 0rem 0.75rem 1.5rem 0.75rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .gallery__image {
     width: 33%;
     height: 33%;
-    padding: 0rem 12px 24px 12px;
+    padding: 0rem 0.75rem 1.5rem 0.75rem;
   }
 }
 .gallery__image:hover {
@@ -749,16 +733,16 @@ hr {
 }
 
 .comments-form {
-  padding: 0rem 1rem 0rem 1rem;
+  padding: 0rem 1rem;
   font-family: "Avenir";
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments-form {
     margin: 0rem 2.25rem;
     padding: 0;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .comments-form {
     margin: 0rem 2.25rem;
     padding: 0;
@@ -766,212 +750,213 @@ hr {
 }
 .comments-form__title {
   font-weight: 600;
-  padding: 16px 0px;
+  padding: 1rem 0rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments-form__title {
-    padding-top: 48px;
-    padding-bottom: 36px;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
     font-size: 2.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .comments-form__title {
-    padding-top: 48px;
-    padding-bottom: 36px;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
     font-size: 2.25rem;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments-form__main {
-    width: 580px;
+    width: 36.25rem;
     margin: auto;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .comments-form__main {
-    width: 580px;
+    width: 36.25rem;
     margin: auto;
   }
 }
 .comments-form__wrapper {
   display: flex;
+  justify-content: flex-start;
   flex-direction: row;
   width: 100%;
 }
 .comments-form__avatar {
   align-self: flex-end;
-  width: 35px;
-  height: 35px;
+  width: 2.1875rem;
+  height: 2.1875rem;
   border-radius: 50%;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments-form__avatar {
-    width: 47px;
-    height: 47px;
+    width: 2.9375rem;
+    height: 2.9375rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .comments-form__avatar {
-    width: 47px;
-    height: 47px;
+    width: 2.9375rem;
+    height: 2.9375rem;
   }
 }
 .comments-form__name {
   font-weight: 600;
   text-transform: uppercase;
   color: #AFAFAF;
-  font-size: 10px;
+  font-size: 0.625rem;
   display: block;
-  padding-bottom: 4px;
+  padding-bottom: 0.25rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments-form__name {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .comments-form__name {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 .comments-form__input[type=text] {
   width: 100%;
   border-radius: 0.3125rem;
-  border: 1px solid #E1E1E1;
-  padding: 10px 0px 10px 10px;
+  border: 0.0625rem solid #E1E1E1;
+  padding: 0.625rem 0rem 0.625rem 0.625rem;
   background-color: rgba(246, 246, 246, 0.7);
-  height: 31px;
+  height: 1.9375rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments-form__input[type=text] {
-    padding: 22px 0px 22px 22px;
-    height: 18px;
+    padding: 1.375rem 0rem 1.375rem 1.375rem;
+    height: 1.125rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .comments-form__input[type=text] {
-    padding: 22px 0px 22px 22px;
-    height: 18px;
+    padding: 1.375rem 0rem 1.375rem 1.375rem;
+    height: 1.125rem;
   }
 }
 .comments-form__input[type=text]::-moz-placeholder {
   font-family: "Avenir";
   color: #323232;
   width: 100%;
-  font-size: 13px;
-  padding: 10px 0px 10px 0px;
+  font-size: 0.8125rem;
+  padding: 0.625rem 0rem 0.625rem 0rem;
 }
 .comments-form__input[type=text]:-ms-input-placeholder {
   font-family: "Avenir";
   color: #323232;
   width: 100%;
-  font-size: 13px;
-  padding: 10px 0px 10px 0px;
+  font-size: 0.8125rem;
+  padding: 0.625rem 0rem 0.625rem 0rem;
 }
 .comments-form__input[type=text]::placeholder {
   font-family: "Avenir";
   color: #323232;
   width: 100%;
-  font-size: 13px;
-  padding: 10px 0px 10px 0px;
+  font-size: 0.8125rem;
+  padding: 0.625rem 0rem 0.625rem 0rem;
 }
 .comments-form__input[type=text]:focus {
-  outline: 1px solid #323232;
+  outline: 0.0625rem solid #323232;
 }
 .comments-form__container {
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
 }
 .comments-form__text-area {
-  padding-left: 50px;
+  padding-left: 3.125rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments-form__text-area {
-    padding-left: 62px;
+    padding-left: 3.875rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .comments-form__text-area {
-    padding-left: 62px;
+    padding-left: 3.875rem;
   }
 }
 .comments-form__comment {
   font-weight: 600;
   text-transform: uppercase;
   color: #AFAFAF;
-  font-size: 10px;
+  font-size: 0.625rem;
   display: block;
-  padding-bottom: 4px;
-  padding-top: 16px;
+  padding-bottom: 0.25rem;
+  padding-top: 1rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments-form__comment {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .comments-form__comment {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 .comments-form__description[type=text] {
   width: 100%;
   border-radius: 0.3125rem;
-  border: 1px solid #E1E1E1;
+  border: 0.0625rem solid #E1E1E1;
   background-color: rgba(246, 246, 246, 0.7);
-  padding: 10px 0px 0px 10px;
+  padding: 0.625rem 0rem 0rem 0.625rem;
 }
 .comments-form__description[type=text]::-moz-placeholder {
   font-family: "Avenir";
   color: #323232;
   width: 100%;
-  font-size: 13px;
-  padding: 0px 0px 0px 0px;
+  font-size: 0.8125rem;
+  padding: 0rem;
 }
 .comments-form__description[type=text]:-ms-input-placeholder {
   font-family: "Avenir";
   color: #323232;
   width: 100%;
-  font-size: 13px;
-  padding: 0px 0px 0px 0px;
+  font-size: 0.8125rem;
+  padding: 0rem;
 }
 .comments-form__description[type=text]::placeholder {
   font-family: "Avenir";
   color: #323232;
   width: 100%;
-  font-size: 13px;
-  padding: 0px 0px 0px 0px;
+  font-size: 0.8125rem;
+  padding: 0rem;
 }
 .comments-form__description:focus {
-  outline: 1px solid #323232;
+  outline: 0.0625rem solid #323232;
 }
 .comments-form__button-wrapper {
-  padding-left: 50px;
-  margin-top: 10px;
-  margin-bottom: 16px;
+  padding-left: 3.125rem;
+  margin-top: 0.625rem;
+  margin-bottom: 1rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments-form__button-wrapper {
-    margin-top: 22px;
-    margin-bottom: 24px;
-    padding-left: 420px;
+    margin-top: 1.375rem;
+    margin-bottom: 1.5rem;
+    padding-left: 26.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .comments-form__button-wrapper {
-    margin-top: 22px;
-    margin-bottom: 24px;
-    padding-left: 420px;
+    margin-top: 1.375rem;
+    margin-bottom: 1.5rem;
+    padding-left: 26.25rem;
   }
 }
 .comments-form__button {
   color: #FFFFFF;
   background-color: #323232;
   width: 100%;
-  padding: 10px 0px;
+  padding: 0.625rem 0rem;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 0.9375rem;
   text-transform: uppercase;
   border-radius: 0.3125rem;
   border: 0.0625rem solid #323232;
@@ -981,12 +966,12 @@ hr {
   font-family: "Avenir";
   padding: 0rem 1rem 1rem 1rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments {
     margin: 0rem 2.25rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .comments {
     margin: 0rem 2.25rem;
   }
@@ -994,92 +979,89 @@ hr {
 .comments__container {
   display: flex;
   flex-direction: column;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments__container {
-    width: 580px;
+    width: 36.25rem;
     margin: auto;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .comments__container {
-    width: 580px;
+    width: 36.25rem;
     margin: auto;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 .comments__flex-1 {
   display: flex;
   justify-content: space-between;
-  height: 24px;
+  height: 1.5rem;
 }
 .comments__one {
   display: flex;
+  justify-content: flex-start;
 }
 .comments__avatar {
-  width: 35px;
-  height: 35px;
+  width: 2.1875rem;
+  height: 2.1875rem;
   border-radius: 50%;
   border: none;
   background-color: #E1E1E1;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments__avatar {
-    width: 47px;
-    height: 47px;
+    width: 2.9375rem;
+    height: 2.9375rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .comments__avatar {
-    width: 47px;
-    height: 47px;
+    width: 2.9375rem;
+    height: 2.9375rem;
   }
 }
 .comments__name {
   font-weight: 600;
-  font-size: 13px;
-  padding-left: 16px;
+  font-size: 0.8125rem;
+  padding-left: 1rem;
 }
 .comments__flex-2 {
-  padding-left: 50px;
+  padding-left: 3.125rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments__flex-2 {
-    padding-left: 62px;
+    padding-left: 3.875rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .comments__flex-2 {
-    padding-left: 62px;
+    padding-left: 3.875rem;
   }
 }
 .comments__description {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   margin-top: 0rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments__description {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .comments__description {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 .comments__date {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: #AFAFAF;
   margin: 0;
-}
-.comments__divider {
-  stroke-width: 1px;
-  color: #E1E1E1;
 }
 /*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */

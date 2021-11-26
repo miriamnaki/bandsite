@@ -292,7 +292,7 @@ function addComment(commentsArray){
     
     // divider
     const divider = document.createElement('hr');
-    divider.classList.add('comments__divider');
+    divider.classList.add('divider');
     sectionEl.appendChild(divider);
     });
 }
