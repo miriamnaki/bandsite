@@ -27,14 +27,14 @@
   <main>
     <!-- hero section -->
     <section class="hero">
-      <h1 class="hero__title">The Bees Knees</h1>
+      <h2 class="hero__title">The Bees Knees</h2>
     </section>
 
     <!-- musician section -->
     <section class="musicians">
-      <div class="musicians__wrapper">
-        <h1 class="musicians__title">About the Musicians</h1>
-        <img  class="musicians__image" src="./assets/images/band.jpg" alt="">
+      <h2 class="musicians__title">About the Musicians</h2>
+      <div class="musicians__image">
+        
       </div>
     </section>
 
@@ -80,7 +80,7 @@
         The Bees Knees are currently recording their
         second studio album, looking to be released in
         late 2021.
-        Photo</p>
+        </p>
       </div> 
     </section>
 
@@ -105,37 +105,38 @@
     <h2 class="comments-form__title">Join the Conversation</h2>
 
     <form class="comments-form__main">
-      <div class="comments-form__container">
-        <img type="image" name="avatar" class="comments-form__avatar" src="./assets/images/Mohan-muruge.jpg" alt="avatar">
-      </div >
-
       <div class="comments-form__wrapper"> 
-        <div class="comments-form__container">
-          <h3 class="comments-form__name">Name</h3>
-          <input class="comments-form__input" type="text"
-            name="commenterName"
-            placeholder="Enter your name"
-          />
+        <!-- <div class="comments-form__avatar-wrapper"> -->
+          <img type="image" name="avatar" class="comments-form__avatar" src="./assets/images/Mohan-muruge.jpg" alt="avatar">
+        <!-- </div > -->
+        
+          <div class="comments-form__container">
+            <label class="comments-form__name" for="commenterName">name</label>
+            <input class="comments-form__input" type="text"
+              name="commenterName"
+              placeholder="Enter your name"
+            />
+          </div>     
         </div>     
 
-      <div class="comments-form__container">
-        <h3 class="comments-form__comment">Comment</h3>
+      <div class="comments-form__text-area">
+        <label class="comments-form__comment" for="description">comment</label>
         <textarea 
         class="comments-form__description"
         type="text"
         name="description" 
         id="description" 
         cols="40" 
-        rows="7"
+        rows="6.5"
         placeholder="Add a new comment"></textarea>
       </div>
 
-      <div class="comments-form__container">
+      <div class="comments-form__button-wrapper">
         <input class="comments-form__button" type="submit"
         value="Comment"
         >
       </div>
-    </div>
+    
     </form>
     <hr>
     </section>

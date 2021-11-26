@@ -254,7 +254,7 @@ function addComment(commentsArray){
     // firstFlex.appendChild(avatarNameWrapper)
 
     // avatar
-    const avatar = document.createElement('img');
+    const avatar = document.createElement('div');
     avatar.classList.add('comments__avatar');
     commentOne.appendChild(avatar);
     // avatarNameWrapper
