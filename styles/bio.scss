@@ -14,7 +14,7 @@
   position: relative;
     
   @include mixins.tablet {
-    height: 50vh;
+    height: 445px;
   }
   @include mixins.desktop {
     height: 60vh;
@@ -56,7 +56,7 @@
   opacity: 0.4;
 
   @include mixins.tablet {
-    height: 50vh;
+    height: 445px;
   }
   @include mixins.desktop {
     height: 60vh;
@@ -71,11 +71,12 @@
   &__title {
     padding: 18px 1rem 10px 1rem;
     padding-top: 18px;
+    font-weight: 600;
     font-style: normal;
 
     @include mixins.tablet {
-    margin-bottom: 2.25rem;
-    font-size: 2.25rem;
+      padding: 40px 36px 25px 36px;
+      font-size: 36px;
     }
 
     @include mixins.desktop {
@@ -94,8 +95,12 @@
     height: 160px;    
     
     @include mixins.tablet {
-      padding-left: 2.25rem;
-      padding-right: 2.25rem;
+      height: 300px;
+      width: 580px;
+      margin: auto;
+      margin-bottom: 36px;
+      // padding-left: 2.25rem;
+      // padding-right: 2.25rem;
     }
     @include mixins.desktop {
       padding-left: 3rem;
@@ -109,7 +114,11 @@
   padding: 16px 16px 24px 16px;
   
   @include mixins.tablet {
-    margin: 0rem 4.5rem 0rem 4.5rem;
+    // margin: 0rem 4.5rem 0rem 4.5rem;
+    margin: auto;
+    width: 580px;
+    padding: 0;
+    
   }
   @include mixins.desktop {
     margin: 3rem 4rem 2.25rem 4rem;
@@ -119,14 +128,18 @@
   &__statement {
     font-family: "Avenir";
     font-weight: 600;
+    font-style: normal;
     line-height: 22px;
     font-size: 0.875rem;
     margin-top: 0rem;
 
     @include mixins.tablet {
-    line-height: 2.75rem;
-    font-size: 1.5rem;
-    margin-bottom: 0.625rem;
+      font-size: 22px;
+      line-height: 32px;
+      padding-bottom: 10px;
+    // line-height: 2.75rem;
+    // font-size: 1.5rem;
+    // margin-bottom: 0.625rem;
     }
 
     @include mixins.desktop {
@@ -146,8 +159,8 @@
   margin-top: 0rem;
 
   @include mixins.tablet {
-    line-height: 2.25rem;
-    font-size: 1.125rem;
+    // line-height: 2.25rem;
+    font-size: 16px;
     margin-bottom: 0rem;
     }
 
@@ -165,7 +178,9 @@
   margin: 0rem 1rem 0px 1rem;
 
   @include mixins.tablet {
-    margin: 3rem 2.25rem 2.25rem 2.25rem;
+    margin: auto;
+    width: 580px;
+    
   }
 
   @include mixins.desktop {
@@ -180,11 +195,8 @@
     padding-bottom: 16px;
 
     @include mixins.tablet {
+      padding-top: 48px;
       font-size: 1.5rem;
-      padding-left: 2.25rem;
-      margin: 0;
-      padding-bottom: 2.25rem;
-      padding-top: 3rem;
     }
     @include mixins.desktop {
       font-size: 1.5rem;
@@ -200,15 +212,30 @@
     font-family: "Avenir";
     font-weight: 400;
     font-style: normal;
-    
+
+    @include mixins.tablet {  
+      @include mixins.flex(space-between);   
+      }
+
+      @include mixins.desktop {
+      line-height: 2rem;
+      font-size: 1.125rem;
+
+      @include mixins.flex(space-between); 
+      margin: 0;
+    } 
+
     //  musician description first paragraph
     &--right {
       line-height: 18px;
       font-size: 13.3px;
       padding-bottom: 16px;
+
       @include mixins.tablet {
-        padding-right: 0.9375rem;
-        padding-left: 2.25rem;
+        line-height: 22px;
+        font-size: 14px;
+        padding-right: 16px;
+        padding-bottom: 36px;
       }
       @include mixins.desktop {
         padding-right: 0.9375rem;
@@ -222,29 +249,15 @@
       font-size: 13.4px;
       padding-bottom: 16px;
       @include mixins.tablet {
-        padding-left: 0.9375rem;
-        padding-right: 2.25rem;
+        line-height: 22px;
+        font-size: 14px;
+        padding-bottom: 30px;
       }
       @include mixins.desktop {
         padding-left: 0.9375rem;
         padding-right: 2.25rem;
-      }
-      
-    }
-
-    
-    @include mixins.tablet {
-    line-height: 2rem;
-    font-size: 1.125rem;
-    @include mixins.flex(space-between); 
-    margin: 0;
-    }
-    @include mixins.desktop {
-    line-height: 2rem;
-    font-size: 1.125rem;  
-    @include mixins.flex(space-between); 
-    margin: 0;
-    }  
+      }     
+    }    
   }
 }
 
@@ -264,8 +277,8 @@
     // tablet and desktop gallery title
     @include mixins.tablet {
       margin: 0rem 2.25rem ;
-      padding-top: 3rem;
-      padding-bottom: 2.25rem;
+      padding-top: 40px;
+      padding-bottom: 24px;
       font-size: 2.25rem;
      
     }
@@ -283,7 +296,9 @@
     @include mixins.tablet {
       flex-wrap: wrap;
       @include mixins.flex(space-between); 
-      margin: 0rem 1.125rem 0rem 1.125rem;
+      // margin: 0rem 1.125rem 0rem 1.125rem;
+      padding-left: 24px;
+      padding-right: 24px;
     }
     @include mixins.desktop {
       flex-wrap: wrap;
@@ -305,8 +320,7 @@
     @include mixins.tablet {
       width: 33%;
       height: 33%;
-      padding: 0rem;
-      padding: 0rem 1.125rem 2.25rem 1.125rem;      
+      padding: 0rem 12px 24px 12px;      
     }
     @include mixins.desktop {
       width: 33%;
@@ -340,8 +354,11 @@
     padding: 16px 0px;
     
     @include mixins.tablet {
+      padding-top: 48px;
+      padding-bottom: 36px;
       font-size: 2.25rem;
     }
+
     @include mixins.desktop {
       font-size: 2.25rem;
       margin: 1.5rem 1rem 0.5rem 1rem; 
@@ -351,7 +368,9 @@
     // comments-form main wrapper
   &__main {
     @include mixins.tablet {
-      justify-content: center;
+      // justify-content: center;
+      width: 580px;
+      margin: auto;
     }
 
     @include mixins.desktop {
@@ -364,14 +383,8 @@
   &__wrapper { 
     display: flex;
     flex-direction: row;
-     width: 100%;
-       
-    @include mixins.tablet {
-      width: 70%;
-    }
-    @include mixins.desktop {
-      width: 50%;
-    }
+    width: 100%;
+  
   }
  
   // comments-form avatar
@@ -382,12 +395,8 @@
     border-radius: 50%;
 
     @include mixins.tablet {
-      vertical-align:auto;
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
-      margin-right: 1.25rem; 
-      margin-top: 1.875rem;
+      width: 47px;
+      height: 47px;
     }
     @include mixins.desktop {
       vertical-align:auto;
@@ -407,10 +416,14 @@
     font-size: 10px; 
     display: block;
     padding-bottom: 4px;
+
+    @include mixins.tablet {
+      font-size: 12px;
+    }
     
   }
 
-  // comments-form input field
+  // comments-form  name input field
   &__input[type= 'text'] {
     width: 100%;
     border-radius: 0.3125rem;
@@ -418,6 +431,11 @@
     padding: 10px 0px 10px 10px;
     background-color: rgba(246, 246, 246, 0.7);
     height: 31px;
+
+    @include mixins.tablet {
+      padding: 22px 0px 22px 22px;
+      height: 18px;
+    }
     
     // comments-form placeholder
     &::placeholder {
@@ -443,6 +461,10 @@
   // comments-form text-area wrapper
   &__text-area {
     padding-left: 50px;
+
+    @include mixins.tablet {
+      padding-left: 62px;
+    }
   }
 
   // comments-form comment label
@@ -454,6 +476,10 @@
     display: block;
     padding-bottom: 4px;
     padding-top: 16px;
+
+    @include mixins.tablet {
+      font-size: 12px;
+    }
   }
 
   // text-area input field
@@ -471,6 +497,10 @@
       width: 100%;
       font-size: 13px;
       padding: 0px 0px 0px 0px;
+
+      @include mixins.tablet {
+        // padding: 10px 0px 0px 10px;
+      }
     }
   }
 
@@ -484,6 +514,13 @@
     padding-left: 50px;
     margin-top: 10px;
     margin-bottom: 16px;
+
+    @include mixins.tablet {
+      margin-top: 22px;
+      margin-bottom: 24px;
+      padding-left: 420px;
+
+    }
   }
   
   // comment-form button
@@ -497,17 +534,7 @@
     text-transform: uppercase;
     border-radius: 0.3125rem;
     border: 0.0625rem solid colors.$bandsite-black;
-    
-    @include mixins.tablet {
-      width: 30%;
-      float: right;
-      padding: 0.625rem 0rem 0.625rem 0rem;
-    }
-    @include mixins.tablet {
-      width: 30%;
-      float: right;
-      padding: 0.625rem 0rem 0.625rem 0rem;
-    }
+  
     @include mixins.desktop {
       width: 30%;
       float: right;
@@ -532,6 +559,13 @@
     padding-top: 16px;
     padding-bottom: 16px;
 
+    @include mixins.tablet {
+      width: 580px;
+      margin: auto;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
     @include mixins.desktop {
       padding-left: 22%;
       justify-content: center;
@@ -542,14 +576,8 @@
   // avatar-name-date container
   &__flex-1 {
     display: flex;
-    // align-items: center;
     justify-content: space-between;
     height: 24px;
-
-    @include mixins.tablet {
-    padding-left: 8.5%;
-    padding-right: 8.5%;
-    }
   }
 
   // avatar-name container
@@ -566,12 +594,8 @@
     background-color: colors.$mercury;
 
     @include mixins.tablet {
-      vertical-align:auto;
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
-      margin-right: 1.25rem; 
-      margin-top: 1.875rem;
+      width: 47px;
+      height: 47px;
     }
     
     @include mixins.desktop {
@@ -582,7 +606,6 @@
       margin-right: 1.25rem; 
       margin-top: 1.875rem;
     }
-  
   }
 
   // commenter's name
@@ -595,6 +618,9 @@
   //  comment description wrapper
   &__flex-2 {
     padding-left: 50px;
+    @include mixins.tablet {
+      padding-left: 62px;
+    }
   }
 
   // comment description
@@ -604,8 +630,7 @@
     margin-top: 0rem;
 
     @include mixins.tablet {
-      padding-left: 12%;
-      padding-right: 8%;
+      font-size: 14px;
     }
     @include mixins.desktop {
       padding-left: 1.25rem;

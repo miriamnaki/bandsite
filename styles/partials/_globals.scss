@@ -15,8 +15,11 @@
   width: 100%;
   background-color: colors.$bandsite-black;
   color: colors.$white;
-  
 
+  @include mixins.tablet {
+    
+  }
+  
   &__wrapper > a {
     text-decoration: none;
   }
@@ -27,11 +30,13 @@
 
     // tablet and desktop wrapper
     @include mixins.tablet {
+      margin-left: 36px;
+      margin-right: 36px;
+      height: 70px;
       display: flex;
-      align-content: center;
-      padding: 2.25rem 2.25rem 0rem 2.25rem; 
-      
+      align-items: center;   
     }
+
     @include mixins.desktop {
       display: flex;
       align-content: center;
@@ -57,11 +62,9 @@
     
     // desktop and tablet title
     @include mixins.tablet {
-      margin-bottom: 0rem;
-      padding-top: 0;
-      padding-bottom: 2.25rem;
-      margin-right: 2.25rem;
+      padding-right: 50px;
     }
+
     @include mixins.desktop {
       margin-bottom: 0rem;
       padding-top: 0;
@@ -80,10 +83,10 @@
   margin: 0rem;
   @include mixins.flex(center);
   
-  // desktop and tablet navlist
   @include mixins.tablet {
-   padding-bottom: 0rem;
+    padding: 0;
   }
+
   @include mixins.desktop {
    padding-bottom: 0rem;
   }
@@ -101,8 +104,9 @@
     
     // desktop and tablet nav item
     @include mixins.tablet {
-      margin-right: 2.25rem;
-      font-size: 1.5rem;
+      padding-right: 36px;
+      padding-left: 0px;
+      margin: 0;
     }
     @include mixins.desktop {
       margin-right: 2.25rem;
@@ -153,7 +157,6 @@
 
   &__item:active {  
     bottom: 0;
-    // padding-bottom: 1rem;
     border-bottom: 0.2em solid colors.$white;
     color: colors.$white;
     font-weight: 700;
@@ -174,7 +177,8 @@
     position: relative;
     z-index: 1;
     @include mixins.tablet {
-      padding-bottom: 2.25rem;
+      // padding-top: 2.25rem;
+      padding-bottom: 20px;
     }    
     @include mixins.desktop {
       padding-bottom: 2.25rem;
