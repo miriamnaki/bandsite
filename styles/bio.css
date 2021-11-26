@@ -65,11 +65,13 @@
 }
 @media screen and (min-width: 79.875rem) {
   .header__wrapper {
+    display: block;
+    width: 87%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70px;
     display: flex;
-    align-content: center;
-    padding: 2.25rem 2.25rem 0rem 2.25rem;
-    margin-top: 0;
-    margin-right: 0;
+    align-items: center;
   }
 }
 .header__title {
@@ -92,12 +94,7 @@
 }
 @media screen and (min-width: 79.875rem) {
   .header__title {
-    margin-bottom: 0rem;
-    padding-top: 0;
-    padding-bottom: 2.5rem;
-    margin-right: 4rem;
-    padding-left: 2rem;
-    font-size: 2.25rem;
+    padding-right: 50px;
   }
 }
 
@@ -138,8 +135,9 @@
 }
 @media screen and (min-width: 79.875rem) {
   .nav-list__item {
-    margin-right: 2.25rem;
-    font-size: 1.5rem;
+    padding-right: 36px;
+    padding-left: 0px;
+    margin: 0;
   }
 }
 .nav-list__item:before {
@@ -401,7 +399,7 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .hero {
-    height: 60vh;
+    height: 475px;
   }
 }
 .hero__title {
@@ -421,7 +419,7 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .hero__title {
-    font-size: 3.75rem;
+    font-size: 43px;
     margin-left: 5rem;
     margin-right: 5rem;
   }
@@ -446,7 +444,7 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .hero:before {
-    height: 60vh;
+    height: 475px;
   }
 }
 
@@ -467,8 +465,9 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .musicians__title {
-    margin-bottom: 2.25rem;
-    font-size: 2.25rem;
+    padding: 36px 36px 25px 0px;
+    font-size: 36px;
+    margin-left: 5rem;
   }
 }
 .musicians__image {
@@ -489,8 +488,10 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .musicians__image {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    height: 450px;
+    width: 970px;
+    margin: auto;
+    margin-bottom: 24px;
   }
 }
 
@@ -506,7 +507,9 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .band-quote {
-    margin: 3rem 4rem 2.25rem 4rem;
+    margin: auto;
+    width: 970px;
+    padding: 0;
   }
 }
 .band-quote__statement {
@@ -526,10 +529,10 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .band-quote__statement {
-    line-height: 2.75rem;
-    font-size: 1.5rem;
+    line-height: 24px;
+    font-size: 18px;
     margin-bottom: 0.625rem;
-    padding-left: 2.25rem;
+    max-width: 540px;
   }
 }
 .band-quote__writter {
@@ -547,10 +550,8 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .band-quote__writter {
-    line-height: 2.25rem;
-    font-size: 1.125rem;
+    font-size: 16px;
     margin-bottom: 0rem;
-    padding-left: 2.25rem;
   }
 }
 
@@ -565,7 +566,8 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .band-info {
-    margin: 3rem 4rem 2.25rem 4rem;
+    margin: auto;
+    width: 970px;
   }
 }
 .band-info__title {
@@ -582,11 +584,8 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .band-info__title {
+    padding-top: 48px;
     font-size: 1.5rem;
-    padding-left: 2.25rem;
-    margin: 0;
-    padding-bottom: 2.25rem;
-    padding-top: 3rem;
   }
 }
 .band-info__description {
@@ -602,8 +601,6 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .band-info__description {
-    line-height: 2rem;
-    font-size: 1.125rem;
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -624,8 +621,10 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .band-info__description--right {
-    padding-right: 0.9375rem;
-    padding-left: 2.25rem;
+    line-height: 22px;
+    font-size: 14px;
+    padding-right: 16px;
+    padding-bottom: 36px;
   }
 }
 .band-info__description--left {
@@ -642,8 +641,9 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .band-info__description--left {
-    padding-left: 0.9375rem;
-    padding-right: 2.25rem;
+    line-height: 22px;
+    font-size: 14px;
+    padding-bottom: 30px;
   }
 }
 
@@ -668,9 +668,9 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .gallery__title {
-    margin: 0rem 2.25rem;
-    padding-top: 3rem;
-    padding-bottom: 2.25rem;
+    margin: 0rem 80px;
+    padding-top: 40px;
+    padding-bottom: 24px;
     font-size: 2.25rem;
   }
 }
@@ -691,7 +691,8 @@ hr {
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
-    margin: 0rem 1.125rem 0rem 1.125rem;
+    padding-left: 68px;
+    padding-right: 68px;
   }
 }
 .gallery__image {
@@ -715,8 +716,7 @@ hr {
   .gallery__image {
     width: 33%;
     height: 33%;
-    padding: 0rem;
-    padding: 0rem 1.125rem 2.25rem 1.125rem;
+    padding: 0rem 12px 24px 12px;
   }
 }
 .gallery__image:hover {
@@ -729,6 +729,12 @@ hr {
   font-family: "Avenir";
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .comments-form {
+    margin: 0rem 2.25rem;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 79.875rem) {
   .comments-form {
     margin: 0rem 2.25rem;
     padding: 0;
@@ -747,8 +753,9 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .comments-form__title {
+    padding-top: 48px;
+    padding-bottom: 36px;
     font-size: 2.25rem;
-    margin: 1.5rem 1rem 0.5rem 1rem;
   }
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
@@ -759,8 +766,8 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .comments-form__main {
-    justify-content: center;
-    width: 100%;
+    width: 580px;
+    margin: auto;
   }
 }
 .comments-form__wrapper {
@@ -782,12 +789,8 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .comments-form__avatar {
-    vertical-align: auto;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    margin-right: 1.25rem;
-    margin-top: 1.875rem;
+    width: 47px;
+    height: 47px;
   }
 }
 .comments-form__name {
@@ -803,6 +806,11 @@ hr {
     font-size: 12px;
   }
 }
+@media screen and (min-width: 79.875rem) {
+  .comments-form__name {
+    font-size: 12px;
+  }
+}
 .comments-form__input[type=text] {
   width: 100%;
   border-radius: 0.3125rem;
@@ -812,6 +820,12 @@ hr {
   height: 31px;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .comments-form__input[type=text] {
+    padding: 22px 0px 22px 22px;
+    height: 18px;
+  }
+}
+@media screen and (min-width: 79.875rem) {
   .comments-form__input[type=text] {
     padding: 22px 0px 22px 22px;
     height: 18px;
@@ -853,6 +867,11 @@ hr {
     padding-left: 62px;
   }
 }
+@media screen and (min-width: 79.875rem) {
+  .comments-form__text-area {
+    padding-left: 62px;
+  }
+}
 .comments-form__comment {
   font-weight: 600;
   text-transform: uppercase;
@@ -863,6 +882,11 @@ hr {
   padding-top: 16px;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .comments-form__comment {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 79.875rem) {
   .comments-form__comment {
     font-size: 12px;
   }
@@ -910,6 +934,13 @@ hr {
     padding-left: 420px;
   }
 }
+@media screen and (min-width: 79.875rem) {
+  .comments-form__button-wrapper {
+    margin-top: 22px;
+    margin-bottom: 24px;
+    padding-left: 420px;
+  }
+}
 .comments-form__button {
   color: #FFFFFF;
   background-color: #323232;
@@ -921,19 +952,17 @@ hr {
   border-radius: 0.3125rem;
   border: 0.0625rem solid #323232;
 }
-@media screen and (min-width: 79.875rem) {
-  .comments-form__button {
-    width: 30%;
-    float: right;
-    padding: 0.625rem 0rem 0.625rem 0rem;
-  }
-}
 
 .comments {
   font-family: "Avenir";
   padding: 0rem 1rem 1rem 1rem;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .comments {
+    margin: 0rem 2.25rem;
+  }
+}
+@media screen and (min-width: 79.875rem) {
   .comments {
     margin: 0rem 2.25rem;
   }
@@ -954,9 +983,10 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .comments__container {
-    padding-left: 22%;
-    justify-content: center;
-    width: 80%;
+    width: 580px;
+    margin: auto;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 .comments__flex-1 {
@@ -982,12 +1012,8 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .comments__avatar {
-    vertical-align: auto;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    margin-right: 1.25rem;
-    margin-top: 1.875rem;
+    width: 47px;
+    height: 47px;
   }
 }
 .comments__name {
@@ -999,6 +1025,11 @@ hr {
   padding-left: 50px;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .comments__flex-2 {
+    padding-left: 62px;
+  }
+}
+@media screen and (min-width: 79.875rem) {
   .comments__flex-2 {
     padding-left: 62px;
   }
@@ -1015,7 +1046,7 @@ hr {
 }
 @media screen and (min-width: 79.875rem) {
   .comments__description {
-    padding-left: 1.25rem;
+    font-size: 14px;
   }
 }
 .comments__date {

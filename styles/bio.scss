@@ -17,7 +17,7 @@
     height: 445px;
   }
   @include mixins.desktop {
-    height: 60vh;
+    height: 475px;
   }
   
   // hero title
@@ -35,7 +35,7 @@
       margin-right: 2.25rem;
     }
     @include mixins.desktop {
-      font-size: 3.75rem;
+      font-size: 43px;
       margin-left: 5rem;
       margin-right: 5rem;
     }
@@ -59,7 +59,7 @@
     height: 445px;
   }
   @include mixins.desktop {
-    height: 60vh;
+    height: 475px;
   }
 }
 
@@ -80,8 +80,9 @@
     }
 
     @include mixins.desktop {
-    margin-bottom: 2.25rem;
-    font-size: 2.25rem;
+      padding: 36px 36px 25px 0px;
+      font-size: 36px;
+      margin-left: 5rem;
     }
   }
 
@@ -99,12 +100,12 @@
       width: 580px;
       margin: auto;
       margin-bottom: 36px;
-      // padding-left: 2.25rem;
-      // padding-right: 2.25rem;
     }
     @include mixins.desktop {
-      padding-left: 3rem;
-      padding-right: 3rem;
+      height: 450px;
+      width: 970px;
+      margin: auto;
+      margin-bottom: 24px;
     }   
   }
 }
@@ -117,12 +118,15 @@
     // margin: 0rem 4.5rem 0rem 4.5rem;
     margin: auto;
     width: 580px;
-    padding: 0;
-    
+    padding: 0;  
   }
   @include mixins.desktop {
-    margin: 3rem 4rem 2.25rem 4rem;
+    // margin: 0rem 4.5rem 0rem 4.5rem;
+    margin: auto;
+    width: 970px;
+    padding: 0;   
   }
+  
 
   // musician quote 
   &__statement {
@@ -137,16 +141,13 @@
       font-size: 22px;
       line-height: 32px;
       padding-bottom: 10px;
-    // line-height: 2.75rem;
-    // font-size: 1.5rem;
-    // margin-bottom: 0.625rem;
     }
 
     @include mixins.desktop {
-    line-height: 2.75rem;
-    font-size: 1.5rem;
+    line-height: 24px;
+    font-size: 18px;
     margin-bottom: 0.625rem;
-    padding-left: 2.25rem;
+    max-width: 540px;
     }  
   }
 
@@ -159,16 +160,13 @@
   margin-top: 0rem;
 
   @include mixins.tablet {
-    // line-height: 2.25rem;
     font-size: 16px;
     margin-bottom: 0rem;
     }
 
   @include mixins.desktop{
-    line-height: 2.25rem;
-    font-size: 1.125rem;
+    font-size: 16px;
     margin-bottom: 0rem;
-    padding-left: 2.25rem;
   }
   }
 }
@@ -182,9 +180,10 @@
     width: 580px;
     
   }
-
   @include mixins.desktop {
-    margin: 3rem 4rem 2.25rem 4rem;
+    margin: auto;
+    width: 970px;
+    
   }
 
   // musician about title
@@ -199,12 +198,10 @@
       font-size: 1.5rem;
     }
     @include mixins.desktop {
+      padding-top: 48px;
       font-size: 1.5rem;
-      padding-left: 2.25rem;
-      margin: 0;
-      padding-bottom: 2.25rem;
-      padding-top: 3rem;
     }
+    
   }
 
   // musician about description
@@ -218,8 +215,6 @@
       }
 
       @include mixins.desktop {
-      line-height: 2rem;
-      font-size: 1.125rem;
 
       @include mixins.flex(space-between); 
       margin: 0;
@@ -238,9 +233,12 @@
         padding-bottom: 36px;
       }
       @include mixins.desktop {
-        padding-right: 0.9375rem;
-        padding-left: 2.25rem;
+        line-height: 22px;
+        font-size: 14px;
+        padding-right: 16px;
+        padding-bottom: 36px;
       }
+      
     }
 
      //  musician description second paragraph
@@ -254,9 +252,11 @@
         padding-bottom: 30px;
       }
       @include mixins.desktop {
-        padding-left: 0.9375rem;
-        padding-right: 2.25rem;
-      }     
+        line-height: 22px;
+        font-size: 14px;
+        padding-bottom: 30px;
+      }
+           
     }    
   }
 }
@@ -283,10 +283,11 @@
      
     }
     @include mixins.desktop {
-      margin: 0rem 2.25rem ;
-      padding-top: 3rem;
-      padding-bottom: 2.25rem;
-      font-size: 2.25rem;   
+      margin: 0rem 80px ;
+      padding-top: 40px;
+      padding-bottom: 24px;
+      font-size: 2.25rem;
+     
     }
   }
 
@@ -303,7 +304,9 @@
     @include mixins.desktop {
       flex-wrap: wrap;
       @include mixins.flex(space-between); 
-      margin: 0rem 1.125rem 0rem 1.125rem;
+      // margin: 0rem 1.125rem 0rem 1.125rem;
+      padding-left: 68px;
+      padding-right: 68px;
     }
   }
 
@@ -325,9 +328,8 @@
     @include mixins.desktop {
       width: 33%;
       height: 33%;
-      padding: 0rem;
-      padding: 0rem 1.125rem 2.25rem 1.125rem;      
-    }  
+      padding: 0rem 12px 24px 12px;      
+    }
   }
 
   // gallery hover effects
@@ -347,6 +349,10 @@
     margin: 0rem 2.25rem;
     padding: 0;
   }
+  @include mixins.desktop {
+    margin: 0rem 2.25rem;
+    padding: 0;
+  }
 
   // comments title
   &__title {
@@ -358,12 +364,12 @@
       padding-bottom: 36px;
       font-size: 2.25rem;
     }
-
     @include mixins.desktop {
+      padding-top: 48px;
+      padding-bottom: 36px;
       font-size: 2.25rem;
-      margin: 1.5rem 1rem 0.5rem 1rem; 
     }
-    }
+  }
 
     // comments-form main wrapper
   &__main {
@@ -372,10 +378,10 @@
       width: 580px;
       margin: auto;
     }
-
     @include mixins.desktop {
-      justify-content: center;
-      width: 100%;
+      // justify-content: center;
+      width: 580px;
+      margin: auto;
     }
   }
 
@@ -398,13 +404,10 @@
       width: 47px;
       height: 47px;
     }
+
     @include mixins.desktop {
-      vertical-align:auto;
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
-      margin-right: 1.25rem; 
-      margin-top: 1.875rem;
+      width: 47px;
+      height: 47px;
     }
   }
 
@@ -420,7 +423,9 @@
     @include mixins.tablet {
       font-size: 12px;
     }
-    
+    @include mixins.desktop {
+      font-size: 12px;
+    }  
   }
 
   // comments-form  name input field
@@ -433,6 +438,10 @@
     height: 31px;
 
     @include mixins.tablet {
+      padding: 22px 0px 22px 22px;
+      height: 18px;
+    }
+    @include mixins.desktop {
       padding: 22px 0px 22px 22px;
       height: 18px;
     }
@@ -465,6 +474,9 @@
     @include mixins.tablet {
       padding-left: 62px;
     }
+    @include mixins.desktop {
+      padding-left: 62px;
+    }
   }
 
   // comments-form comment label
@@ -478,6 +490,9 @@
     padding-top: 16px;
 
     @include mixins.tablet {
+      font-size: 12px;
+    }
+    @include mixins.desktop {
       font-size: 12px;
     }
   }
@@ -497,10 +512,6 @@
       width: 100%;
       font-size: 13px;
       padding: 0px 0px 0px 0px;
-
-      @include mixins.tablet {
-        // padding: 10px 0px 0px 10px;
-      }
     }
   }
 
@@ -521,6 +532,12 @@
       padding-left: 420px;
 
     }
+    @include mixins.desktop {
+      margin-top: 22px;
+      margin-bottom: 24px;
+      padding-left: 420px;
+
+    }
   }
   
   // comment-form button
@@ -534,12 +551,7 @@
     text-transform: uppercase;
     border-radius: 0.3125rem;
     border: 0.0625rem solid colors.$bandsite-black;
-  
-    @include mixins.desktop {
-      width: 30%;
-      float: right;
-      padding: 0.625rem 0rem 0.625rem 0rem;
-    }
+
   }  
 }
 
@@ -549,6 +561,9 @@
   padding: 0rem 1rem 1rem 1rem;
 
   @include mixins.tablet {
+    margin: 0rem 2.25rem;
+  }
+  @include mixins.desktop {
     margin: 0rem 2.25rem;
   }
 
@@ -565,12 +580,13 @@
       padding-top: 24px;
       padding-bottom: 24px;
     }
-
     @include mixins.desktop {
-      padding-left: 22%;
-      justify-content: center;
-      width: 80%;
+      width: 580px;
+      margin: auto;
+      padding-top: 24px;
+      padding-bottom: 24px;
     }
+
   }
 
   // avatar-name-date container
@@ -597,15 +613,10 @@
       width: 47px;
       height: 47px;
     }
-    
     @include mixins.desktop {
-      vertical-align:auto;
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
-      margin-right: 1.25rem; 
-      margin-top: 1.875rem;
-    }
+      width: 47px;
+      height: 47px;
+    }  
   }
 
   // commenter's name
@@ -621,6 +632,9 @@
     @include mixins.tablet {
       padding-left: 62px;
     }
+    @include mixins.desktop {
+      padding-left: 62px;
+    }
   }
 
   // comment description
@@ -633,7 +647,7 @@
       font-size: 14px;
     }
     @include mixins.desktop {
-      padding-left: 1.25rem;
+      font-size: 14px;
     }
   }
 
