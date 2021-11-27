@@ -62,6 +62,33 @@ const container = document.createElement('div');
 container.classList.add('shows__container');
 article.appendChild(container);
 
+const tabletDesktop = document.createElement('div');
+tabletDesktop.classList.add('shows__tablet-desktop');
+container.appendChild(tabletDesktop);
+
+const tabletDesktopDate = document.createElement('p');
+tabletDesktopDate.classList.add('shows__tablet');
+tabletDesktopDate.innerText = 'date';
+tabletDesktop.appendChild(tabletDesktopDate);
+
+const tabletDesktopVenue = document.createElement('p');
+tabletDesktopVenue.classList.add('shows__tablet');
+tabletDesktopVenue.innerText = 'venue';
+tabletDesktop.appendChild(tabletDesktopVenue);
+
+const tabletDesktopLocation = document.createElement('p');
+tabletDesktopLocation.classList.add('shows__tablet');
+tabletDesktopLocation.innerText = 'location';
+tabletDesktop.appendChild(tabletDesktopLocation);
+
+const buttonTablet = document.createElement('a');
+buttonTablet.classList.add('shows__tablet-button');
+buttonTablet.classList.add('shows__tablet-button-hide');
+buttonTablet.setAttribute('href', "#");
+buttonTablet.innerText = "buy tickets"
+tabletDesktop.appendChild(buttonTablet);
+
+
 showDates
 .then((response)=> {
   console.log(response)
@@ -82,9 +109,9 @@ showDates
     // date label
     const dateLabel = document.createElement('p');
     dateLabel.classList.add('shows__label');
-    if(index !== 0){
-      dateLabel.classList.add('shows__label--tablet-desktop');
-    }
+    // if(index !== 0){
+    //   dateLabel.classList.add('shows__label--tablet-desktop');
+    // }
     dateLabel.innerText = 'date';
     dateWrapper.appendChild(dateLabel);
   
@@ -110,9 +137,9 @@ showDates
     //venue label
     const venueLabel = document.createElement('p');
     venueLabel.classList.add('shows__label');
-    if(index !== 0){
-      venueLabel.classList.add('shows__label--tablet-desktop');
-    }
+    // if(index !== 0){
+    //   venueLabel.classList.add('shows__label--tablet-desktop');
+    // }
     venueLabel.innerText = 'venue';
     venueWrapper.appendChild(venueLabel);
   
@@ -130,9 +157,9 @@ showDates
     // location label
     const locationLabel = document.createElement('p');
     locationLabel.classList.add('shows__label');
-    if(index !== 0){
-      locationLabel.classList.add('shows__label--tablet-desktop');
-    }
+    // if(index !== 0){
+    //   locationLabel.classList.add('shows__label--tablet-desktop');
+    // }
     locationLabel.innerText = 'location';
     locationWrapper.appendChild(locationLabel);
   
@@ -145,9 +172,9 @@ showDates
     // button wrapper
     const buttonWrapper = document.createElement('div');
     buttonWrapper.classList.add('shows__button-wrapper');
-    if(index === 0){
-    buttonWrapper.classList.add('shows__button-wrapper--top')
-    }
+    // if(index === 0){
+    // buttonWrapper.classList.add('shows__button-wrapper--top')
+    // }
     showsWrapper.appendChild(buttonWrapper);
   
     // button
