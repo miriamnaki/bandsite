@@ -52,10 +52,10 @@ mainEl.appendChild(article);
 console.log(article);
 
 // heading
-const h1 = document.createElement('h1');
-h1.classList.add('shows__title');
-h1.innerText = 'Shows';
-article.appendChild(h1);
+const h3 = document.createElement('h3');
+h3.classList.add('shows__title');
+h3.innerText = 'Shows';
+article.appendChild(h3);
 
 // shows container
 const container = document.createElement('div');
@@ -159,6 +159,7 @@ showDates
   
     // hr
     const hr = document.createElement('hr');
+    hr.classList.add('shows__divider')
     container.appendChild(hr);
   });
   

@@ -7,7 +7,8 @@
 .hero {
   font-family: "Avenir";
   height: 11.875rem;
-  display: flex;
+  @include mixins.flex();
+  background-image: url('../assets/images/hero-bio.jpg');
   @include mixins.hero;
     
   @include mixins.tablet {

@@ -3,18 +3,21 @@
 @use './partials/mixins';
 @use './partials/globals';
 
-// hero section
+// ********************** hero section *********************
 .hero {
   color: colors.$white;
   font-family: 'Avenir';
-  display: flex;
-  flex-direction: column;
+  background-image: url('../assets/images/hero-shows.jpg');
+  @include mixins.hero;
+  padding: 2rem 1rem;
+  height: 265px;
+  // @include mixins.flex();
+  // flex-direction: column;
+
+  
   &__wrapper {
     position: relative;
-    background-image: url('../assets/images/hero-shows.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 2rem 1rem 2rem 1rem;
+    z-index: 2;
     
     //tablet and desktop
     @include mixins.tablet{
@@ -27,29 +30,35 @@
       padding: 10rem 5rem;
     }
   }
-  &__wrapper::before {
-    content: " ";
-    background-color: colors.$bandsite-black;
-    // position: absolute;
-    // z-index: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0.5; 
-  }
 
-  &__info-wrapper {
-    @include mixins.desktop {
-      margin-right: 1.25rem;
-    }
-  }
+
+  // &__wrapper:after {
+  //   // @include mixins.overlay;
+  // content: " ";
+  // background-color: colors.$bandsite-black;
+  // position: absolute;
+  // z-index: 1;
+  // top: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  // opacity: 0.4;
+  // }
+
+  // &__info-wrapper {
+  //   z-index: 2;
+  //   @include mixins.desktop {
+  //     margin-right: 1.25rem;
+  //   }
+  // }
 
   &__title {
-    z-index: 3;
-    margin-top: 0;
-    font-weight: 400;
+    font-size: 14px;
     font-style: normal;
+    padding-bottom: 16px;
+    // z-index: 1;
+    // margin-top: 0;
+    // font-weight: 600;
   
     @include mixins.tablet {
       font-size: 1.5rem;
@@ -58,12 +67,15 @@
       font-size: 1.5rem;    
     }   
   }
+
   &__sample-title {
-    z-index: 3;
-    font-size: 2.25rem;
-    font-weight: 37.5rem;
-    margin-top: 0;
-    max-width: 50%;
+    // z-index: 1;
+    font-size: 24px;
+    font-weight: 600;
+    max-width: 210px;
+    padding-bottom: 16px;
+    // margin-top: 0;
+
     @include mixins.tablet {
       font-size: 2.5rem;
       max-width: 60%;
@@ -76,9 +88,9 @@
   }
 
   &__video-wrapper {
-    width: 60%;
-    height: 9.375rem;
-    z-index: 3;
+    width: 100%;
+    height: 90px;
+    // z-index: 2;
 
     @include mixins.desktop {
       width: 60%;
@@ -87,10 +99,16 @@
   }  
 }
 
-//shows section
+// hero overlay
+.hero:before {
+  @include mixins.overlay;
+}
+
+//*************************** hero section **********************
 .shows {
-  padding: 2rem 1rem 2rem 1rem;
+  
   font-family: 'Avenir';
+
   @include mixins.tablet {
     padding: 3rem 2.25rem 2.25rem;
   }
@@ -103,6 +121,7 @@
     padding: 3rem 5rem 5rem ;
   }
 
+  // show label wrapper
   &__label-wrapper {
     display: none;
     
@@ -115,15 +134,20 @@
     }
   }
 
+  // shows info wrapper
   &__wrapper {
-    display: flex;
-    flex-direction: column;
+    padding: 0px 16px;
+    // margin-bottom: 16px;
     @include mixins.tablet {
+      display: flex;
+      flex-direction: column;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;   
     }
     @include mixins.desktop {
+      display: flex;
+      flex-direction: column;
       flex-wrap: wrap;
       justify-content: space-between;
       flex-direction: row;
@@ -138,7 +162,10 @@
     background-color: colors.$mercury;
   }
   &__title {
-    font-size: 1.875rem;
+    font-size: 24px;
+    font-weight: 600;
+    // padding-bottom: 24px;
+    padding: 32px 16px 24px 16px;
 
     @include mixins.desktop {
       padding-right: 10%;
@@ -150,6 +177,7 @@
     text-transform: uppercase;
     color: colors.$silver;
     font-weight: 600;
+    font-size: 10px; 
 
     &--tablet-desktop {
       @include mixins.tablet {
@@ -163,6 +191,7 @@
 
   &__date {
     font-weight: 600;
+    font-size: 13px; 
     @include mixins.desktop{
       width: 12.5rem;
       line-height: 1.375rem;
@@ -173,6 +202,7 @@
   &__location {
     font-weight: 400;
     font-style: normal;
+    font-size: 13px; 
     @include mixins.desktop {
       width: 12.5rem;
       line-height: 2rem;
@@ -184,9 +214,9 @@
     text-align: center;
     background-color: colors.$bandsite-black;
     border-radius: 0.3125rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-top: 1.5rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 6px;
     margin-bottom: 1rem;
      
     @include mixins.tablet {
@@ -220,7 +250,7 @@
     color: colors.$white;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 14px;
     
     @include mixins.tablet {
       // width: 15%;
@@ -240,7 +270,7 @@
   &__venue-wrapper,
   &__location-wrapper {
     line-height: 1.125rem;
-    padding-bottom: 0.125rem;
+    padding-bottom: 12px;
 
     @include mixins.tablet {
       line-height: 2.75rem;
@@ -255,6 +285,23 @@
 
     }
     
+  }
+
+  &__divider {
+    height: 2px;
+    border: none;
+    background: colors.$mercury;
+    margin-bottom: 16px;
+    width: 100%;
+
+    @include mixins.tablet {
+      width: 36.25rem;
+      margin: auto;
+    }
+    @include mixins.desktop {
+      width: 36.25rem;
+      margin: auto;
+    }
   }
 }
 

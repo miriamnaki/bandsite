@@ -397,6 +397,7 @@
   font-family: "Avenir";
   height: 11.875rem;
   display: flex;
+  justify-content: flex-start;
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: cover;

@@ -187,6 +187,12 @@ allComments
     // stop form from reloading after its submitted
     e.preventDefault();
 
+
+    const formname = document.querySelector('.comments-form__input')
+// const comment = document.querySelector('.comments-form__description')
+// const form2 = document.querySelector('.comments-form__main')
+
+  
     // save the  submitted form input values
     let commenterName = e.target.commenterName.value;
     const description = e.target.description.value;
@@ -304,7 +310,7 @@ function displayCommentsBynewest(commentsArray){
   })
 }
 
-      
+
      
         
         
