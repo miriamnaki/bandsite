@@ -60,6 +60,7 @@
     margin-right: 2.25rem;
     height: 4.375rem;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
   }
 }
@@ -94,7 +95,7 @@
 }
 @media screen and (min-width: 80rem) {
   .header__title {
-    padding-right: 3.125rem;
+    width: 12.5rem;
   }
 }
 
@@ -221,10 +222,11 @@
 }
 
 .footer {
+  font-family: "Avenir";
   background-color: #323232;
   color: #FFFFFF;
   padding-top: 0.5rem;
-  padding: 1.5rem 1rem 1rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .footer {
@@ -234,7 +236,7 @@
 }
 @media screen and (min-width: 80rem) {
   .footer {
-    padding: 3rem 2.25rem 2.25rem 2.25rem;
+    padding: 3rem 5rem 2.25rem 5rem;
     position: relative;
   }
 }
@@ -243,22 +245,24 @@
     align-items: baseline;
     display: flex;
     justify-content: space-between;
-    max-width: 50%;
+    width: 50%;
+    padding-top: 1rem;
   }
 }
 @media screen and (min-width: 80rem) {
   .footer__wrapper {
-    display: flex;
-    justify-content: space-between;
     align-items: baseline;
-    max-width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 1rem;
   }
 }
 .footer__title {
   margin-top: 0rem;
   font-family: "Avenir";
-  font-weight: 700;
-  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .footer__title {
@@ -268,13 +272,25 @@
 @media screen and (min-width: 80rem) {
   .footer__title {
     font-size: 2.25rem;
+    width: 18.125rem;
   }
 }
 .footer__icons {
-  flex-direction: row;
   display: flex;
   justify-content: space-between;
-  max-width: 30%;
+  flex-direction: row;
+  width: 6.25rem;
+}
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .footer__icons {
+    width: 9.375rem;
+    padding-left: 1.5rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .footer__icons {
+    width: 9.375rem;
+  }
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .footer__icon {
@@ -295,33 +311,57 @@
 }
 .management__wrapper {
   line-height: 1.375rem;
+  padding-top: 1rem;
 }
-.management__name {
-  margin-bottom: 0rem;
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .management__wrapper {
+    padding-top: 1.5rem;
+    line-height: 1.375rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .management__wrapper {
+    padding-top: 1.5rem;
+    line-height: 1.375rem;
+  }
+}
+.management__column {
+  font-size: 0.8125rem;
+}
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .management__column {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .management__column {
+    font-size: 1rem;
+    margin-right: 5rem;
+  }
+}
+.management__name, .management__group {
   font-weight: 600;
 }
-.management__group {
-  margin-top: 0;
-  font-weight: 600;
-}
-.management__address {
-  margin-top: 0;
+.management__addresses {
   font-weight: 400;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
-.management__location {
-  margin-top: 0;
-  font-weight: 400;
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .management__addresses {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    line-height: 1.375rem;
+  }
 }
-.management__type {
-  margin-bottom: 0;
-  font-weight: 400;
+@media screen and (min-width: 80rem) {
+  .management__addresses {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    line-height: 1.375rem;
+  }
 }
-.management__street {
-  margin-bottom: 0;
-  font-weight: 400;
-}
-.management__city {
-  margin-top: 0;
+.management__location, .management__type, .management__street, .management__city {
   font-weight: 400;
 }
 .management__email {
@@ -333,22 +373,36 @@
 .management__copyright {
   font-weight: 400;
   font-size: 0.875rem;
+  font-size: 0.6875rem;
+}
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
+  .management__copyright {
+    padding-top: 3.5rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .management__copyright {
+    padding-top: 3.5rem;
+    font-size: 1rem;
+  }
 }
 .management__logo {
   font-weight: 400;
   font-size: 1.5rem;
-  padding-top: 3.125rem;
+  padding-top: 3.25rem;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .management__logo {
     position: absolute;
     top: 0;
     right: 0;
-    padding-top: 3.4375rem;
+    padding-top: 4rem;
     padding-right: 2.25rem;
     margin-bottom: 0;
     margin-top: 0rem;
-    font-size: 2.25rem;
+    font-size: 1.6875rem;
   }
 }
 @media screen and (min-width: 80rem) {
@@ -356,11 +410,11 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding-top: 3.4375rem;
+    padding-top: 4rem;
     padding-right: 2.25rem;
     margin-bottom: 0;
     margin-top: 0rem;
-    font-size: 2.25rem;
+    font-size: 1.6875rem;
   }
 }
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
@@ -372,7 +426,7 @@
 @media screen and (min-width: 80rem) {
   .management__sections {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 }
 

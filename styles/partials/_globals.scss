@@ -52,7 +52,7 @@
       margin-left: 2.25rem;
       margin-right: 2.25rem;
       height: 4.375rem;
-      display: flex;
+      @include mixins.flex();
       align-items: center;   
     }
 
@@ -88,12 +88,13 @@
     }
 
     @include mixins.desktop {
-      padding-right: 3.125rem;
+      // padding-right: 3.125rem;
+      width: 12.5rem;
     }   
   } 
 }
 
-// navlist
+// ************** navlist ******************
 .nav-list {
   padding-left: 0;
   padding-bottom: 0.7rem;
@@ -108,6 +109,7 @@
    padding-bottom: 0rem;
   }
 
+  // nav list item
   &__item {
     list-style: none;
     color: colors.$mercury;
@@ -211,32 +213,37 @@
   padding-bottom: 0rem;
 }
 
-// footer
+// ****************** footer **************************
 .footer {
+  font-family: 'Avenir';
   background-color: colors.$bandsite-black;
   color: colors.$white;
   padding-top: 0.5rem;
-  padding: 1.5rem 1rem 1rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
+  
 
   @include mixins.tablet {
     padding: 3rem 2.25rem 2.25rem 2.25rem;
     position: relative; 
   }
   @include mixins.desktop {
-    padding: 3rem 2.25rem 2.25rem 2.25rem;
+    padding: 3rem 5rem 2.25rem 5rem;
     position: relative; 
   }
 
+  // footer wrapper
   &__wrapper {
     @include mixins.tablet {
       align-items: baseline;
       @include mixins.flex(space-between); 
-      max-width: 50%;
+      width: 50%;
+      padding-top: 1rem
     }
     @include mixins.desktop {
-      @include mixins.flex(space-between); 
       align-items: baseline;
-      max-width: 50%;
+
+      @include mixins.flex(); 
+      padding-top: 1rem
     }
   }
   
@@ -244,24 +251,36 @@
   &__title {
     margin-top: 0rem;
     font-family: 'Avenir';
-    font-weight: 700;
-    font-style: normal;
-
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    
     @include mixins.tablet {
      font-size: 2.25rem;
     }
     @include mixins.desktop {
      font-size: 2.25rem;
+     width: 18.125rem;
     }
   }
 
-  // footer icons
+  // footer icons container
   &__icons {
-    flex-direction: row;
     @include mixins.flex(space-between); 
-    max-width: 30%;
+    flex-direction: row;
+    width: 6.25rem;
+
+    @include mixins.tablet {
+      width: 9.375rem;
+      padding-left: 1.5rem;
+    }
+
+    @include mixins.desktop {
+      width: 9.375rem;
+    }
   }
   
+  // footer icons
   &__icon {
     @include mixins.tablet {
       padding-left: .5rem;
@@ -272,79 +291,117 @@
       height: 1.8rem;
     }
   }
-
 }
 
 // management section
 .management {
   font-family: 'Avenir';
   font-size: 0.875rem;
+
+  // management wrapper
   &__wrapper {
    line-height: 1.375rem;
+   padding-top: 1rem;
+
+   @include mixins.tablet {
+     padding-top: 1.5rem;
+     line-height: 1.375rem;
+   }
+   @include mixins.desktop {
+     padding-top: 1.5rem;
+     line-height: 1.375rem;
+   }
   }
-  &__name{
-    margin-bottom: 0rem;
+
+  // management columns
+  &__column {
+    font-size: 0.8125rem;
+
+    @include mixins.tablet {
+      font-size: 1rem;
+    }
+    @include mixins.desktop {
+      font-size: 1rem;
+      margin-right: 5rem;
+    }
+  }
+  &__name,
+  &__group {
     font-weight: 600;
   }
-  &__group {
-    margin-top: 0; 
-    font-weight: 600; 
-  }
-  &__address {
-    margin-top: 0; 
+ 
+  &__addresses {
     font-weight: 400;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+    @include mixins.tablet {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      line-height: 1.375rem;
+    }
+    @include mixins.desktop {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      line-height: 1.375rem;
+    }
   }
-  &__location {
-    margin-top: 0; 
-    font-weight: 400;
-  }
-  &__type {
-    margin-bottom: 0;
-    font-weight: 400;
-  }
-  &__street {
-    margin-bottom: 0;
-    font-weight: 400;
-  }
+  &__location,
+  &__type,
+  &__street,
   &__city {
-    margin-top: 0;
     font-weight: 400;
   }
+  
   &__email {
     font-weight: 400;
     color: colors.$white;
     text-decoration: none;
-    cursor: pointer;
+    cursor: pointer;  
   }
+
+  // footer copyright
   &__copyright {
     font-weight: 400;
     font-size: 0.875rem;
+    font-size: 0.6875rem;
+
+    @include mixins.tablet {
+      padding-top: 3.5rem;
+      font-size: 1rem;
+    }
+    @include mixins.desktop {
+      padding-top: 3.5rem;
+      font-size: 1rem;
+    }
   }
 
+  // footer-logo
   &__logo {
     font-weight: 400;
     font-size: 1.5rem;
-    padding-top: 3.125rem;
+    padding-top: 3.25rem;
+    padding-bottom: 1rem;
 
     @include mixins.tablet {
       position: absolute;
       top: 0;
       right: 0;
-      padding-top: 3.4375rem;
+      padding-top: 4rem;
       padding-right: 2.25rem;
       margin-bottom:0;
       margin-top: 0rem;
-      font-size: 2.25rem;
+      font-size: 1.6875rem;
     }
     @include mixins.desktop {
       position: absolute;
       top: 0;
       right: 0;
-      padding-top: 3.4375rem;
+      padding-top: 4rem;
       padding-right: 2.25rem;
       margin-bottom:0;
       margin-top: 0rem;
-      font-size: 2.25rem;
+      font-size: 1.6875rem;
     }
   }
 
@@ -354,14 +411,13 @@
       @include mixins.flex(space-between); 
     }
     @include mixins.desktop {
-      @include mixins.flex(space-between); 
+      @include mixins.flex();       
     }
   }
 }
 
+// comments divider
 .divider {
-  // comments divider
-  
     stroke-width: 0.0625rem;
     color: colors.$mercury;
 
@@ -372,6 +428,5 @@
     @include mixins.desktop {
       width: 36.25rem;
       margin: auto;
-    }
-  
+    }  
 }
