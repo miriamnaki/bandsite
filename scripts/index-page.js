@@ -298,7 +298,7 @@ function addComment(commentsArray){
     
     // divider
     const divider = document.createElement('hr');
-    divider.classList.add('divider');
+    divider.classList.add('comments__divider');
     sectionEl.appendChild(divider);
     });
 }

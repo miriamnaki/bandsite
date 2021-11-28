@@ -347,6 +347,7 @@
       padding-top: 3rem;
       padding-bottom: 2.25rem;
       font-size: 2.25rem;
+      margin-left: 2.5rem;
     }
   }
 
@@ -633,6 +634,23 @@
     font-size: 0.8125rem;
     color: colors.$silver;
     margin: 0;
+  }
+
+  &__divider {
+    height: 0.125rem;
+    border: none;
+    background: colors.$mercury;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    @include mixins.tablet {
+      margin: auto;
+      width: 580px;
+    }
+    @include mixins.desktop {
+      margin: auto;
+      width: 580px;
+    }
   }
 
 }
