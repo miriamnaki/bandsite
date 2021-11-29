@@ -10,7 +10,6 @@ sectionEl.classList.add('comments');
 mainEl.appendChild(sectionEl);
 
 // fetching all comments and resolve the returned promise
-
 allComments
 .then((response) => {
  
