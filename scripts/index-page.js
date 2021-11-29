@@ -1,6 +1,6 @@
 
 const COMMENTS_API_URL = 'https://project-1-api.herokuapp.com/comments';
-const COMMENTS_API_KEY = '55721b21-6b64-4e73-a3a6-0642249a1226';
+const COMMENTS_API_KEY = '6453c231-aaeb-4170-9b47-c3cef0a07fe5';
 const allComments = axios.get(`${COMMENTS_API_URL}?api_key=${COMMENTS_API_KEY}`);
 
 // creating the comments section and appending it to the main section
