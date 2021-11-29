@@ -1,6 +1,6 @@
 
 const COMMENTS_API_URL = 'https://project-1-api.herokuapp.com/comments';
-const COMMENTS_API_KEY = '3962138c-ad16-40e5-ad5b-79ce5d2fe7ae';
+const COMMENTS_API_KEY = '55721b21-6b64-4e73-a3a6-0642249a1226';
 const allComments = axios.get(`${COMMENTS_API_URL}?api_key=${COMMENTS_API_KEY}`);
 
 // creating the comments section and appending it to the main section
@@ -13,28 +13,20 @@ mainEl.appendChild(sectionEl);
 
 allComments
 .then((response) => {
-  console.log(response);
-  console.log(response.data);
-
-
+ 
   // clearing the comments section to start clean
   sectionEl.innerHTML = "";
   const comments = response.data;
-  console.log(response);
-  console.log(response.data);
-
+ 
   // sorting  default comments by timestamp starting from the newest
   displayCommentsBynewest(comments);
   
   // invoke the addComment function and pass the comments array
   addComment(comments);
-    
-    
+      
   // select the form by class name and add an event listener
   const form = document.querySelector('.comments-form__main');
   form.addEventListener('submit', handleSubmitForm);
-
-  
 
   // handle the form when it is submitted
   function handleSubmitForm(e) {
@@ -74,11 +66,13 @@ allComments
             displayCommentsBynewest(rerenderedcomments)
 
             // invoke the add comment function and pass the re-rendered comments array
-            addComment(rerenderedcomments)
-                          
+            addComment(rerenderedcomments)                        
             })        
         })     
       }
+    })
+    .catch((error)=> {
+      console.log(error)
     })
 
 
@@ -132,20 +126,26 @@ function addComment(commentsArray){
     description.classList.add('comments__description');
     description.innerHTML = comment.comment;
     flexTwo.appendChild(description);
-    
 
+    
     // created at in days
     const createdAt = document.createElement('p');
     createdAt.classList.add('comments__created-at');
     createdAt.innerText = `Posted at ${timeInWords(comment.timestamp)}`;
     flexTwo.appendChild(createdAt)
+    
+    // days-delete-likes container
+    const deleteLikes = document.createElement('div');
+    deleteLikes.classList.add('comments__delete-likes');
+    flexTwo.appendChild(deleteLikes);
 
     // delete 
     const deletePost = document.createElement('button');
     deletePost.classList.add('comments__deleted-post');
     deletePost.innerText = 'delete'
-    flexTwo.appendChild(deletePost)
+    deleteLikes.appendChild(deletePost)
 
+    // handlind delete button
     deletePost.addEventListener('click', () => {
       console.log('post deleted')
       axios.delete(`${COMMENTS_API_URL}/${comment.id}?api_key=${COMMENTS_API_KEY}`)
@@ -155,14 +155,46 @@ function addComment(commentsArray){
         axios.get(`${COMMENTS_API_URL}?api_key=${COMMENTS_API_KEY}`)
         .then((res) => {
           const rerenderedcomments = res.data
-          addComment(rerenderedcomments)
-          
+          addComment(rerenderedcomments)  
         })
       })
-      
+      .catch((error) => {
+        console.log(error)
+      })    
     })
 
-    
+    // post like button
+    const likePost = document.createElement('button');
+    likePost.classList.add('comments__liked-post');
+    likePost.innerText = `like`
+    deleteLikes.appendChild(likePost)
+
+    // post likes
+    const likes = document.createElement('p');
+    likes.classList.add('comments__likes');
+    likes.innerText = `${comment.likes}`
+    deleteLikes.appendChild(likes)
+
+
+    // handling like post button
+    likePost.addEventListener('click', ()=> {
+      console.log('clicked');
+      axios.put(`${COMMENTS_API_URL}/${comment.id}/like?api_key=${COMMENTS_API_KEY}`,{
+        likes: comment.likes
+      }).then((res)=> {
+          console.log(res.data.likes)
+          axios.get(`${COMMENTS_API_URL}?api_key=${COMMENTS_API_KEY}`)
+          .then((res) => {
+          sectionEl.innerHTML = "";
+          const newcomments = res.data
+          addComment(newcomments)  
+        })
+      })
+      .then((error)=> {
+        console.log(error)
+      })
+    })
+
     // divider
     const divider = document.createElement('hr');
     divider.classList.add('comments__divider');
