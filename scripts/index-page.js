@@ -295,6 +295,12 @@ function addComment(commentsArray){
     description.innerHTML = comment.comment;
     flexTwo.appendChild(description);
     // secondFlex
+
+    // created at in days
+    const createdAt = document.createElement('p');
+    createdAt.classList.add('comments__created-at');
+    createdAt.innerText = `Posted at ${timeInWords(comment.timestamp)}`;
+    flexTwo.appendChild(createdAt)
     
     // divider
     const divider = document.createElement('hr');
@@ -309,6 +315,42 @@ function displayCommentsBynewest(commentsArray){
     return y.timestamp - x.timestamp;
   })
 }
+
+
+//****************** function that posts time in words*************** */
+function timeInWords(date) {
+  let seconds = Math.floor((Date.now() - date) / 1000);
+  let unit = "second";
+  let direction = "ago";
+  if (seconds < 0) {
+    seconds = -seconds;
+    direction = "less than a minute ago";
+  }
+  let value = seconds;
+  if (seconds >= 31536000) {
+    value = Math.floor(seconds / 31536000);
+    unit = "year";
+
+  } 
+  else if(seconds >= 2592000){
+    value = Math.floor(seconds / 2562000);
+    unit= 'month'
+  }
+  else if (seconds >= 86400) {
+    value = Math.floor(seconds / 86400);
+    unit = "day";
+  } else if (seconds >= 3600) {
+    value = Math.floor(seconds / 3600);
+    unit = "hour";
+  } else if (seconds >= 60) {
+    value = Math.floor(seconds / 60);
+    unit = "minute";
+  }
+  if (value != 1)
+    unit = unit + "s";
+  return value + " " + unit + " " + direction;
+}
+
 
 
      
