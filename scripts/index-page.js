@@ -131,7 +131,7 @@ function addComment(commentsArray){
     // created at in days
     const createdAt = document.createElement('p');
     createdAt.classList.add('comments__created-at');
-    createdAt.innerText = `Posted at ${timeInWords(comment.timestamp)}`;
+    createdAt.innerText = `•  Posted ${timeInWords(comment.timestamp)}`;
     flexTwo.appendChild(createdAt)
     
     // days-delete-likes container
@@ -141,7 +141,7 @@ function addComment(commentsArray){
 
     // delete 
     const deletePost = document.createElement('button');
-    deletePost.classList.add('comments__deleted-post');
+    deletePost.classList.add('comments__post');
     deletePost.innerText = 'delete'
     deleteLikes.appendChild(deletePost)
 
@@ -165,8 +165,8 @@ function addComment(commentsArray){
 
     // post like button
     const likePost = document.createElement('button');
-    likePost.classList.add('comments__liked-post');
-    likePost.innerText = `like`
+    likePost.classList.add('comments__post');
+    likePost.innerText = `likes`
     deleteLikes.appendChild(likePost)
 
     // post likes

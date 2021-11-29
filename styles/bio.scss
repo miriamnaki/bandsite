@@ -636,6 +636,34 @@
     margin: 0;
   }
 
+  // created At in words
+  &__created-at {
+    font-size: 'Avenir';
+    font-size: 13px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__delete-likes {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__post {
+    color: colors.$white;
+    background-color: colors.$bandsite-black;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: 10px;
+    text-transform: capitalize;
+    font-size: 13px;
+  }
+
+  &__likes {
+    font-size: 13px;
+  }
+
   &__divider {
     height: 0.125rem;
     border: none;

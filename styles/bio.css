@@ -1120,6 +1120,29 @@
   color: #AFAFAF;
   margin: 0;
 }
+.comments__created-at {
+  font-size: "Avenir";
+  font-size: 13px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.comments__delete-likes {
+  display: flex;
+  align-items: baseline;
+}
+.comments__post {
+  color: #FFFFFF;
+  background-color: #323232;
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  margin-right: 10px;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+.comments__likes {
+  font-size: 13px;
+}
 .comments__divider {
   height: 0.125rem;
   border: none;
