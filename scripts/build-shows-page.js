@@ -49,7 +49,6 @@ const mainEl = document.querySelector('main');
 const article = document.createElement('article');
 article.classList.add('shows');
 mainEl.appendChild(article);
-console.log(article);
 
 // heading
 const h3 = document.createElement('h3');
@@ -62,25 +61,30 @@ const container = document.createElement('div');
 container.classList.add('shows__container');
 article.appendChild(container);
 
+// tablet and desktop  label container
 const tabletDesktop = document.createElement('div');
 tabletDesktop.classList.add('shows__tablet-desktop');
 container.appendChild(tabletDesktop);
 
+// desktop and tablet date label
 const tabletDesktopDate = document.createElement('p');
 tabletDesktopDate.classList.add('shows__tablet');
 tabletDesktopDate.innerText = 'date';
 tabletDesktop.appendChild(tabletDesktopDate);
 
+// desktop and tablet venue label
 const tabletDesktopVenue = document.createElement('p');
 tabletDesktopVenue.classList.add('shows__tablet');
 tabletDesktopVenue.innerText = 'venue';
 tabletDesktop.appendChild(tabletDesktopVenue);
 
+// desktop and tablet location label
 const tabletDesktopLocation = document.createElement('p');
 tabletDesktopLocation.classList.add('shows__tablet');
 tabletDesktopLocation.innerText = 'location';
 tabletDesktop.appendChild(tabletDesktopLocation);
 
+// virtual button
 const buttonTablet = document.createElement('a');
 buttonTablet.classList.add('shows__tablet-button');
 buttonTablet.classList.add('shows__tablet-button-hide');
@@ -91,8 +95,7 @@ tabletDesktop.appendChild(buttonTablet);
 
 showDates
 .then((response)=> {
-  console.log(response)
-
+ 
   let concerts = response.data
   concerts.forEach((concert, index)=> {
 
@@ -119,14 +122,7 @@ showDates
     const date = document.createElement('p');
     date.classList.add('shows__date');
     let showingDate  =   Number(concert.date);
-    console.log( typeof showingDate)
-    date.innerHTML = new Date(showingDate).toDateString();
-    console.log(concert.date)
-    console.log( typeof concert.date)
-    console.log(showingDate)
-    // console.log(showingDate)
-    // let currentDate = showingDate.toLocaleDateString();
-    // date.innerHTML =  new Date(concert.date);
+    date.innerHTML = new Date(showingDate).toDateString(); 
     dateWrapper.appendChild(date);
   
     //venue wrapper
@@ -137,9 +133,6 @@ showDates
     //venue label
     const venueLabel = document.createElement('p');
     venueLabel.classList.add('shows__label');
-    // if(index !== 0){
-    //   venueLabel.classList.add('shows__label--tablet-desktop');
-    // }
     venueLabel.innerText = 'venue';
     venueWrapper.appendChild(venueLabel);
   
@@ -157,9 +150,6 @@ showDates
     // location label
     const locationLabel = document.createElement('p');
     locationLabel.classList.add('shows__label');
-    // if(index !== 0){
-    //   locationLabel.classList.add('shows__label--tablet-desktop');
-    // }
     locationLabel.innerText = 'location';
     locationWrapper.appendChild(locationLabel);
   
@@ -172,9 +162,6 @@ showDates
     // button wrapper
     const buttonWrapper = document.createElement('div');
     buttonWrapper.classList.add('shows__button-wrapper');
-    // if(index === 0){
-    // buttonWrapper.classList.add('shows__button-wrapper--top')
-    // }
     showsWrapper.appendChild(buttonWrapper);
   
     // button
@@ -189,9 +176,9 @@ showDates
     hr.classList.add('shows__divider')
     container.appendChild(hr);
   });
-  
-  
-
+})
+.catch((error)=> {
+  console.log(error)
 })
 
 
@@ -220,81 +207,4 @@ showDates
 
 
 
-
-// for(let i= 0; i < concerts.length; i++) {
-//   // let concert = concerts[i];
-//   let concert = document.createElement('div');
-//   concert.classList.add('shows__wrapper')
-//   shows.appendChild(concert)
-
-//   // let data = document.createElement('p');
-//   // date.classList('shows__date');
-//   // date.
-// }
-
-// function createDiv(){}
-
-// let showOne = document.createElement('div');
-// sectionEl.appendChild(showOne);
-// showOne.classList.add('shows__wrapper');
-
-// let dateLabel = document.createElement('p');
-// let date = document.createElement('p');
-// let venueLabel = document.createElement('p');
-// let venue = document.createElement('p');
-// let locationLabel = document.createElement('p');
-// let locationEl = document.createElement('p');
-
-// showOne.appendChild(dateLabel);
-// dateLabel.classList.add('shows__label')
-// dateLabel.innerText = 'date'
-
-// showOne.appendChild(date);
-// date.classList.add('shows__label');
-// date.innerText = 'Mon Sept 06 2021';
-
-// showOne.appendChild(venueLabel);
-// date.classList.add('shows__label');
-// venueLabel.innerText = 'venue';
-
-// showOne.appendChild(venue);
-// venue.classList.add('shows__label');
-// venue.innerText = 'Roland Lane';
-
-// showOne.appendChild(locationLabel);
-// locationLabel.classList.add('shows__label');
-// locationLabel.innerText = 'location';
-
-// showOne.appendChild(locationEl);
-// locationEl.classList.add('location');
-// locationEl.innerText = 'San Fransisco, CA'
-
-
-
-
-
-// let showTwo = document.createElement('div');
-// sectionEl.appendChild(showTwo);
-// showTwo.classList.add('shows__wrapper');
-// console.log(showTwo)
-
-
-
-// let showThree = document.createElement('div');
-// sectionEl.appendChild(showThree);
-// showThree.classList.add('shows__wrapper');
-
-// let showFour = document.createElement('div');
-// sectionEl.appendChild(showFour);
-// showFour.classList.add('shows__wrapper');
-
-// let showFive = document.createElement('div');
-// sectionEl.appendChild(showFive);
-// showFive.classList.add('shows__wrapper');
-
-// let showSix = document.createElement('div');
-// sectionEl.appendChild(showSix);
-// showSix.classList.add('shows__wrapper');
-
-// let btn
 

@@ -59,7 +59,6 @@ allComments
 
             // Clear comments section to re-render new data to a clean section
             sectionEl.innerHTML = " ";
-            console.log(res)
             const rerenderedcomments = res.data
 
             // invoke displayCommentsBynewest function to display comments by newest
@@ -88,8 +87,7 @@ function addComment(commentsArray){
     // First flex container
     const flexOne = document.createElement('div'); 
     flexOne.classList.add('comments__flex-1');
-    container.appendChild(flexOne);
-    
+    container.appendChild(flexOne); 
     
     // Avatar and Name Wrapper
     const commentOne = document.createElement('div');
@@ -126,8 +124,7 @@ function addComment(commentsArray){
     description.classList.add('comments__description');
     description.innerHTML = comment.comment;
     flexTwo.appendChild(description);
-
-    
+ 
     // created at in days
     const createdAt = document.createElement('p');
     createdAt.classList.add('comments__created-at');
@@ -147,14 +144,15 @@ function addComment(commentsArray){
 
     // handlind delete button
     deletePost.addEventListener('click', () => {
-      console.log('post deleted')
+      
       axios.delete(`${COMMENTS_API_URL}/${comment.id}?api_key=${COMMENTS_API_KEY}`)
       .then((res)=> {
-        console.log(res)
+       
         sectionEl.innerHTML = "";
         axios.get(`${COMMENTS_API_URL}?api_key=${COMMENTS_API_KEY}`)
         .then((res) => {
           const rerenderedcomments = res.data
+          displayCommentsBynewest(rerenderedcomments)
           addComment(rerenderedcomments)  
         })
       })
@@ -175,18 +173,16 @@ function addComment(commentsArray){
     likes.innerText = `${comment.likes}`
     deleteLikes.appendChild(likes)
 
-
     // handling like post button
     likePost.addEventListener('click', ()=> {
-      console.log('clicked');
       axios.put(`${COMMENTS_API_URL}/${comment.id}/like?api_key=${COMMENTS_API_KEY}`,{
         likes: comment.likes
       }).then((res)=> {
-          console.log(res.data.likes)
           axios.get(`${COMMENTS_API_URL}?api_key=${COMMENTS_API_KEY}`)
           .then((res) => {
           sectionEl.innerHTML = "";
           const newcomments = res.data
+          displayCommentsBynewest(newcomments)
           addComment(newcomments)  
         })
       })
@@ -209,8 +205,8 @@ function displayCommentsBynewest(commentsArray){
   })
 }
 
-
 //****************** function that posts time in words*************** */
+//**** inspired from stackoverflow **** */
 function timeInWords(date) {
   let seconds = Math.floor((Date.now() - date) / 1000);
   let unit = "second";

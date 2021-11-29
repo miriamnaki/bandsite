@@ -438,6 +438,8 @@
   &__input[type= 'text']:focus {
     outline: 0.0625rem solid colors.$bandsite-black;
   }
+  // error state
+  &__input:focus:required:invalid {border: 1px solid colors.$error;}
 
   // comments-form comment field-name wrapper
   &__container {
@@ -497,6 +499,9 @@
   &__description:focus {
     outline: 0.0625rem solid colors.$bandsite-black;
   }
+
+  // error state
+  &__description:focus:required:invalid {border: 1px solid colors.$error;}
   
   // comment-form button wrapper
   &__button-wrapper {
@@ -639,9 +644,9 @@
   // created At in words
   &__created-at {
     font-size: 'Avenir';
-    font-size: 13px;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    font-size: 0.8125rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   &__delete-likes {
@@ -653,15 +658,15 @@
     color: colors.$white;
     background-color: colors.$bandsite-black;
     border: none;
-    padding: 5px;
-    border-radius: 4px;
-    margin-right: 10px;
+    padding: 0.3125rem;
+    border-radius: 0.25rem;
+    margin-right: 0.625rem;
     text-transform: capitalize;
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 
   &__likes {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 
   &__divider {
@@ -673,11 +678,11 @@
 
     @include mixins.tablet {
       margin: auto;
-      width: 580px;
+      width: 36.25rem;
     }
     @include mixins.desktop {
       margin: auto;
-      width: 580px;
+      width: 36.25rem;
     }
   }
 

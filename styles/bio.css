@@ -920,6 +920,9 @@
 .comments-form__input[type=text]:focus {
   outline: 0.0625rem solid #323232;
 }
+.comments-form__input:focus:required:invalid {
+  border: 1px solid #D22D25;
+}
 .comments-form__container {
   width: 100%;
   padding-left: 1rem;
@@ -986,6 +989,9 @@
 }
 .comments-form__description:focus {
   outline: 0.0625rem solid #323232;
+}
+.comments-form__description:focus:required:invalid {
+  border: 1px solid #D22D25;
 }
 .comments-form__button-wrapper {
   padding-left: 3.125rem;
@@ -1122,9 +1128,9 @@
 }
 .comments__created-at {
   font-size: "Avenir";
-  font-size: 13px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  font-size: 0.8125rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .comments__delete-likes {
   display: flex;
@@ -1134,14 +1140,14 @@
   color: #FFFFFF;
   background-color: #323232;
   border: none;
-  padding: 5px;
-  border-radius: 4px;
-  margin-right: 10px;
+  padding: 0.3125rem;
+  border-radius: 0.25rem;
+  margin-right: 0.625rem;
   text-transform: capitalize;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 .comments__likes {
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 .comments__divider {
   height: 0.125rem;
@@ -1153,13 +1159,13 @@
 @media screen and (min-width: 48rem) and (max-width: 79.9375rem) {
   .comments__divider {
     margin: auto;
-    width: 580px;
+    width: 36.25rem;
   }
 }
 @media screen and (min-width: 80rem) {
   .comments__divider {
     margin: auto;
-    width: 580px;
+    width: 36.25rem;
   }
 }
 /*# sourceMappingURL=bio.css.map *//*# sourceMappingURL=bio.css.map */
